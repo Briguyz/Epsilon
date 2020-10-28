@@ -13,8 +13,8 @@ serverUse = True
 
 if serverUse:
     hostName = 'ukko.d.umn.edu'
-    portNumber =32895 
-else:     
+    portNumber = 12760
+else:
     hostName = 'localhost'
     portNumber = 5555
 if __name__ == '__main__':

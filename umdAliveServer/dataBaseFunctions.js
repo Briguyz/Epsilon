@@ -1,7 +1,7 @@
 //loads the MongoDB package
 var mongojs = require("mongojs");
 
-var url = 'mongodb://ukko.d.umn.edu:32893/umdAliveDatabase';
+var url = 'mongodb://akka.d.umn.edu:12750/umdAliveDatabase';
 
 //array of collections we will use
 var collections = ['clubs', 'users', 'events'];
