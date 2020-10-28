@@ -1,0 +1,524 @@
+2018-03-22T08:09:57.594-0500 I CONTROL  [initandlisten] MongoDB starting : pid=15263 port=32893 dbpath=dbfile 64-bit host=ukko
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten] db version v3.6.2
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten] git version: 489d177dbd0f0420a8ca04d39fd78d0a2c539420
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten] modules: none
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten] build environment:
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten]     distmod: ubuntu1604
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten]     distarch: x86_64
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 32893 }, storage: { dbPath: "dbfile" }, systemLog: { destination: "file", logAppend: true, path: "mongod.log" } }
+2018-03-22T08:09:57.595-0500 I STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory dbfile not found., terminating
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten] now exiting
+2018-03-22T08:09:57.595-0500 I CONTROL  [initandlisten] shutting down with code:100
+2018-03-22T08:10:12.572-0500 I CONTROL  [main] ***** SERVER RESTARTED *****
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten] MongoDB starting : pid=15271 port=32893 dbpath=dbfile 64-bit host=ukko
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten] db version v3.6.2
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten] git version: 489d177dbd0f0420a8ca04d39fd78d0a2c539420
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten] modules: none
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten] build environment:
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten]     distmod: ubuntu1604
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten]     distarch: x86_64
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten]     target_arch: x86_64
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "127.0.0.1", port: 32893 }, storage: { dbPath: "dbfile" }, systemLog: { destination: "file", logAppend: true, path: "mongod.log" } }
+2018-03-22T08:10:12.581-0500 I STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory dbfile not found., terminating
+2018-03-22T08:10:12.581-0500 I CONTROL  [initandlisten] now exiting
+2018-03-22T08:10:12.582-0500 I CONTROL  [initandlisten] shutting down with code:100
+2020-10-27T16:30:14.696-0500 I CONTROL  [main] ***** SERVER RESTARTED *****
+2020-10-27T16:30:14.705-0500 I CONTROL  [initandlisten] MongoDB starting : pid=43802 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=ukko
+2020-10-27T16:30:14.705-0500 I CONTROL  [initandlisten] db version v3.6.9
+2020-10-27T16:30:14.705-0500 I CONTROL  [initandlisten] git version: 167861a164723168adfaaa866f310cb94010428f
+2020-10-27T16:30:14.705-0500 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2n  7 Dec 2017
+2020-10-27T16:30:14.705-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2020-10-27T16:30:14.705-0500 I CONTROL  [initandlisten] modules: none
+2020-10-27T16:30:14.705-0500 I CONTROL  [initandlisten] build environment:
+2020-10-27T16:30:14.705-0500 I CONTROL  [initandlisten]     distmod: ubuntu1604
+2020-10-27T16:30:14.705-0500 I CONTROL  [initandlisten]     distarch: x86_64
+2020-10-27T16:30:14.705-0500 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-10-27T16:30:14.705-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:30:14.706-0500 I STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile not found., terminating
+2020-10-27T16:30:14.706-0500 I CONTROL  [initandlisten] now exiting
+2020-10-27T16:30:14.706-0500 I CONTROL  [initandlisten] shutting down with code:100
+2020-10-27T16:30:53.680-0500 I CONTROL  [main] ***** SERVER RESTARTED *****
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten] MongoDB starting : pid=43809 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=ukko
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten] db version v3.6.9
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten] git version: 167861a164723168adfaaa866f310cb94010428f
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2n  7 Dec 2017
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten] modules: none
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten] build environment:
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten]     distmod: ubuntu1604
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten]     distarch: x86_64
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:30:53.689-0500 I STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile not found., terminating
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten] now exiting
+2020-10-27T16:30:53.689-0500 I CONTROL  [initandlisten] shutting down with code:100
+2020-10-27T16:31:59.024-0500 I CONTROL  [main] ***** SERVER RESTARTED *****
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten] MongoDB starting : pid=43840 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=ukko
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten] db version v3.6.9
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten] git version: 167861a164723168adfaaa866f310cb94010428f
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2n  7 Dec 2017
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten] modules: none
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten] build environment:
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten]     distmod: ubuntu1604
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten]     distarch: x86_64
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:31:59.033-0500 I STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile not found., terminating
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten] now exiting
+2020-10-27T16:31:59.033-0500 I CONTROL  [initandlisten] shutting down with code:100
+2020-10-27T16:34:54.100-0500 ***** SERVER RESTARTED *****
+2020-10-27T16:34:54.107-0500 [initandlisten] MongoDB starting : pid=26081 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T16:34:54.108-0500 [initandlisten] 
+2020-10-27T16:34:54.108-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T16:34:54.108-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T16:34:54.108-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T16:34:54.108-0500 [initandlisten] 
+2020-10-27T16:34:54.108-0500 [initandlisten] db version v2.6.10
+2020-10-27T16:34:54.108-0500 [initandlisten] git version: nogitversion
+2020-10-27T16:34:54.108-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T16:34:54.108-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T16:34:54.108-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T16:34:54.108-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:34:54.109-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T16:34:54.109-0500 [initandlisten] dbexit: 
+2020-10-27T16:34:54.109-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T16:34:54.109-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T16:34:54.109-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T16:34:54.109-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T16:34:54.109-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T16:34:54.109-0500 [initandlisten] shutdown: final commit...
+2020-10-27T16:34:54.109-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T16:34:54.109-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T16:34:54.109-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T16:40:50.625-0500 ***** SERVER RESTARTED *****
+2020-10-27T16:40:50.634-0500 [initandlisten] MongoDB starting : pid=26255 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongo 64-bit host=akka
+2020-10-27T16:40:50.635-0500 [initandlisten] 
+2020-10-27T16:40:50.635-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T16:40:50.635-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T16:40:50.635-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T16:40:50.635-0500 [initandlisten] 
+2020-10-27T16:40:50.635-0500 [initandlisten] db version v2.6.10
+2020-10-27T16:40:50.635-0500 [initandlisten] git version: nogitversion
+2020-10-27T16:40:50.635-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T16:40:50.635-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T16:40:50.635-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T16:40:50.635-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongo" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:40:50.636-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongo) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T16:40:50.636-0500 [initandlisten] dbexit: 
+2020-10-27T16:40:50.636-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T16:40:50.636-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T16:40:50.636-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T16:40:50.636-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T16:40:50.636-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T16:40:50.636-0500 [initandlisten] shutdown: final commit...
+2020-10-27T16:40:50.636-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T16:40:50.636-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T16:40:50.636-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T16:43:49.092-0500 ***** SERVER RESTARTED *****
+2020-10-27T16:43:49.099-0500 [initandlisten] MongoDB starting : pid=26378 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T16:43:49.100-0500 [initandlisten] 
+2020-10-27T16:43:49.100-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T16:43:49.100-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T16:43:49.100-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T16:43:49.100-0500 [initandlisten] 
+2020-10-27T16:43:49.100-0500 [initandlisten] db version v2.6.10
+2020-10-27T16:43:49.100-0500 [initandlisten] git version: nogitversion
+2020-10-27T16:43:49.100-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T16:43:49.100-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T16:43:49.100-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T16:43:49.100-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:43:49.100-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T16:43:49.100-0500 [initandlisten] dbexit: 
+2020-10-27T16:43:49.100-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T16:43:49.100-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T16:43:49.100-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T16:43:49.100-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T16:43:49.100-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T16:43:49.100-0500 [initandlisten] shutdown: final commit...
+2020-10-27T16:43:49.100-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T16:43:49.100-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T16:43:49.100-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T16:43:52.389-0500 ***** SERVER RESTARTED *****
+2020-10-27T16:43:52.397-0500 [initandlisten] MongoDB starting : pid=26382 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T16:43:52.398-0500 [initandlisten] 
+2020-10-27T16:43:52.398-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T16:43:52.398-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T16:43:52.398-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T16:43:52.398-0500 [initandlisten] 
+2020-10-27T16:43:52.398-0500 [initandlisten] db version v2.6.10
+2020-10-27T16:43:52.398-0500 [initandlisten] git version: nogitversion
+2020-10-27T16:43:52.398-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T16:43:52.398-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T16:43:52.398-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T16:43:52.398-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:43:52.399-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T16:43:52.399-0500 [initandlisten] dbexit: 
+2020-10-27T16:43:52.399-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T16:43:52.399-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T16:43:52.399-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T16:43:52.399-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T16:43:52.399-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T16:43:52.399-0500 [initandlisten] shutdown: final commit...
+2020-10-27T16:43:52.399-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T16:43:52.399-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T16:43:52.399-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T16:44:00.633-0500 ***** SERVER RESTARTED *****
+2020-10-27T16:44:00.642-0500 [initandlisten] MongoDB starting : pid=26388 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T16:44:00.643-0500 [initandlisten] 
+2020-10-27T16:44:00.643-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T16:44:00.643-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T16:44:00.643-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T16:44:00.643-0500 [initandlisten] 
+2020-10-27T16:44:00.643-0500 [initandlisten] db version v2.6.10
+2020-10-27T16:44:00.643-0500 [initandlisten] git version: nogitversion
+2020-10-27T16:44:00.643-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T16:44:00.643-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T16:44:00.643-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T16:44:00.643-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:44:00.644-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T16:44:00.644-0500 [initandlisten] dbexit: 
+2020-10-27T16:44:00.644-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T16:44:00.644-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T16:44:00.644-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T16:44:00.644-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T16:44:00.644-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T16:44:00.644-0500 [initandlisten] shutdown: final commit...
+2020-10-27T16:44:00.644-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T16:44:00.644-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T16:44:00.644-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T16:46:04.594-0500 I CONTROL  [main] ***** SERVER RESTARTED *****
+2020-10-27T16:46:04.600-0500 I CONTROL  [initandlisten] MongoDB starting : pid=44165 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=ukko
+2020-10-27T16:46:04.600-0500 I CONTROL  [initandlisten] db version v3.6.9
+2020-10-27T16:46:04.600-0500 I CONTROL  [initandlisten] git version: 167861a164723168adfaaa866f310cb94010428f
+2020-10-27T16:46:04.600-0500 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2n  7 Dec 2017
+2020-10-27T16:46:04.600-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2020-10-27T16:46:04.600-0500 I CONTROL  [initandlisten] modules: none
+2020-10-27T16:46:04.600-0500 I CONTROL  [initandlisten] build environment:
+2020-10-27T16:46:04.600-0500 I CONTROL  [initandlisten]     distmod: ubuntu1604
+2020-10-27T16:46:04.600-0500 I CONTROL  [initandlisten]     distarch: x86_64
+2020-10-27T16:46:04.600-0500 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-10-27T16:46:04.600-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:46:04.600-0500 I STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile not found., terminating
+2020-10-27T16:46:04.601-0500 I CONTROL  [initandlisten] now exiting
+2020-10-27T16:46:04.601-0500 I CONTROL  [initandlisten] shutting down with code:100
+2020-10-27T16:46:15.949-0500 I CONTROL  [main] ***** SERVER RESTARTED *****
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten] MongoDB starting : pid=44172 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=ukko
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten] db version v3.6.9
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten] git version: 167861a164723168adfaaa866f310cb94010428f
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2n  7 Dec 2017
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten] allocator: tcmalloc
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten] modules: none
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten] build environment:
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten]     distmod: ubuntu1604
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten]     distarch: x86_64
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten]     target_arch: x86_64
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:46:15.957-0500 I STORAGE  [initandlisten] exception in initAndListen: NonExistentPath: Data directory /home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile not found., terminating
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten] now exiting
+2020-10-27T16:46:15.957-0500 I CONTROL  [initandlisten] shutting down with code:100
+2020-10-27T16:51:03.599-0500 ***** SERVER RESTARTED *****
+2020-10-27T16:51:03.608-0500 [initandlisten] MongoDB starting : pid=26646 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T16:51:03.609-0500 [initandlisten] 
+2020-10-27T16:51:03.609-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T16:51:03.609-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T16:51:03.609-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T16:51:03.609-0500 [initandlisten] 
+2020-10-27T16:51:03.609-0500 [initandlisten] db version v2.6.10
+2020-10-27T16:51:03.609-0500 [initandlisten] git version: nogitversion
+2020-10-27T16:51:03.609-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T16:51:03.609-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T16:51:03.609-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T16:51:03.609-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile", journal: { enabled: true } }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:51:03.609-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T16:51:03.610-0500 [initandlisten] dbexit: 
+2020-10-27T16:51:03.610-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T16:51:03.610-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T16:51:03.610-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T16:51:03.610-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T16:51:03.610-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T16:51:03.610-0500 [initandlisten] shutdown: final commit...
+2020-10-27T16:51:03.610-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T16:51:03.610-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T16:51:03.610-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T16:54:03.432-0500 ***** SERVER RESTARTED *****
+2020-10-27T16:54:03.439-0500 [initandlisten] MongoDB starting : pid=26724 port=12755 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T16:54:03.439-0500 [initandlisten] 
+2020-10-27T16:54:03.439-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T16:54:03.439-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T16:54:03.439-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T16:54:03.439-0500 [initandlisten] 
+2020-10-27T16:54:03.439-0500 [initandlisten] db version v2.6.10
+2020-10-27T16:54:03.439-0500 [initandlisten] git version: nogitversion
+2020-10-27T16:54:03.439-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T16:54:03.439-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T16:54:03.439-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T16:54:03.439-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12755 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:54:03.439-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T16:54:03.439-0500 [initandlisten] dbexit: 
+2020-10-27T16:54:03.439-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T16:54:03.439-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T16:54:03.439-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T16:54:03.440-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T16:54:03.440-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T16:54:03.440-0500 [initandlisten] shutdown: final commit...
+2020-10-27T16:54:03.440-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T16:54:03.440-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T16:54:03.440-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T16:54:45.664-0500 ***** SERVER RESTARTED *****
+2020-10-27T16:54:45.673-0500 [initandlisten] MongoDB starting : pid=26787 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T16:54:45.674-0500 [initandlisten] 
+2020-10-27T16:54:45.674-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T16:54:45.674-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T16:54:45.674-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T16:54:45.674-0500 [initandlisten] 
+2020-10-27T16:54:45.674-0500 [initandlisten] db version v2.6.10
+2020-10-27T16:54:45.674-0500 [initandlisten] git version: nogitversion
+2020-10-27T16:54:45.674-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T16:54:45.674-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T16:54:45.674-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T16:54:45.674-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:54:45.674-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T16:54:45.674-0500 [initandlisten] dbexit: 
+2020-10-27T16:54:45.674-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T16:54:45.674-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T16:54:45.674-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T16:54:45.674-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T16:54:45.674-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T16:54:45.674-0500 [initandlisten] shutdown: final commit...
+2020-10-27T16:54:45.674-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T16:54:45.674-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T16:54:45.674-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T16:56:06.590-0500 ***** SERVER RESTARTED *****
+2020-10-27T16:56:06.599-0500 [initandlisten] MongoDB starting : pid=26853 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T16:56:06.599-0500 [initandlisten] 
+2020-10-27T16:56:06.599-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T16:56:06.599-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T16:56:06.599-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T16:56:06.599-0500 [initandlisten] 
+2020-10-27T16:56:06.600-0500 [initandlisten] db version v2.6.10
+2020-10-27T16:56:06.600-0500 [initandlisten] git version: nogitversion
+2020-10-27T16:56:06.600-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T16:56:06.600-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T16:56:06.600-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T16:56:06.600-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, setParameter: { enableLocalhostAuthBypass: "false" }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:56:06.600-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T16:56:06.600-0500 [initandlisten] dbexit: 
+2020-10-27T16:56:06.600-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T16:56:06.600-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T16:56:06.600-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T16:56:06.600-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T16:56:06.600-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T16:56:06.600-0500 [initandlisten] shutdown: final commit...
+2020-10-27T16:56:06.600-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T16:56:06.600-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T16:56:06.600-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T16:56:33.469-0500 ***** SERVER RESTARTED *****
+2020-10-27T16:56:33.476-0500 [initandlisten] MongoDB starting : pid=26907 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T16:56:33.477-0500 [initandlisten] 
+2020-10-27T16:56:33.477-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T16:56:33.477-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T16:56:33.477-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T16:56:33.477-0500 [initandlisten] 
+2020-10-27T16:56:33.477-0500 [initandlisten] db version v2.6.10
+2020-10-27T16:56:33.477-0500 [initandlisten] git version: nogitversion
+2020-10-27T16:56:33.477-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T16:56:33.477-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T16:56:33.477-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T16:56:33.477-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:56:33.477-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T16:56:33.477-0500 [initandlisten] dbexit: 
+2020-10-27T16:56:33.477-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T16:56:33.477-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T16:56:33.477-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T16:56:33.478-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T16:56:33.478-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T16:56:33.478-0500 [initandlisten] shutdown: final commit...
+2020-10-27T16:56:33.478-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T16:56:33.478-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T16:56:33.478-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T16:57:00.615-0500 ***** SERVER RESTARTED *****
+2020-10-27T16:57:00.624-0500 [initandlisten] MongoDB starting : pid=26938 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T16:57:00.624-0500 [initandlisten] 
+2020-10-27T16:57:00.624-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T16:57:00.624-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T16:57:00.624-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T16:57:00.625-0500 [initandlisten] 
+2020-10-27T16:57:00.625-0500 [initandlisten] db version v2.6.10
+2020-10-27T16:57:00.625-0500 [initandlisten] git version: nogitversion
+2020-10-27T16:57:00.625-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T16:57:00.625-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T16:57:00.625-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T16:57:00.625-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T16:57:00.625-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T16:57:00.625-0500 [initandlisten] dbexit: 
+2020-10-27T16:57:00.625-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T16:57:00.625-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T16:57:00.625-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T16:57:00.625-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T16:57:00.625-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T16:57:00.625-0500 [initandlisten] shutdown: final commit...
+2020-10-27T16:57:00.625-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T16:57:00.625-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T16:57:00.625-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T17:05:33.016-0500 ***** SERVER RESTARTED *****
+2020-10-27T17:05:33.023-0500 [initandlisten] MongoDB starting : pid=27236 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T17:05:33.023-0500 [initandlisten] 
+2020-10-27T17:05:33.023-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T17:05:33.023-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T17:05:33.023-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T17:05:33.023-0500 [initandlisten] 
+2020-10-27T17:05:33.023-0500 [initandlisten] db version v2.6.10
+2020-10-27T17:05:33.023-0500 [initandlisten] git version: nogitversion
+2020-10-27T17:05:33.023-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T17:05:33.023-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T17:05:33.023-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T17:05:33.024-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T17:05:33.024-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T17:05:33.024-0500 [initandlisten] dbexit: 
+2020-10-27T17:05:33.024-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T17:05:33.024-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T17:05:33.024-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T17:05:33.024-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T17:05:33.024-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T17:05:33.024-0500 [initandlisten] shutdown: final commit...
+2020-10-27T17:05:33.024-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T17:05:33.024-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T17:05:33.024-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T17:05:39.773-0500 ***** SERVER RESTARTED *****
+2020-10-27T17:05:39.782-0500 [initandlisten] MongoDB starting : pid=27240 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T17:05:39.783-0500 [initandlisten] 
+2020-10-27T17:05:39.783-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T17:05:39.783-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T17:05:39.783-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T17:05:39.783-0500 [initandlisten] 
+2020-10-27T17:05:39.783-0500 [initandlisten] db version v2.6.10
+2020-10-27T17:05:39.783-0500 [initandlisten] git version: nogitversion
+2020-10-27T17:05:39.783-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T17:05:39.783-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T17:05:39.783-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T17:05:39.783-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T17:05:39.783-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T17:05:39.783-0500 [initandlisten] dbexit: 
+2020-10-27T17:05:39.783-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T17:05:39.783-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T17:05:39.783-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T17:05:39.783-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T17:05:39.783-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T17:05:39.783-0500 [initandlisten] shutdown: final commit...
+2020-10-27T17:05:39.783-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T17:05:39.783-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T17:05:39.783-0500 [initandlisten] dbexit: really exiting now
+2020-10-27T17:29:11.306-0500 ***** SERVER RESTARTED *****
+2020-10-27T17:29:11.313-0500 [initandlisten] MongoDB starting : pid=27852 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-10-27T17:29:11.313-0500 [initandlisten] 
+2020-10-27T17:29:11.313-0500 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-10-27T17:29:11.313-0500 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-10-27T17:29:11.313-0500 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-10-27T17:29:11.313-0500 [initandlisten] 
+2020-10-27T17:29:11.313-0500 [initandlisten] db version v2.6.10
+2020-10-27T17:29:11.313-0500 [initandlisten] git version: nogitversion
+2020-10-27T17:29:11.313-0500 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-10-27T17:29:11.314-0500 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-10-27T17:29:11.314-0500 [initandlisten] allocator: tcmalloc
+2020-10-27T17:29:11.314-0500 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-10-27T17:29:11.314-0500 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2020-10-27T17:29:11.314-0500 [initandlisten] dbexit: 
+2020-10-27T17:29:11.314-0500 [initandlisten] shutdown: going to close listening sockets...
+2020-10-27T17:29:11.314-0500 [initandlisten] shutdown: going to flush diaglog...
+2020-10-27T17:29:11.314-0500 [initandlisten] shutdown: going to close sockets...
+2020-10-27T17:29:11.314-0500 [initandlisten] shutdown: waiting for fs preallocator...
+2020-10-27T17:29:11.314-0500 [initandlisten] shutdown: lock for final commit...
+2020-10-27T17:29:11.314-0500 [initandlisten] shutdown: final commit...
+2020-10-27T17:29:11.314-0500 [initandlisten] shutdown: closing all files...
+2020-10-27T17:29:11.314-0500 [initandlisten] closeAllFiles() finished
+2020-10-27T17:29:11.314-0500 [initandlisten] dbexit: really exiting now

@@ -29,7 +29,7 @@ app.secret_key = 'development'
 oauth = OAuth(app)
 
 # URL for the REST API
-url = "http://ukko.d.umn.edu:32892"
+url = "http://akka.d.umn.edu:12755"
 
 # Initializes all of the Google authentication
 # and profile information
