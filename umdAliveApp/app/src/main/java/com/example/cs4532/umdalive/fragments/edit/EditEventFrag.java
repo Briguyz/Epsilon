@@ -194,6 +194,7 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
         NewEventDate = view.findViewById(R.id.EventDate);
         NewEventTime = view.findViewById(R.id.EventTime);
         SaveButton = view.findViewById(R.id.SaveEvent);
+        DeleteEvent = view.findViewById(R.id.DeleteEvent);
         SaveButton.setOnClickListener(this);
         DeleteEvent.setOnClickListener(this);
         DeleteEvent.setTag("DELETE");
