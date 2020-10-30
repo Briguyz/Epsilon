@@ -50,12 +50,11 @@ public class CommentsFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //Create View
         view = inflater.inflate(R.layout.comment_layout, container, false);
-       ;
+        ;
         //Get Layout Components
         getLayoutComponents();
 
         commentData = new Bundle();
-
 
 
         //10/30 needs more developement help for editing
@@ -90,5 +89,19 @@ public class CommentsFrag extends Fragment {
 
         //Return View
         return view;
+    }
 
-}
+
+        /**
+         * Gets the layout components from club_layout.xml
+         * @return nothing
+         */
+        private void getLayoutComponents() {
+
+        }
+
+    private void updateUI(JSONObject res) throws JSONException{
+
+        }
+    }
+
