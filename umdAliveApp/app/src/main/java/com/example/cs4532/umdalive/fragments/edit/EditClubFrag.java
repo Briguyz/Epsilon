@@ -59,7 +59,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         //Create View
-        view = inflater.inflate(R.layout.edit_club_layou, container, false);
+        view = inflater.inflate(R.layout.edit_club_layout, container, false);
 
         //Get Layout Components
         getLayoutComponents();
@@ -95,7 +95,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
      */
     @Override
     public void onClick(View v) {
-        if (v.getTag().toString() == "DELETE") {
+        if (v.getTag() != null && v.getTag().toString() == "DELETE") {
             RestSingleton restSingleton = RestSingleton.getInstance(view.getContext());
             StringRequest stringRequest = null;
             try {
@@ -168,7 +168,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
     }
 
     /**
-     * Gets the layout components from edit_club_layou.xml
+     * Gets the layout components from edit_club_layout.xml
      * @return nothing
      */
     private void getLayoutComponents() {
