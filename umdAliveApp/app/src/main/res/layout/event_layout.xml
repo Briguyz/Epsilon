@@ -92,11 +92,11 @@
         android:layout_marginEnd="16dp" />
 
     <Button
-        android:id="@+id/createComment"
+        android:id="@+id/goToComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="31dp"
-        android:text="@string/createCommentString"
+        android:text="@string/goToCommentString"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
