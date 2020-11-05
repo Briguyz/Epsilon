@@ -23,6 +23,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
+import com.example.cs4532.umdalive.fragments.create.CreateCommentsFrag;
 import com.example.cs4532.umdalive.fragments.edit.EditProfileFrag;
 
 import org.json.JSONArray;
@@ -56,7 +57,7 @@ public class CommentsFrag extends Fragment {
         view = inflater.inflate(R.layout.comment_layout, container, false);
 
         //Get Layout Components
-        //getLayoutComponents();
+        getLayoutComponents();
 
         commentData = new Bundle();
 
@@ -71,10 +72,11 @@ public class CommentsFrag extends Fragment {
             }
         });
         */
+
         //Use Volley Singleton to Update Page UI
 
         RestSingleton restSingleton = RestSingleton.getInstance(view.getContext());
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, restSingleton.getUrl() + "getEvent/" + getArguments().getString("commentID"),
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, restSingleton.getUrl() + "getComment/" + getArguments().getString("commentID"),
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -103,17 +105,18 @@ public class CommentsFrag extends Fragment {
          */
         private void getLayoutComponents() {
             //prototype of teh commentbox
-            commentBoxShow = view.findViewById(R.id.commentBoxSection);
+            //currently broken
+            //commentBoxShow = view.findViewById(R.id.commentsSection);
 
             //prototype of the addcommentsection
-            addCommentButton = view.findViewById(R.id.addCommentButton);
+            addCommentButton = view.findViewById(R.id.addCommentButtonView);
             addCommentButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     String TAG = (String) addCommentButton.getTag();
-                    CommentsFrag frag = new CommentsFrag();
+                    CreateCommentsFrag frag = new CreateCommentsFrag();
                     Bundle data = new Bundle();
-                    data.putString("commentID", TAG);
+                    data.putString("commentsID", TAG);
                     frag.setArguments(data);
                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
                 }
@@ -123,35 +126,7 @@ public class CommentsFrag extends Fragment {
     private void updateUI(JSONObject res) throws JSONException {
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
 
-        JSONArray commentsArray = res.getJSONArray("comments");
-        //Copied from profilefrag club to see how the logic is
-        //no idea how that works but modified it with new varialbe names
-        //
-        for (int i = 0; i < commentsArray.length(); i++) {
-            final JSONObject curComments = (JSONObject) commentsArray.get(i);
-
-            TextView commentsText = new TextView(view.getContext());
-            commentsText.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
-            commentsText.setText(curComments.get("name").toString());
-            commentsText.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ClubFrag frag = new ClubFrag();
-                    Bundle data = new Bundle();
-                    try {
-                        data.putString("eventID", curComments.get("_id").toString());
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    frag.setArguments(data);
-                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
-                }
-            });
-            commentBoxShow.addView(commentsText);
         }
-
-        }
-
     }
 
 

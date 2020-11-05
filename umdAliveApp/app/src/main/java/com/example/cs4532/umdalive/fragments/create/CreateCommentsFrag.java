@@ -1,6 +1,6 @@
 package com.example.cs4532.umdalive.fragments.create;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.view.View;
@@ -29,38 +29,42 @@ import org.json.JSONObject;
 
 
 
-public class CreateCommentsFrag extends Fragment implements View.OnClickListener {
+public class CreateCommentsFrag  extends Fragment implements View.OnClickListener {
     //View
     View view;
+
     //Layout Components
-    private EditText commentItself;
+    //private EditText EventName;
+    //private EditText EventDescription;
+    private EditText CommentText;
     private Button CreateCommentButton;
-    private JSONObject commentData;
+    private JSONObject eventData;
 
     /**
-     * Creates the create profile page view
+     * Creates the page for Editing Events when the edit events button is pressed
      * @param inflater
      * @param container
      * @param savedInstanceState
-     * @return view The view of the Create profile page
+     * @return view The View of the create events page
      */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         //Create View
-        view = inflater.inflate(R.layout.create_profile_layout, container, false);
+        view = inflater.inflate(R.layout.create_comment_layout, container, false);
 
-        getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
-
+        //Set Event Data
         try {
-            commentData = new JSONObject();
-            commentData.put("commentID", getArguments().getString("commentID"));
+            eventData = new JSONObject();
+            eventData.put("eventID", getArguments().getString("eventID"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
+        //Get Layout Components
         getLayoutComponents();
 
+        //Return View
         return view;
     }
 
@@ -69,27 +73,30 @@ public class CreateCommentsFrag extends Fragment implements View.OnClickListener
      * @param v The textView clicked
      * @return nothing
      */
-    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public void onClick(View v) {
         JSONObject newCommentData = new JSONObject();
         try {
-            newCommentData.put("commentString", commentItself.getText());
+            newCommentData.put("comment", CommentText.getText());
+            //newEventData.put("description", EventDescription.getText());
+            //newEventData.put("time",EventTime.getText());
+            //newEventData.put("date", EventDate.getText());
+            newCommentData.put("event",eventData.getString("eventID"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, RestSingleton.getInstance(view.getContext()).getUrl() + "createComment", newCommentData,
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, RestSingleton.getInstance(view.getContext()).getUrl() + "createcomment", newCommentData,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            CommentsFrag frag = new CommentsFrag();
+                            EventFrag frag = new EventFrag();
                             Bundle data = new Bundle();
-                            data.putString("eventID", response.getString("eventID"));
-                            data.putString("commentID", commentData.getString("commentID"));
+                            data.putString("commentID", response.getString("commentID"));
+                            data.putString("eventID", eventData.getString("eventID"));
                             frag.setArguments(data);
-                            getActivity().getFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+                            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
                         } catch (JSONException e){
                             Log.d("Error getting commentID", String.valueOf(e));
                         }
@@ -104,7 +111,16 @@ public class CreateCommentsFrag extends Fragment implements View.OnClickListener
         RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
     }
 
+
+    /**
+     * Gets the layout components from edit_event_layout.xml
+     * @return nothing
+     */
     private void getLayoutComponents() {
+        CommentText = view.findViewById(R.id.addCommentTextBox);
+        //EventDescription = view.findViewById(R.id.EventDescription);
+        //EventTime = view.findViewById(R.id.EventTime);
+        //EventDate = view.findViewById(R.id.EventDate);
         CreateCommentButton = view.findViewById(R.id.saveCommentButton);
         CreateCommentButton.setOnClickListener(this);
     }

@@ -310,3 +310,32 @@ module.exports.deleteEvent = function (eventID){
     }
   });
 };
+
+
+// 11/5 Henry Trinh, Josh Tindell createComment
+module.exports.createComment = function(commentData, callback){
+  DBRef.collection('comments').save(commentData, function(err, result){
+	console.log(result);
+    if (err){
+      console.log(err);
+    } else {
+      DBRef.collection('events').findOne({"_id": mongojs.ObjectId(result.events)}, function (err, doc){
+        if (err){
+          console.log(err);
+        } else {
+          //took from create event as a sub in
+        }
+        doc.events.push(result._id + "");
+        DBRef.collection('events').update({"_id": mongojs.ObjectId(result.events)}, doc, function (err, result){
+          if (err){
+            console.log(err);
+          } else {
+            //took from create event as a sub in
+          }
+        });
+      });
+      //Completed
+	  callback({"commentID" : result._id});
+    }
+  });
+};
