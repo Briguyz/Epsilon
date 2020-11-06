@@ -28,7 +28,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-
+/**11/6Code is buggy with reponse to server
+ * -will crash the server
+ * -Henry, Josh
+ */
 public class CreateCommentsFrag  extends Fragment implements View.OnClickListener {
     //View
     View view;
@@ -41,7 +44,7 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
     private JSONObject eventData;
 
     /**
-     * Creates the page for Editing Events when the edit events button is pressed
+     * Creates the page for Editing Comments when the edit events button is pressed
      * @param inflater
      * @param container
      * @param savedInstanceState
@@ -53,7 +56,7 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
         //Create View
         view = inflater.inflate(R.layout.create_comment_layout, container, false);
 
-        //Set Event Data
+        //Set Comment Data
         try {
             eventData = new JSONObject();
             eventData.put("eventID", getArguments().getString("eventID"));
@@ -91,7 +94,7 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-                            EventFrag frag = new EventFrag();
+                            CommentsFrag frag = new CommentsFrag();
                             Bundle data = new Bundle();
                             data.putString("commentID", response.getString("commentID"));
                             data.putString("eventID", eventData.getString("eventID"));
@@ -113,7 +116,7 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
 
 
     /**
-     * Gets the layout components from edit_event_layout.xml
+     * Gets the layout components from edit_comments_layout.xml
      * @return nothing
      */
     private void getLayoutComponents() {

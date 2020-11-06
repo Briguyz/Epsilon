@@ -12,13 +12,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
         android:ems="10"
+        android:hint="@string/comment"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
-        android:text="@string/comment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/saveCommentButton"
@@ -31,4 +31,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addCommentTextBox"
         app:layout_constraintVertical_bias="0.302" />
+
+    <Button
+        android:id="@+id/fromCreateCommentToComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goToCommentString"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveCommentButton"
+        app:layout_constraintVertical_bias="0.237" />
 </android.support.constraint.ConstraintLayout>

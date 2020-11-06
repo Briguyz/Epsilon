@@ -15,4 +15,5 @@
     <string name="add_comment">add Comment</string>
     <string name="comment">Comment</string>
     <string name="comments">Comments</string>
+    <string name="go_to_events">Go To Events</string>
 </resources>

@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60d12b77-ce9e-4dcc-9123-34e5983bd66a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator-enh.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/base/CommentsFrag.java" beforeDir="false" afterPath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/base/CommentsFrag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/create/CreateCommentsFrag.java" beforeDir="false" afterPath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/create/CreateCommentsFrag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/umdAliveApp/app/src/main/res/layout/comment_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/umdAliveApp/app/src/main/res/layout/comment_layout.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/umdAliveApp/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/umdAliveApp/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/umdAliveServer/dataBaseFunctions.js" beforeDir="false" afterPath="$PROJECT_DIR$/umdAliveServer/dataBaseFunctions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -30,6 +30,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+/**11/6 Proceed with caution
+ * -Henry, Josh
+ * -database functions and code needs to be looked at in this file
+ * -need to make sure things are running
+*/
+
 public class CommentsFrag extends Fragment {
     //View
     View view;
@@ -42,7 +48,7 @@ public class CommentsFrag extends Fragment {
 
     private FloatingActionButton addCommentButton;
 
-
+    
     //waiting for testing development
     private ImageView profileImage;
     private FloatingActionButton commentEdit;
@@ -125,7 +131,8 @@ public class CommentsFrag extends Fragment {
 
     private void updateUI(JSONObject res) throws JSONException {
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
-
+        //userComment.setText(res.getString("comment"));
+        //userComment.setTag(res.getString("_id"));
         }
     }
 

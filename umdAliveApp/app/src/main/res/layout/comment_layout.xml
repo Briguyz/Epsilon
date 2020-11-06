@@ -39,6 +39,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/fromCommentsToEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_events"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toEndOf="@+id/addCommentButtonView"
+        app:layout_constraintTop_toBottomOf="@+id/commentProgressBar"
+        app:layout_constraintVertical_bias="0.896" />
+
     <ListView
         android:id="@+id/commentsSection"
         android:layout_width="282dp"
