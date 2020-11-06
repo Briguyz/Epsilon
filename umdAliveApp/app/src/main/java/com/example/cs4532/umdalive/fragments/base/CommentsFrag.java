@@ -48,7 +48,7 @@ public class CommentsFrag extends Fragment {
 
     private FloatingActionButton addCommentButton;
 
-    
+
     //waiting for testing development
     private ImageView profileImage;
     private FloatingActionButton commentEdit;
