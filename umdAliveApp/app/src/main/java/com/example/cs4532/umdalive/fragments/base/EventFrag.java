@@ -17,7 +17,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
-import com.example.cs4532.umdalive.fragments.base.ClubFrag;
 import com.example.cs4532.umdalive.fragments.edit.EditEventFrag;
 
 import org.json.JSONException;
@@ -124,7 +123,7 @@ public class EventFrag extends Fragment{
          * the button functionality switches the view
          * Then when clicked on it will send a
          */
-        createCommentButton=view.findViewById(R.id.createComment);
+        createCommentButton=view.findViewById(R.id.goToComment);
         createCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -167,6 +166,18 @@ public class EventFrag extends Fragment{
         eventDescription.setText(res.getString("description"));
         eventTime.setText(res.getString("time"));
         goTo.setTag(res.getJSONObject("club").getString("_id").toString());
+
+        if(res.getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID())) {
+            editEventFAB.setVisibility(View.VISIBLE);
+        }
+        else
+        {
+
+        /*editEventFAB.setVisibility(View.VISIBLE);
+        if(UserSingleton.getInstance().getUserID() == res.getJSONObject("club").getJSONObject("members").getString("admin")){X
+            editEventFAB.setVisibility(View.GONE);
+        }
+        */
         if(res.getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID())) {
             editEventFAB.setVisibility(View.VISIBLE);
         }

@@ -1,21 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="com.example.cs4532.umdalive.fragments.base.CommentsFrag"
+    <TextView
+        android:id="@+id/commentHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="73dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_marginTop="16dp"
+        android:text="@string/comments"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="210dp"
-        android:layout_height="400dp"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="50dp" />
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addCommentButtonView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.019"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:srcCompat="@drawable/ic_add" />
+
+    <ProgressBar
+        android:id="@+id/commentProgressBar"
+        android:layout_width="159dp"
+        android:layout_height="168dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fromCommentsToEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go_to_events"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toEndOf="@+id/addCommentButtonView"
+        app:layout_constraintTop_toBottomOf="@+id/commentProgressBar"
+        app:layout_constraintVertical_bias="0.896" />
+
+    <ListView
+        android:id="@+id/commentsSection"
+        android:layout_width="282dp"
+        android:layout_height="264dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentHeader"
+        app:layout_constraintVertical_bias="0.126" />
+
 </android.support.constraint.ConstraintLayout>

@@ -317,6 +317,7 @@ module.exports.deleteEvent = function (eventID){
     }
   });
 };
+
 //Comment Calls
 module.exports.createComment = function(commentData, callback){
     DBRef.collection('comments').save(commentData, function(err,result){
@@ -347,3 +348,4 @@ module.exports.createComment = function(commentData, callback){
         }
     });
 };
+
