@@ -41,7 +41,8 @@ module.exports.editClub = function(clubID, clubData){
     if (err){
       console.log(err);
     } else {
-      //Completed
+        //Completed
+        console.log(result);
     }
   });
 };
@@ -89,7 +90,8 @@ module.exports.joinClub = function(userID, clubID){
       if (err){
         console.log(err);
       } else {
-        //Completed
+          //Completed
+          console.log(result);
       }
     });
   });
@@ -99,7 +101,8 @@ module.exports.joinClub = function(userID, clubID){
       if (err){
         console.log(err);
       } else {
-        //Completed
+          //Completed
+          console.log(result);
       }
     });
   });
@@ -116,7 +119,8 @@ module.exports.leaveClub = function(userID, clubID){
       if (err){
         console.log(err);
       } else {
-        //Completed
+          //Completed
+          console.log(result);
       }
     });
   });
@@ -130,49 +134,47 @@ module.exports.leaveClub = function(userID, clubID){
       if (err){
         console.log(err);
       } else {
-        //Completed
+          //Completed
+          console.log(result);
       }
     });
   });
 };
 
 module.exports.deleteClub = function (clubID){
-  DBRef.collection('clubs').findOne({"_id": mongojs.ObjectId(clubID)}, function (err, doc){
-    if (err){
-      console.log(err);
-    } else {
-      DBRef.collection('users').find({"clubs": clubID}).toArray(function (err, userDocs){
-        for (i = 0; i < userDocs.length; i++){
-          var index = userDocs[i].clubs(clubID);
-          if (index > -1){
-            userDocs[i].clubs.splice(index, 1);
-          }
-          DBRef.collection('users').update({"_id": mongojs.ObjectId(userDocs[i])}, userDocs[i], function (err, result){
+    DBRef.collection('clubs').findOne({"_id": mongojs.ObjectId(clubID)}, function (err, doc){
+        if (err){
+            console.log(err);
+        }
+        else {
+            //Might cause error of $pull referencing non-array but doesn't affect performance of deletetion
+            DBRef.collection('users').update({},{$pull:{clubs:{$in:[clubID]}}},{multi: true}, function (err,result){
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    //Completed
+                    console.log(result);
+                }
+            });
+        }
+        DBRef.collection('events').remove({"club": clubID}, false, function (err, result){
             if (err){
-              console.log(err);
+                console.log(err);
             } else {
-
-              //Completed
+                //Completed
+                console.log(result);
             }
-          });
-        }
-      });
-      DBRef.collection('events').remove({"club": clubID}, false, function (err, result){
-        if (err){
-          console.log(err);
-        } else {
-          //Completed
-        }
-      });
-      DBRef.collection('clubs').remove({"_id":mongojs.ObjectId(clubID)}, false, function (err, result){
-        if (err){
-          console.log(err);
-        } else {
-          //Completed
-        }
-      });
-    }
-  });
+        });
+        DBRef.collection('clubs').remove({"_id":mongojs.ObjectId(clubID)}, false, function (err, result){
+            if (err){
+                console.log(err);
+            } else {
+                //Completed
+                console.log(result);
+            }
+        });
+    });
 };
 
 //User Calls
@@ -181,7 +183,8 @@ module.exports.createUser = function(userData){
     if (err){
       console.log(err)
     } else {
-      //Completed
+        //Completed
+        console.log(result);
     }
   });
 };
@@ -191,8 +194,8 @@ module.exports.editUser = function(userID, userData){
     if (err){
       console.log(err);
     } else {
-      console.log(result);
-      //Completed
+        //Completed
+        console.log(result);
     }
   });
 };
@@ -228,7 +231,8 @@ module.exports.createEvent = function(eventData, callback){
         if (err){
           console.log(err);
         } else {
-          //Completed
+            //Completed
+            console.log(doc);
         }
         doc.events.push(result._id + "");
         DBRef.collection('clubs').update({"_id": mongojs.ObjectId(result.club)}, doc, function (err, result){
@@ -250,7 +254,8 @@ module.exports.editEvent = function(eventID, eventData){
     if (err){
       console.log(err);
     } else {
-      //Completed
+        //Completed
+        console.log(result);
     }
   });
 };
@@ -296,7 +301,8 @@ module.exports.deleteEvent = function (eventID){
           if (err){
             console.log(err);
           } else {
-            //Completed
+              //Completed
+              console.log(result);
           }
         });
       });
@@ -304,9 +310,40 @@ module.exports.deleteEvent = function (eventID){
         if (err){
           console.log(err);
         } else {
-          //Completed
+            //Completed
+            console.log(result);
         }
       });
     }
   });
+};
+//Comment Calls
+module.exports.createComment = function(commentData, callback){
+    DBRef.collection('comments').save(commentData, function(err,result){
+        console.log(result);
+        if (err){
+            console.log(err);
+        } else {
+            DBRef.collection('events').findOne({"_id": mongojs.ObjectId(result.events)},function (err, doc){
+                if (err){
+                    console.log(err);
+                } else {
+                    //took from create event as a sub in
+                }
+                doc.events.push(result._id + "");
+                DBRef.collection('events').update({"_id":mongojs.ObjectId(result.events)},doc,function(err, result){
+                    if
+                        (err){
+                            console.log(err);
+                        }
+                    else
+                    {
+                        //took from create event as a sub in
+                    }
+                });
+            });
+            //Completed
+            callback({"commentID" : result._id});
+        }
+    });
 };

@@ -233,6 +233,33 @@ app.delete('/deleteEvent/:eventID', function (req, res){
   res.send({});
 });
 
+//Comment Server Calls
+app.put('/createComment' , function (req, res) {
+    if (!req.body) {
+        return res.sendStatus(400);
+    }
+    var commentData = {
+        "name" : req.body.name,
+        "comments" : req.body.comments,
+        "Time" : req.body.Time,
+        "userID" : req.body.userID,
+        "clubID" : req.body.clubID
+    };
+    dataBase.createComment(commentData, function (doc) {
+        res.send(doc);
+    });
+
+    mongodb.insertComment(commentData);
+    console.log("Creating Comment" + req.body.name);
+
+    var jsonResponse = {
+        id: '123', status: 'created'
+    };
+    res.json(jsonResponse);
+
+})
+
+
 ////////// SECOND TEAM STUFF
 
 /*///////////////////////////
