@@ -7294,3 +7294,12 @@
 2020-11-06T13:24:15.675-0600 [clientcursormon] mem (MB) res:45 virt:568
 2020-11-06T13:24:15.676-0600 [clientcursormon]  mapped (incl journal view):320
 2020-11-06T13:24:15.676-0600 [clientcursormon]  connections:17
+2020-11-06T13:29:15.689-0600 [clientcursormon] mem (MB) res:45 virt:568
+2020-11-06T13:29:15.689-0600 [clientcursormon]  mapped (incl journal view):320
+2020-11-06T13:29:15.689-0600 [clientcursormon]  connections:17
+2020-11-06T13:34:15.702-0600 [clientcursormon] mem (MB) res:45 virt:568
+2020-11-06T13:34:15.702-0600 [clientcursormon]  mapped (incl journal view):320
+2020-11-06T13:34:15.702-0600 [clientcursormon]  connections:17
+2020-11-06T13:39:15.715-0600 [clientcursormon] mem (MB) res:45 virt:568
+2020-11-06T13:39:15.715-0600 [clientcursormon]  mapped (incl journal view):320
+2020-11-06T13:39:15.715-0600 [clientcursormon]  connections:17
