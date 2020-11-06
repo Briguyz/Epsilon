@@ -172,6 +172,13 @@ public class ClubFrag extends Fragment{
         view.setVisibility(View.VISIBLE);
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
 
+        // Attempt at changing the images for the clubs
+        /*
+        Glide.with(this)
+                .load("https://images.homedepot-static.com/productImages/42613c1a-7427-4557-ada8-ba2a17cca381/svn/gorilla-carts-yard-carts-gormp-12-64_1000.jpg")
+                .into(clubImage);
+         */
+
         clubName.setText(res.getString("name"));
         clubName.setTag(res.getString("_id"));
 
@@ -187,7 +194,7 @@ public class ClubFrag extends Fragment{
         String userID = UserSingleton.getInstance().getUserID();
 
 
-        joinLeave.setText("Join CLub");
+        joinLeave.setText("Join Club");
         joinLeave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
