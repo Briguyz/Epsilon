@@ -21,7 +21,7 @@ public class RestSingleton {
     private static Context context;
 
     //Server address
-    private String url = "http://ukko.d.umn.edu:32892/";
+    private String url = "http://akka.d.umn.edu:12755/";
 
 
     /**
