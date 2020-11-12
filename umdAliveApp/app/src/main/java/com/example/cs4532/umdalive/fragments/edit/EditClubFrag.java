@@ -119,6 +119,12 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
                 e.printStackTrace();
             }
             restSingleton.addToRequestQueue(stringRequest);
+            //Thread is put to sleep to allow request to be fulfilled and not show null reference to deleted club
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             AllClubsFrag frag = new AllClubsFrag();
             Bundle data = new Bundle();
             frag.setArguments(data);
