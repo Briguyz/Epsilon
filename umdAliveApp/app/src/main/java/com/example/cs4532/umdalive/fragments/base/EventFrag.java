@@ -29,6 +29,10 @@ import org.json.JSONObject;
  * 4/26/2018
  *
  * This class holds the page for the events
+ *
+ * 10/29/2020
+ *
+ * view
  */
 public class EventFrag extends Fragment{
 
@@ -41,6 +45,10 @@ public class EventFrag extends Fragment{
     private TextView eventDate;
     private TextView eventTime;
     private Button goTo;
+
+    //10/29/2020 Henry Trinh, Brian, Josh
+    private Button createCommentButton;
+
     private FloatingActionButton editEventFAB;
 
     //
@@ -97,17 +105,38 @@ public class EventFrag extends Fragment{
         eventDescription=view.findViewById(R.id.EventDescriptionView);
         eventTime=view.findViewById(R.id.EventTimeView);
         goTo=view.findViewById(R.id.GoToClub);
-        goTo.setOnClickListener(new View.OnClickListener() {
+            goTo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String TAG = (String) goTo.getTag();
+                    ClubFrag frag = new ClubFrag();
+                    Bundle data = new Bundle();
+                    data.putString("clubID", TAG);
+                    frag.setArguments(data);
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
+
+
+                }
+            });
+        /**
+         * Functionality of the button for createComment
+         * 10/30/2020- Henry Trinh
+         * the button functionality switches the view
+         * Then when clicked on it will send a
+         */
+        createCommentButton=view.findViewById(R.id.createComment);
+        createCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String TAG = (String) goTo.getTag();
-                ClubFrag frag = new ClubFrag();
+                String TAG = (String) createCommentButton.getTag();
+                CommentsFrag frag = new CommentsFrag();
                 Bundle data = new Bundle();
-                data.putString("clubID", TAG);
+                data.putString("commentID", TAG);
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
             }
         });
+
         editEventFAB=view.findViewById(R.id.EditEventFAB);
         editEventFAB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,8 +167,11 @@ public class EventFrag extends Fragment{
         eventDescription.setText(res.getString("description"));
         eventTime.setText(res.getString("time"));
         goTo.setTag(res.getJSONObject("club").getString("_id").toString());
-        //editEventFAB.setVisibility(View.VISIBLE);
-        if(UserSingleton.getInstance().getUserID() == res.getJSONObject("club").getJSONObject("members").getString("admin")){
+        if(res.getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID())) {
+            editEventFAB.setVisibility(View.VISIBLE);
+        }
+        else
+        {
             editEventFAB.setVisibility(View.GONE);
         }
     }
