@@ -181,7 +181,6 @@ app.put('/userData', function (req, res) {
 
 //Event server calls
 app.put('/createEvent', function (req, res){
-<<<<<<< HEAD
   if (!req.body){
     return res.sendStatus(400);
   }
@@ -215,39 +214,6 @@ app.put('/editEvent', function (req, res){
 
   dataBase.editEvent(req.body._id, eventData);
   res.send({});
-=======
-    if (!req.body){
-        return res.sendStatus(400);
-    }
-    var eventData = {
-        "name" : req.body.name,
-        "description" : req.body.description,
-        "date" : req.body.date,
-        "time" : req.body.time,
-        "club" : req.body.club,
-        "comments" : req.body.comments
-    };
-    dataBase.createEvent(eventData, function(doc){
-	console.log(doc);
-	res.send(doc);
-    });
-});
-
-app.put('/editEvent', function (req, res){
-    if (!req.body){
-        return res.sendStatus(400);
-    }
-    var eventData = {
-        "name" : req.body.name,
-        "description" : req.body.description,
-        "date" : req.body.date,
-        "time" : req.body.time,
-        "club" : req.body.club,
-        "comments" : req.body.comments
-    };
-    dataBase.editEvent(req.body._id, eventData);
-    res.send({});
->>>>>>> 30a0bf78c2f7e2cbfc7b85add77d6d4ec9d7f0b6
 });
 
 app.get('/getEvent/:eventID', function (req, res) {
@@ -288,16 +254,7 @@ app.put('/createComment' , function (req, res) {
     dataBase.createComment(commentData, function (doc) {
         res.send(doc);
     });
-<<<<<<< HEAD
-
-    //mongodb.insertComment(commentData);
-    //console.log("Creating Comment" + req.body.name);
-
-    //var jsonResponse = {
-       // id: '123', status: 'created'
-    //};
-    //res.json(jsonResponse);
-=======
+	
     /*
     mongodb.insertComment(commentData);
     console.log("Creating Comment" + req.body.name);
@@ -305,7 +262,6 @@ app.put('/createComment' , function (req, res) {
     var jsonResponse = {
         id: '123', status: 'created'
     };
->>>>>>> 30a0bf78c2f7e2cbfc7b85add77d6d4ec9d7f0b6
 
     res.json(jsonResponse);
     */
