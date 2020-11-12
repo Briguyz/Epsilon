@@ -179,6 +179,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
         SaveButton = view.findViewById(R.id.SaveClub);
         SaveButton.setOnClickListener(this);
         DeleteButton = view.findViewById(R.id.DeleteClub);
+        DeleteButton.setOnClickListener(this);
     }
 
     /**

@@ -181,45 +181,45 @@ app.put('/userData', function (req, res) {
 
 //Event server calls
 app.put('/createEvent', function (req, res){
-  if (!req.body){
-    return res.sendStatus(400);
-  }
-  var eventData = {
-    "name" : req.body.name,
-    "description" : req.body.description,
-    "date" : req.body.date,
-    "time" : req.body.time,
-    "club" : req.body.club
-  };
-  dataBase.createEvent(eventData, function(doc){
-		console.log(doc);
-		res.send(doc);
-  });
+    if (!req.body){
+        return res.sendStatus(400);
+    }
+    var eventData = {
+        "name" : req.body.name,
+        "description" : req.body.description,
+        "date" : req.body.date,
+        "time" : req.body.time,
+        "club" : req.body.club,
+        "comments" : req.body.comments
+    };
+    dataBase.createEvent(eventData, function(doc){
+	console.log(doc);
+	res.send(doc);
+    });
 });
 
 app.put('/editEvent', function (req, res){
-  if (!req.body){
-    return res.sendStatus(400);
-  }
-
-  var eventData = {
-    "name" : req.body.name,
-    "description" : req.body.description,
-    "date" : req.body.date,
-    "time" : req.body.time,
-    "club" : req.body.club
-  };
-
-  dataBase.editEvent(req.body._id, eventData);
-  res.send({});
+    if (!req.body){
+        return res.sendStatus(400);
+    }
+    var eventData = {
+        "name" : req.body.name,
+        "description" : req.body.description,
+        "date" : req.body.date,
+        "time" : req.body.time,
+        "club" : req.body.club,
+        "comments" : req.body.comments
+    };
+    dataBase.editEvent(req.body._id, eventData);
+    res.send({});
 });
 
-app.get('/getEvent/:eventID', function (req, res) { 
-  console.log("getEvent");
-  dataBase.getEvent(req.params.eventID, function (docs) {
+app.get('/getEvent/:eventID', function (req, res) {
+    console.log("getEvent");
+    dataBase.getEvent(req.params.eventID, function (docs) {
 	console.log(docs);
-    res.send(docs);
-  });
+        res.send(docs);
+    });
 });
 
 app.get('/getAllEvents', function (req, res){
@@ -229,7 +229,7 @@ app.get('/getAllEvents', function (req, res){
 });
 
 app.delete('/deleteEvent/:eventID', function (req, res){
-  dataBase.deleteClub(req.params.eventID);
+  dataBase.deleteEvent(req.params.eventID);
   res.send({});
 });
 
@@ -240,23 +240,24 @@ app.put('/createComment' , function (req, res) {
     }
     var commentData = {
         "name" : req.body.name,
-        "comments" : req.body.comments,
-        "Time" : req.body.Time,
+        "comment" : req.body.comment,
+        "time" : req.body.time,
         "userID" : req.body.userID,
-        "clubID" : req.body.clubID
+        "eventID" : req.body.eventID
     };
     dataBase.createComment(commentData, function (doc) {
         res.send(doc);
     });
-
+    /*
     mongodb.insertComment(commentData);
     console.log("Creating Comment" + req.body.name);
 
     var jsonResponse = {
         id: '123', status: 'created'
     };
-    res.json(jsonResponse);
 
+    res.json(jsonResponse);
+    */
 })
 
 

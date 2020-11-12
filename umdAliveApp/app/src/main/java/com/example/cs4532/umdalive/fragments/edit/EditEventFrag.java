@@ -97,7 +97,7 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
      */
     @Override
     public void onClick(View v) {
-        if(v.getTag()=="DELETE"){
+        if(v.getTag() != null && v.getTag().toString() == "DELETE"){
             String clubid = new String();
             try {
                 clubid =  eventData.getString("_id");
@@ -197,7 +197,7 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
         DeleteEvent = view.findViewById(R.id.DeleteEvent);
         SaveButton.setOnClickListener(this);
         DeleteEvent.setOnClickListener(this);
-        DeleteEvent.setTag("DELETE");
+        //DeleteEvent.setTag("DELETE");
     }
 
     /**
@@ -213,6 +213,7 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
         NewEventDescription.setText(res.getString("description"));
         NewEventTime.setText(res.getString("time"));
         NewEventDate.setText(res.getString("date"));
+        DeleteEvent.setTag("DELETE");
         eventData = res;
     }
 }

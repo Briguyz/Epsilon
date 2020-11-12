@@ -119,10 +119,10 @@ public class EventFrag extends Fragment{
                 }
             });
         /**
-         * Funtionality of the button for createComment
+         * Functionality of the button for createComment
          * 10/30/2020- Henry Trinh
          * the button functionality switches the view
-         * Then whhen clicked on it will send a
+         * Then when clicked on it will send a
          */
         createCommentButton=view.findViewById(R.id.createComment);
         createCommentButton.setOnClickListener(new View.OnClickListener() {
@@ -167,8 +167,11 @@ public class EventFrag extends Fragment{
         eventDescription.setText(res.getString("description"));
         eventTime.setText(res.getString("time"));
         goTo.setTag(res.getJSONObject("club").getString("_id").toString());
-        //editEventFAB.setVisibility(View.VISIBLE);
-        if(UserSingleton.getInstance().getUserID() == res.getJSONObject("club").getJSONObject("members").getString("admin")){
+        if(res.getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID())) {
+            editEventFAB.setVisibility(View.VISIBLE);
+        }
+        else
+        {
             editEventFAB.setVisibility(View.GONE);
         }
     }
