@@ -189,7 +189,8 @@ app.put('/createEvent', function (req, res){
     "description" : req.body.description,
     "date" : req.body.date,
     "time" : req.body.time,
-    "club" : req.body.club
+    "club" : req.body.club,
+    "comments": req.body.comments
   };
   dataBase.createEvent(eventData, function(doc){
 		console.log(doc);
@@ -207,7 +208,8 @@ app.put('/editEvent', function (req, res){
     "description" : req.body.description,
     "date" : req.body.date,
     "time" : req.body.time,
-    "club" : req.body.club
+    "club" : req.body.club,
+    "comments": req.body.comments
   };
 
   dataBase.editEvent(req.body._id, eventData);
@@ -233,6 +235,10 @@ app.delete('/deleteEvent/:eventID', function (req, res){
   res.send({});
 });
 
+/**
+* Fall 2020 Epsilon Team
+* Comments for Index.js
+*/
 //Comment Server Calls
 app.put('/createComment' , function (req, res) {
     if (!req.body) {
@@ -240,25 +246,61 @@ app.put('/createComment' , function (req, res) {
     }
     var commentData = {
         "name" : req.body.name,
-        "comments" : req.body.comments,
-        "Time" : req.body.Time,
+        "comment" : req.body.comment,
+        "time" : req.body.time,
         "userID" : req.body.userID,
-        "clubID" : req.body.clubID
+        "eventID" : req.body.eventID
     };
     dataBase.createComment(commentData, function (doc) {
         res.send(doc);
     });
 
-    mongodb.insertComment(commentData);
-    console.log("Creating Comment" + req.body.name);
+    //mongodb.insertComment(commentData);
+    //console.log("Creating Comment" + req.body.name);
 
-    var jsonResponse = {
-        id: '123', status: 'created'
-    };
-    res.json(jsonResponse);
+    //var jsonResponse = {
+       // id: '123', status: 'created'
+    //};
+    //res.json(jsonResponse);
 
 })
 
+//Requires Testing taken from previous functions
+app.put('/editComment', function (req, res){
+  if (!req.body){
+    return res.sendStatus(400);
+  }
+  var commentData = {
+          "name" : req.body.name,
+          "comment" : req.body.comment,
+          "time" : req.body.time,
+          "userID" : req.body.userID,
+          "eventID" : req.body.eventID
+      };
+    dataBase.editEvent(req.body._id, eventData);
+      res.send({});
+  };
+
+//Requires Testing taken from previous functions
+app.get('/getComment/:commentID', function (req, res) {
+  console.log("getComment");
+  dataBase.getComment(req.params.commentID, function (docs) {
+	console.log(docs);
+    res.send(docs);
+  });
+});
+
+app.get('/getAllCommentss', function (req, res){
+  dataBase.getAllComments(function (docs){
+    res.send(docs);
+  });
+});
+
+//Requires Testing taken from previous functions
+app.delete('/deleteComment/:commentID', function (req, res){
+  dataBase.deleteComment(req.params.commentID);
+  res.send({});
+});
 
 ////////// SECOND TEAM STUFF
 
