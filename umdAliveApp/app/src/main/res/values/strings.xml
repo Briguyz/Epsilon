@@ -10,6 +10,10 @@
     <string name="upEvents"><u>Upcoming Events</u></string>
     <string name="clubMem"><u>Members</u></string>
 
-    <string name="createCommentString">Create Comment</string>
+    <string name="goToCommentString">Go To Comments</string>
     <string name="goToClub">Go To Club</string>
+    <string name="add_comment">add Comment</string>
+    <string name="comment">Comment</string>
+    <string name="comments">Comments</string>
+    <string name="go_to_events">Go To Events</string>
 </resources>

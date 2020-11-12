@@ -3,11 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="60d12b77-ce9e-4dcc-9123-34e5983bd66a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/umdAliveApp/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/umdAliveApp/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/base/ClubFrag.java" beforeDir="false" afterPath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/base/ClubFrag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/base/EventFrag.java" beforeDir="false" afterPath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/base/EventFrag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/edit/EditEventFrag.java" beforeDir="false" afterPath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/edit/EditEventFrag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/umdAliveApp/app/src/main/res/layout/create_event_layout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/umdAliveApp/app/src/main/res/layout/create_event_layout.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/create/CreateCommentsFrag.java" beforeDir="false" afterPath="$PROJECT_DIR$/umdAliveApp/app/src/main/java/com/example/cs4532/umdalive/fragments/create/CreateCommentsFrag.java" afterDir="false" />
+>>>>>>> 60719f1f23bad8438968f55debdffe6d064604bc
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectId" id="1jnVOYm3UU2kB9nj5nRaRLQGy9G" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,6 +29,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+=======
+  <component name="ProjectId" id="1jsyUePh6u6iG8k2cWvs6GhvmQ8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+>>>>>>> 60719f1f23bad8438968f55debdffe6d064604bc
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -70,8 +84,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
+<<<<<<< HEAD
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+=======
+>>>>>>> 60719f1f23bad8438968f55debdffe6d064604bc
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -85,4 +117,13 @@
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="WindowStateProjectService">
+    <state x="480" y="195" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604607135126">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="480" y="195" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1604607135126" />
+  </component>
+>>>>>>> 60719f1f23bad8438968f55debdffe6d064604bc
 </project>
