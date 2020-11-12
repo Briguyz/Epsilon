@@ -157,7 +157,6 @@ module.exports.deleteClub = function (clubID){
                     console.log(result);
                 }
             });
-        }
         DBRef.collection('events').remove({"club": clubID}, false, function (err, result){
             if (err){
                 console.log(err);
@@ -174,6 +173,7 @@ module.exports.deleteClub = function (clubID){
                 console.log(result);
             }
         });
+    }
     });
 };
 
@@ -288,34 +288,39 @@ module.exports.getAllEvents = function(callback){
 };
 
 module.exports.deleteEvent = function (eventID){
-  DBRef.collection('events').findOne({"_id": mongojs.ObjectId(eventID)}, function (err, doc){
-    if (err){
-      console.log(err);
-    } else {
-      DBRef.collection('clubs').findOne({"_id": mongojs.ObjectId(doc.club)}, function (err, clubDoc){
-        var index = clubDoc.events(eventID);
-        if (index > -1){
-          clubDoc.events.splice(index, 1);
-        }
-        DBRef.collection('clubs').update({"_id": mongojs.ObjectId(doc.club)}, clubDoc, function (err, result){
-          if (err){
-            console.log(err);
-          } else {
-              //Completed
-              console.log(result);
-          }
-        });
-      });
-      DBRef.collection('events').remove({"_id": mongojs.ObjectId(eventID)}, false, function (err, result){
+    DBRef.collection('events').findOne({"_id": mongojs.ObjectId(eventID)}, function (err, doc){
         if (err){
-          console.log(err);
-        } else {
-            //Completed
-            console.log(result);
+            console.log(err);
         }
-      });
-    }
-  });
+        else {
+            /*
+              DBRef.collection('clubs').findOne({"_id": mongojs.ObjectId(doc.club)}, function (err, clubDoc){
+              var index = clubDoc.events(eventID);
+              if (index > -1){
+              clubDoc.events.splice(index, 1);
+              }
+              });
+              */
+
+            DBRef.collection('clubs').update({"_id": mongojs.ObjectId(doc.club)}, {$pull:{events:{$in:[eventID]}}}, function (err, result){
+                if (err){
+                    console.log(err);
+                } else {
+                    //Completed
+                    console.log(result);
+                }
+            });
+        }
+        DBRef.collection('events').remove({"_id": mongojs.ObjectId(eventID)}, false, function (err, result){
+            if (err){
+                console.log(err);
+            }
+            else {
+                //Completed
+                console.log(result);
+            }
+        });
+    });
 };
 
 //Comment Calls
