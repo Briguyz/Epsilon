@@ -126,14 +126,19 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
                 });
             
             restSingleton.addToRequestQueue(stringRequest);
+            //Thread is put to sleep to allow request to be fulfilled
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             ClubFrag frag = new ClubFrag();
             Bundle data = new Bundle();
             try {
-                clubid = eventData.getString("club");
+                data.putString("clubID", eventData.getJSONObject("club").getString("_id"));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-            data.putString("clubID", clubid);
             frag.setArguments(data);
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
             
