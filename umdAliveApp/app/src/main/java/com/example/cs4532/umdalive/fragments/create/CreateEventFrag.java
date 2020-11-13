@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -20,6 +21,7 @@ import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
 import com.example.cs4532.umdalive.fragments.base.EventFrag;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -82,13 +84,16 @@ public class CreateEventFrag  extends Fragment implements View.OnClickListener {
      */
     @Override
     public void onClick(View v) {
+
         JSONObject newEventData = new JSONObject();
+        JSONArray comments = new JSONArray();
         try {
             newEventData.put("name", EventName.getText());
             newEventData.put("description", EventDescription.getText());
             newEventData.put("time",EventTime.getText());
             newEventData.put("date", EventDate.getText());
             newEventData.put("club",clubData.getString("clubID"));
+            newEventData.put("comments", comments);
         } catch (JSONException e) {
             e.printStackTrace();
         }
