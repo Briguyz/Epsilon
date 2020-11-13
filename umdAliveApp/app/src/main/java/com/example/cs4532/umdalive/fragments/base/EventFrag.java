@@ -33,7 +33,7 @@ import org.json.JSONObject;
  *
  * view
  */
-public class EventFrag extends Fragment{
+public class EventFrag extends Fragment {
 
     //View
     View view;
@@ -96,34 +96,35 @@ public class EventFrag extends Fragment{
 
     /**
      * Gets the layout components from event_layout.xml
+     *
      * @return nothing
      */
     private void getLayoutComponents() {
-        eventName=view.findViewById(R.id.EventNameView);
-        eventDate=view.findViewById(R.id.EventDateView);
-        eventDescription=view.findViewById(R.id.EventDescriptionView);
-        eventTime=view.findViewById(R.id.EventTimeView);
-        goTo=view.findViewById(R.id.GoToClub);
-            goTo.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    String TAG = (String) goTo.getTag();
-                    ClubFrag frag = new ClubFrag();
-                    Bundle data = new Bundle();
-                    data.putString("clubID", TAG);
-                    frag.setArguments(data);
-                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
+        eventName = view.findViewById(R.id.EventNameView);
+        eventDate = view.findViewById(R.id.EventDateView);
+        eventDescription = view.findViewById(R.id.EventDescriptionView);
+        eventTime = view.findViewById(R.id.EventTimeView);
+        goTo = view.findViewById(R.id.GoToClub);
+        goTo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String TAG = (String) goTo.getTag();
+                ClubFrag frag = new ClubFrag();
+                Bundle data = new Bundle();
+                data.putString("clubID", TAG);
+                frag.setArguments(data);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
 
 
-                }
-            });
+            }
+        });
         /**
          * Functionality of the button for createComment
          * 10/30/2020- Henry Trinh
          * the button functionality switches the view
          * Then when clicked on it will send a
          */
-        createCommentButton=view.findViewById(R.id.goToComment);
+        createCommentButton = view.findViewById(R.id.goToComment);
         createCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,11 +133,11 @@ public class EventFrag extends Fragment{
                 Bundle data = new Bundle();
                 data.putString("commentID", TAG);
                 frag.setArguments(data);
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
         });
 
-        editEventFAB=view.findViewById(R.id.EditEventFAB);
+        editEventFAB = view.findViewById(R.id.EditEventFAB);
         editEventFAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -145,7 +146,7 @@ public class EventFrag extends Fragment{
                 Bundle data = new Bundle();
                 data.putString("eventID", TAG);
                 frag.setArguments(data);
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
         });
 
@@ -153,12 +154,13 @@ public class EventFrag extends Fragment{
 
     /**
      * Updates the UI of the Event page depending on which event had been clicked
+     *
      * @param res The response from the database
+     * @return nothing
      * @throws JSONException Error in JSON processing
      * @see JSONException
-     * @return nothing
      */
-    private void updateUI(JSONObject res) throws JSONException{
+    private void updateUI(JSONObject res) throws JSONException {
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
         eventName.setText(res.getString("name"));
         eventName.setTag(res.getString("_id"));
@@ -167,24 +169,10 @@ public class EventFrag extends Fragment{
         eventTime.setText(res.getString("time"));
         goTo.setTag(res.getJSONObject("club").getString("_id").toString());
 
-        if(res.getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID())) {
+        if (res.getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID())) {
             editEventFAB.setVisibility(View.VISIBLE);
-        }
-        else
-        {
-
-        /*editEventFAB.setVisibility(View.VISIBLE);
-        if(UserSingleton.getInstance().getUserID() == res.getJSONObject("club").getJSONObject("members").getString("admin")){X
-            editEventFAB.setVisibility(View.GONE);
-        }
-        */
-        if(res.getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID())) {
-            editEventFAB.setVisibility(View.VISIBLE);
-        }
-        else
-        {
+        } else {
             editEventFAB.setVisibility(View.GONE);
         }
     }
-
 }

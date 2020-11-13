@@ -98,16 +98,17 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if(v.getTag() != null && v.getTag().toString() == "DELETE"){
+            String eventid = new String();
             String clubid = new String();
             try {
-                clubid =  eventData.getString("_id");
+                eventid =  eventData.getString("_id");
             } catch (JSONException e) {
                 e.printStackTrace();
             }
             RestSingleton restSingleton = RestSingleton.getInstance(view.getContext());
             StringRequest stringRequest = null;
             
-                stringRequest = new StringRequest(Request.Method.DELETE, restSingleton.getUrl() + "deleteEvent/" + clubid,
+                stringRequest = new StringRequest(Request.Method.DELETE, restSingleton.getUrl() + "deleteEvent/" + eventid,
                         new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
@@ -125,9 +126,19 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
                 });
             
             restSingleton.addToRequestQueue(stringRequest);
+            //Thread is put to sleep to allow request to be fulfilled
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             ClubFrag frag = new ClubFrag();
             Bundle data = new Bundle();
-            data.putString("clubID", clubid);
+            try {
+                data.putString("clubID", eventData.getJSONObject("club").getString("_id"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             frag.setArguments(data);
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
             
@@ -197,7 +208,6 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
         DeleteEvent = view.findViewById(R.id.DeleteEvent);
         SaveButton.setOnClickListener(this);
         DeleteEvent.setOnClickListener(this);
-        //DeleteEvent.setTag("DELETE");
     }
 
     /**
