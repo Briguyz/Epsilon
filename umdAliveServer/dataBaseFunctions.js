@@ -351,3 +351,72 @@ module.exports.createComment = function(commentData, callback){
     });
 };
 
+//needs to be tested
+module.exports.editComment = function(commentID, commentData){
+  DBRef.collection('comments').update({"_id":mongojs.ObjectId(commentID)},commentData,function(err, result){
+    if (err){
+      console.log(err);
+    } else {
+        console.log(result);
+    }
+  });
+};
+
+//needs to be tested
+module.exports.getComment = function(eventID, callback) {
+	DBRef.collection('comments').findOne({"_id": mongojs.ObjectId(commentID)}, function (err, doc){
+    if (err){
+      console.log(err);
+    } else {
+      DBRef.collection('comments').findOne({"_id": mongojs.ObjectId(doc.comment)}, function (err, commentDoc){
+        doc.comment = commentDoc;
+        callback(doc);
+      });
+    }
+  });
+};
+
+//needs to be tested
+module.exports.getAllComments = function(callback) {
+	DBRef.collection('comments').find({}).toArray(function(err, docs) {
+		if (err){
+      console.log(err);
+		} else {
+      var allCommentsObject = {
+        "comment" : docs
+      };
+			callback(allCommentsObject);
+		}
+	});
+};
+//Needs to be tested not sure if it will delte or not but this is taken from delete event
+module.exports.deleteComment = function (commentID){
+  DBRef.collection('comments').findOne({"_id": mongojs.ObjectId(commentID)}, function (err, doc){
+    if (err){
+      console.log(err);
+    } else {
+      DBRef.collection('events').findOne({"_id": mongojs.ObjectId(doc.comment)}, function (err, commentDoc){
+        var index = commentDoc.comments(commentID);
+        if (index > -1){
+          commentDoc.comments.splice(index, 1);
+        }
+        DBRef.collection('event').update({"_id": mongojs.ObjectId(doc.comment)}, commentDoc, function (err, result){
+          if (err){
+            console.log(err);
+          } else {
+              console.log(result);
+          }
+        });
+      });
+      DBRef.collection('comments').remove({"_id": mongojs.ObjectId(commentID)}, false, function (err, result){
+        if (err){
+          console.log(err);
+        } else {
+            console.log(result);
+        }
+      });
+    }
+  });
+};
+
+
