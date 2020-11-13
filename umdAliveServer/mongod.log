@@ -11271,3 +11271,6 @@
 2020-11-13T14:17:55.147-0600 [clientcursormon] mem (MB) res:44 virt:565
 2020-11-13T14:17:55.147-0600 [clientcursormon]  mapped (incl journal view):320
 2020-11-13T14:17:55.147-0600 [clientcursormon]  connections:25
+2020-11-13T14:22:55.156-0600 [clientcursormon] mem (MB) res:44 virt:565
+2020-11-13T14:22:55.156-0600 [clientcursormon]  mapped (incl journal view):320
+2020-11-13T14:22:55.156-0600 [clientcursormon]  connections:25
