@@ -99,9 +99,8 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         if(v.getTag() != null && v.getTag().toString() == "DELETE"){
             String eventid = new String();
-            String clubid = new String();
             try {
-                eventid =  eventData.getString("_id");
+                    eventid =  eventData.getString("_id");
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -126,7 +125,7 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
                 });
             
             restSingleton.addToRequestQueue(stringRequest);
-            //Thread is put to sleep to allow request to be fulfilled
+            //Thread is put to sleep to allow request to be fulfilled so it doesn't reference null
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
@@ -185,9 +184,19 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
                 }
             });
             restSingleton.addToRequestQueue(jsonObjectRequest);
+            //Thread is put to sleep to allow request to be fulfilled so it doesn't reference null
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             EventFrag frag = new EventFrag();
             Bundle data = new Bundle();
-            data.putString("eventID", EditingEvent.getTag().toString());
+            try {
+                data.putString("eventID", eventData.getString("_id"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             frag.setArguments(data);
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
         }

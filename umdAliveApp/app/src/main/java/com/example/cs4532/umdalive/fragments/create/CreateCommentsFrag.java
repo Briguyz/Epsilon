@@ -88,14 +88,14 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
             newCommentData.put("name", UserSingleton.getInstance().getName());
             newCommentData.put("time", getCurrentTime());
             newCommentData.put("userID",UserSingleton.getInstance().getUserID());
-            newCommentData.put("eventID",eventData.getString("eventID"));
+            newCommentData.put("eventID", eventData.getString("eventID"));
             //newCommentData.put("club",clubData.getString("clubID"));
 
         } catch (JSONException e) {
             e.printStackTrace();
         }
         //Taken from CreateEventFrag since they are very similar in terms of what they do
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, RestSingleton.getInstance(view.getContext()).getUrl() + "createcomment", newCommentData,
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, RestSingleton.getInstance(view.getContext()).getUrl() + "createComment", newCommentData,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -127,11 +127,9 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
         CommentText = view.findViewById(R.id.addCommentTextBox);
         CreateCommentButton = view.findViewById(R.id.saveCommentButton);
         CreateCommentButton.setOnClickListener(this);
-        /**
-         * this code goes at line 130 in CreateCommentFrag, in the getLayoutComponents
-         *
-         */
         goToComments = view.findViewById(R.id.fromCreateCommentToComments);
+        goToComments.setOnClickListener(this);
+        /*
         goToComments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -143,6 +141,7 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
         });
+        */
     }
     /**
      * Gets the current time for the comments posted so people can know how long ago the comments are

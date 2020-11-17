@@ -1,13 +1,11 @@
 package com.example.cs4532.umdalive.fragments.base;
 // untested imports
-import java.util.Calendar;
 
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,16 +20,15 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
-import com.example.cs4532.umdalive.UserSingleton;
 import com.example.cs4532.umdalive.fragments.create.CreateCommentsFrag;
-import com.example.cs4532.umdalive.fragments.edit.EditProfileFrag;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**11/6 Proceed with caution
- * -Henry, Josh
+/**
+ * @author Henry Trinh, Josh Tindell
+ *
+ * 11/6/2020 Proceed with caution
  * -database functions and code needs to be looked at in this file
  * -need to make sure things are running
 */
@@ -47,7 +44,7 @@ public class CommentsFrag extends Fragment {
     private LinearLayout commentBoxShow;
 
     private FloatingActionButton addCommentButton;
-
+    private Button goToEventButton;
 
     //waiting for testing development
     private ImageView profileImage;
@@ -56,11 +53,18 @@ public class CommentsFrag extends Fragment {
     private Bundle commentData;
 
 
-
+    /**
+     * Create the comment page when navigating to it
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         //Create View
-        view = inflater.inflate(R.layout.comment_layout, container, false);
+        view = inflater.inflate(R.layout.commentview_layout, container, false);
 
         //Get Layout Components
         getLayoutComponents();
@@ -127,10 +131,27 @@ public class CommentsFrag extends Fragment {
                     getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
                 }
             });
+
+            goToEventButton = view.findViewById(R.id.fromCommentsToEvents);
+            goToEventButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    String TAG = (String) goToEventButton.getTag();
+                    EventFrag frag = new EventFrag();
+                    Bundle data = new Bundle();
+                    data.putString("eventID", TAG);
+                    frag.setArguments(data);
+                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+                }
+                });
         }
 
     private void updateUI(JSONObject res) throws JSONException {
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
+        //userComment.setText(res.getString("comment"));
+        //userComment.setTag(res.getString("_id"));
+
+        goToEventButton.setTag(res.getJSONObject("eventID").getString("_id"));
         //userComment.setText(res.getString("comment"));
         //userComment.setTag(res.getString("_id"));
         }

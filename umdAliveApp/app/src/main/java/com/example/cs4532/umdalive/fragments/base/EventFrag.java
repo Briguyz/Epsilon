@@ -17,6 +17,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
+import com.example.cs4532.umdalive.fragments.create.CreateCommentsViewFrag;
 import com.example.cs4532.umdalive.fragments.edit.EditEventFrag;
 
 import org.json.JSONException;
@@ -44,13 +45,10 @@ public class EventFrag extends Fragment {
     private TextView eventDate;
     private TextView eventTime;
     private Button goTo;
+    private FloatingActionButton editEventFAB;
 
     //10/29/2020 Henry Trinh, Brian, Josh
     private Button createCommentButton;
-
-    private FloatingActionButton editEventFAB;
-
-    //
 
 
     /**
@@ -114,24 +112,22 @@ public class EventFrag extends Fragment {
                 data.putString("clubID", TAG);
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
-
-
             }
         });
+
         /**
          * Functionality of the button for createComment
          * 10/30/2020- Henry Trinh
          * the button functionality switches the view
          * Then when clicked on it will send a
          */
-        createCommentButton = view.findViewById(R.id.goToComment);
+        createCommentButton = (Button) view.findViewById(R.id.goToComment);
         createCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String TAG = (String) createCommentButton.getTag();
-                CommentsFrag frag = new CommentsFrag();
+                CommentsViewFrag frag = new CommentsViewFrag();
                 Bundle data = new Bundle();
-                data.putString("commentID", TAG);
+                data.putString("eventID", eventName.getTag().toString());
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
