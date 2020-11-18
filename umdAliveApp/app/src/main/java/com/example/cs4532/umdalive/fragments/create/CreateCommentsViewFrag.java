@@ -32,7 +32,7 @@ import org.json.JSONObject;
  * <p>
  * Class that creates the commentsView for comment to be displayed on
  */
-public class CreateCommentsViewFrag extends Fragment implements View.OnClickListener {
+public class CreateCommentsViewFrag extends Fragment {
     //View
     View view;
 
@@ -41,6 +41,7 @@ public class CreateCommentsViewFrag extends Fragment implements View.OnClickList
     private FloatingActionButton addCommentButton;
     private Button goToEventButton;
     private JSONObject eventData;
+    private String commentsViewID;
 
     /**
      * Creates the commentsViewFrag where comments are displayed
@@ -54,7 +55,7 @@ public class CreateCommentsViewFrag extends Fragment implements View.OnClickList
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         //Create View
-        view = inflater.inflate(R.layout.event_layout, container, false);
+        view = inflater.inflate(R.layout.commentview_layout, container, false);
 
         //Set CommentsView Data
         try {
@@ -66,6 +67,41 @@ public class CreateCommentsViewFrag extends Fragment implements View.OnClickList
 
         //Get Layout Components
         getLayoutComponents();
+
+        //Create the commentsView in Database
+        JSONArray comments = new JSONArray();
+        JSONObject newCommentsViewData = new JSONObject();
+
+        try {
+            newCommentsViewData.put("eventID", eventData.getString("eventID"));
+            newCommentsViewData.put("comments", comments);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, RestSingleton.getInstance(view.getContext()).getUrl() + "createCommentsView", newCommentsViewData,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            commentsViewID = response.getString("commentsViewID");
+                            CommentsViewFrag frag = new CommentsViewFrag();
+                            Bundle data = new Bundle();
+                            data.putString("commentsViewID", response.getString("commentsViewID"));
+                            data.putString("eventID", eventData.getString("eventID"));
+                            frag.setArguments(data);
+                            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+                        } catch (JSONException e) {
+                            Log.d("Error", String.valueOf(e));
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("Error connecting", String.valueOf(error));
+            }
+        });
+
+        RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
 
         //Return View
         return view;
@@ -97,48 +133,8 @@ public class CreateCommentsViewFrag extends Fragment implements View.OnClickList
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
         });
-
-
     }
-
-    /**
-     * @param v
-     * @returns nothing
-     */
-    @Override
-    public void onClick(View v) {
-
-        JSONArray comments = new JSONArray();
-        JSONObject newCommentsViewData = new JSONObject();
-
-        try {
-            newCommentsViewData.put("eventID", eventData.getString("eventID"));
-            newCommentsViewData.put("comments", comments);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, RestSingleton.getInstance(view.getContext()).getUrl() + "createCommentsView", newCommentsViewData,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            CommentsViewFrag frag = new CommentsViewFrag();
-                            Bundle data = new Bundle();
-                            data.putString("commentsViewID", response.getString("commentsViewID"));
-                            data.putString("eventID", eventData.getString("eventID"));
-                            frag.setArguments(data);
-                            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
-                        } catch (JSONException e) {
-                            Log.d("Error", String.valueOf(e));
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.d("Error connecting", String.valueOf(error));
-            }
-        });
-
-        RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
+    public String getCommentsViewID() {
+        return commentsViewID;
     }
 }

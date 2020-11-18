@@ -43,7 +43,6 @@ public class CommentsViewFrag extends Fragment {
     private ListView commentBoxShow;
     private FloatingActionButton addCommentButton;
     private Button goToEventButton;
-    private Bundle commentData;
 
     /**
      * Create the comment view page when navigating to it
@@ -61,10 +60,7 @@ public class CommentsViewFrag extends Fragment {
         //Get Layout Components
         getLayoutComponents();
 
-        commentData = new Bundle();
-
         //Use Volley Singleton to Update Page UI
-
         RestSingleton restSingleton = RestSingleton.getInstance(view.getContext());
         StringRequest stringRequest = new StringRequest(Request.Method.GET, restSingleton.getUrl() + "getCommentsView/" + getArguments().getString("commentsViewID"),
                 new Response.Listener<String>() {
@@ -96,7 +92,6 @@ public class CommentsViewFrag extends Fragment {
      */
     private void getLayoutComponents() {
         commentBoxShow = (ListView) view.findViewById(R.id.commentsSection);
-
         addCommentButton = view.findViewById(R.id.addCommentButtonView);
         addCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,10 +110,9 @@ public class CommentsViewFrag extends Fragment {
         goToEventButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String TAG = (String) goToEventButton.getTag();
                 EventFrag frag = new EventFrag();
                 Bundle data = new Bundle();
-                data.putString("eventID", TAG);
+                data.putString("eventID", goToEventButton.getTag().toString());
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
@@ -134,6 +128,7 @@ public class CommentsViewFrag extends Fragment {
      */
     private void updateUI(JSONObject res) throws JSONException {
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
+        goToEventButton.setTag(res.getJSONObject("eventID").getString("_id"));
         //JSONArray allComments = res.getJSONArray("comments");
         /* Code to Make Comments appear in here
         * for (int i=0; i<allComments.length(); i++) {

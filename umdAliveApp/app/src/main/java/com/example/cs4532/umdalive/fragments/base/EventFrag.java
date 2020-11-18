@@ -22,6 +22,7 @@ import com.example.cs4532.umdalive.fragments.edit.EditEventFrag;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 /**
  * @author Josh Senst
@@ -98,11 +99,11 @@ public class EventFrag extends Fragment {
      * @return nothing
      */
     private void getLayoutComponents() {
-        eventName = view.findViewById(R.id.EventNameView);
-        eventDate = view.findViewById(R.id.EventDateView);
-        eventDescription = view.findViewById(R.id.EventDescriptionView);
-        eventTime = view.findViewById(R.id.EventTimeView);
-        goTo = view.findViewById(R.id.GoToClub);
+        eventName = (TextView) view.findViewById(R.id.EventNameView);
+        eventDate = (TextView) view.findViewById(R.id.EventDateView);
+        eventDescription = (TextView) view.findViewById(R.id.EventDescriptionView);
+        eventTime = (TextView) view.findViewById(R.id.EventTimeView);
+        goTo = (Button) view.findViewById(R.id.GoToClub);
         goTo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -125,6 +126,7 @@ public class EventFrag extends Fragment {
         createCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 CommentsViewFrag frag = new CommentsViewFrag();
                 Bundle data = new Bundle();
                 data.putString("eventID", eventName.getTag().toString());
@@ -133,7 +135,7 @@ public class EventFrag extends Fragment {
             }
         });
 
-        editEventFAB = view.findViewById(R.id.EditEventFAB);
+        editEventFAB = (FloatingActionButton) view.findViewById(R.id.EditEventFAB);
         editEventFAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
