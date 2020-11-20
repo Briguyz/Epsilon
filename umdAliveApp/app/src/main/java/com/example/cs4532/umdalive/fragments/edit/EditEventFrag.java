@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -17,6 +18,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
+import com.example.cs4532.umdalive.UserSingleton;
+import com.example.cs4532.umdalive.fragments.base.AllClubsFrag;
 import com.example.cs4532.umdalive.fragments.base.ClubFrag;
 import com.example.cs4532.umdalive.fragments.base.EventFrag;
 
@@ -29,13 +32,13 @@ import org.json.JSONObject;
 
 /**
  * @author Josh Senst
- *
+ * <p>
  * 4/26/2018
- *
+ * <p>
  * Class that allows for the editing of events on the edit events page
  */
 
-public class EditEventFrag  extends Fragment implements View.OnClickListener {
+public class EditEventFrag extends Fragment implements View.OnClickListener {
     //View
     View view;
 
@@ -45,13 +48,14 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
     private EditText NewEventDescription;
     private EditText NewEventTime;
     private EditText NewEventDate;
-    private Button SaveButton;
+    private Button SaveEvent;
     private Button DeleteEvent;
 
     private JSONObject eventData;
 
     /**
      * Creates the page for Editing Events when the edit events button is pressed
+     *
      * @param inflater
      * @param container
      * @param savedInstanceState
@@ -92,30 +96,116 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
 
     /**
      * Allows for the clicked to edit on the text box
+     *
      * @param v The textView clicked
      * @return nothing
      */
     @Override
     public void onClick(View v) {
-        if(v.getTag() != null && v.getTag().toString() == "DELETE"){
-            String eventid = new String();
-            try {
-                    eventid =  eventData.getString("_id");
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            RestSingleton restSingleton = RestSingleton.getInstance(view.getContext());
-            StringRequest stringRequest = null;
-            
-                stringRequest = new StringRequest(Request.Method.DELETE, restSingleton.getUrl() + "deleteEvent/" + eventid,
-                        new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                try {
-                                    updateUI(new JSONObject(response));
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
+        switch (v.getId()) {
+            //Delete Event Case
+            case R.id.DeleteEvent:
+                RestSingleton restSingleton = RestSingleton.getInstance(view.getContext());
+                StringRequest stringRequest = null;
+                try {
+                    stringRequest = new StringRequest(Request.Method.DELETE, restSingleton.getUrl() + "deleteEvent/" + eventData.getString("_id"),
+                            new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    try {
+                                        updateUI(new JSONObject(response));
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
                                 }
+                            }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Log.d("Error connecting", String.valueOf(error));
+                        }
+                    });
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                restSingleton.addToRequestQueue(stringRequest);
+                //Thread is put to sleep to allow request to be fulfilled so it doesn't reference null
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                //Puts the current club into the data "ClubID" string
+
+                ClubFrag frag = new ClubFrag();
+                Bundle data = new Bundle();
+                try {
+                    data.putString("clubID", eventData.getJSONObject("club").getString("_id"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                frag.setArguments(data);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+                //Toast for when the action is complete
+                try {
+                    Toast.makeText(view.getContext(), "\"" + eventData.getString("name") + "\"" + " was successfully deleted.", Toast.LENGTH_LONG).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                break;
+            //Save Event Case
+            case R.id.SaveEvent:
+                Log.d("info", "Entered Save");
+                String prevname = null;
+                try {
+                    prevname = eventData.getString("name");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                String clubid = null;
+                try {
+                    clubid = eventData.getJSONObject("club").getString("_id");
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                if (NewEventName.getText().toString().trim().length() != 0) {
+                    try {
+                        eventData.put("name", NewEventName.getText().toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (NewEventDescription.getText().toString().trim().length() != 0) {
+                    try {
+                        eventData.put("description", NewEventDescription.getText().toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (NewEventDate.getText().toString().trim().length() != 0) {
+                    try {
+                        eventData.put("date", NewEventDate.getText().toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (NewEventTime.getText().toString().trim().length() != 0) {
+                    try {
+                        eventData.put("time", NewEventTime.getText().toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                try {
+                    eventData.put("club", eventData.getJSONObject("club").getString("_id"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                restSingleton = RestSingleton.getInstance(view.getContext());
+
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, restSingleton.getUrl() + "editEvent/", eventData,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
                             }
                         }, new Response.ErrorListener() {
                     @Override
@@ -123,88 +213,34 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
                         Log.d("Error connecting", String.valueOf(error));
                     }
                 });
-            
-            restSingleton.addToRequestQueue(stringRequest);
-            //Thread is put to sleep to allow request to be fulfilled so it doesn't reference null
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            ClubFrag frag = new ClubFrag();
-            Bundle data = new Bundle();
-            try {
-                data.putString("clubID", eventData.getJSONObject("club").getString("_id"));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            frag.setArguments(data);
-            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
-            
-        }else {
-            if (NewEventName.getText().toString().trim().length() != 0) {
-                try {
-                    eventData.put("name", NewEventName.getText().toString());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (NewEventDescription.getText().toString().trim().length() != 0) {
-                try {
-                    eventData.put("description", NewEventDescription.getText().toString());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (NewEventDate.getText().toString().trim().length() != 0) {
-                try {
-                    eventData.put("date", NewEventDate.getText().toString());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-            if (NewEventTime.getText().toString().trim().length() != 0) {
-                try {
-                    eventData.put("time", NewEventTime.getText().toString());
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-            RestSingleton restSingleton = RestSingleton.getInstance(view.getContext());
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, restSingleton.getUrl() + "editEvent/", eventData,
-                    new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
+                restSingleton.addToRequestQueue(jsonObjectRequest);
 
-                        }
-                    }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Log.d("Error connecting", String.valueOf(error));
+                //Thread is put to sleep to allow request to be fulfilled so it doesn't reference null
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-            });
-            restSingleton.addToRequestQueue(jsonObjectRequest);
-            //Thread is put to sleep to allow request to be fulfilled so it doesn't reference null
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            EventFrag frag = new EventFrag();
-            Bundle data = new Bundle();
-            try {
-                data.putString("eventID", eventData.getString("_id"));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            frag.setArguments(data);
-            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+                //Puts the current club into the data "ClubID" string
+                frag = new ClubFrag();
+                data = new Bundle();
+                data.putString("clubID", clubid);
+                frag.setArguments(data);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+                //Toast for when the action is complete
+                try {
+                    Toast.makeText(view.getContext(), "\"" + prevname + "\"" +
+                            " was successfully edited to " + "\"" + eventData.getString("name") + "\"", Toast.LENGTH_LONG).show();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                break;
         }
-
     }
 
     /**
      * Gets the layout components from edit_event_layout.xml
+     *
      * @return nothing
      */
     private void getLayoutComponents() {
@@ -213,20 +249,21 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
         NewEventDescription = view.findViewById(R.id.EventDescription);
         NewEventDate = view.findViewById(R.id.EventDate);
         NewEventTime = view.findViewById(R.id.EventTime);
-        SaveButton = view.findViewById(R.id.SaveEvent);
+        SaveEvent = view.findViewById(R.id.SaveEvent);
         DeleteEvent = view.findViewById(R.id.DeleteEvent);
-        SaveButton.setOnClickListener(this);
+        SaveEvent.setOnClickListener(this);
         DeleteEvent.setOnClickListener(this);
     }
 
     /**
      * Adds the textView boxes from the database into the page
+     *
      * @param res The response from the database
      * @throws JSONException Error in JSON processing
      * @see JSONException
      */
-    private void updateUI(JSONObject res) throws JSONException{
-        EditingEvent.setText("Editing Event:\n"+res.getString("name"));
+    private void updateUI(JSONObject res) throws JSONException {
+        EditingEvent.setText("Editing Event:\n" + res.getString("name"));
         EditingEvent.setTag(res.getString("_id"));
         NewEventName.setText(res.getString("name"));
         NewEventDescription.setText(res.getString("description"));
