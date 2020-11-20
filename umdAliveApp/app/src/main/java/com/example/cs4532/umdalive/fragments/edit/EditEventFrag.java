@@ -126,13 +126,14 @@ public class EditEventFrag  extends Fragment implements View.OnClickListener {
                     e.printStackTrace();
                 }
             restSingleton.addToRequestQueue(stringRequest);
-            //Makes the thread sleep for the request
+            //Thread is put to sleep to allow request to be fulfilled
             try {
                  Thread.sleep(100);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             //Puts the current club into the data "ClubID" string
+
             ClubFrag frag = new ClubFrag();
             Bundle data = new Bundle();
             try {

@@ -4,7 +4,7 @@ var mongojs = require("mongojs");
 var url = 'mongodb://akka.d.umn.edu:12750/umdAliveDatabase';
 
 //array of collections we will use
-var collections = ['clubs', 'users', 'events'];
+var collections = ['clubs', 'users', 'events', 'comments'];
 
 var assert = require('assert');
 
@@ -239,7 +239,8 @@ module.exports.createEvent = function(eventData, callback){
           if (err){
             console.log(err);
           } else {
-            //Completed
+              //Completed
+              console.log(result);
           }
         });
       });
@@ -293,15 +294,6 @@ module.exports.deleteEvent = function (eventID){
             console.log(err);
         }
         else {
-            /*
-              DBRef.collection('clubs').findOne({"_id": mongojs.ObjectId(doc.club)}, function (err, clubDoc){
-              var index = clubDoc.events(eventID);
-              if (index > -1){
-              clubDoc.events.splice(index, 1);
-              }
-              });
-              */
-
             DBRef.collection('clubs').update({"_id": mongojs.ObjectId(doc.club)}, {$pull:{events:{$in:[eventID]}}}, function (err, result){
                 if (err){
                     console.log(err);
@@ -330,14 +322,18 @@ module.exports.createComment = function(commentData, callback){
         if (err){
             console.log(err);
         } else {
-            DBRef.collection('events').findOne({"_id": mongojs.ObjectId(result.events)},function (err, doc){
+            console.log("Made it to else statement");
+            DBRef.collection('events').findOne({"_id": mongojs.ObjectId(result.eventID)},function (err, doc){
                 if (err){
                     console.log(err);
                 } else {
                     //took from create event as a sub in
+                    console.log(doc);
                 }
+                console.log("before doc.comments.push");
                 doc.comments.push(result._id + "");
-                DBRef.collection('events').update({"_id":mongojs.ObjectId(result.events)},doc,function(err, result){
+                console.log("after doc.commments.push");
+                DBRef.collection('events').update({"_id":mongojs.ObjectId(result.eventID)}, doc,function(err, result){
                     if
                         (err){
                             console.log(err);
@@ -345,6 +341,7 @@ module.exports.createComment = function(commentData, callback){
                     else
                     {
                         //took from create event as a sub in
+                        console.log(result);
                     }
                 });
             });
@@ -353,4 +350,73 @@ module.exports.createComment = function(commentData, callback){
         }
     });
 };
+
+//needs to be tested
+module.exports.editComment = function(commentID, commentData){
+  DBRef.collection('comments').update({"_id":mongojs.ObjectId(commentID)},commentData,function(err, result){
+    if (err){
+      console.log(err);
+    } else {
+        console.log(result);
+    }
+  });
+};
+
+//needs to be tested
+module.exports.getComment = function(eventID, callback) {
+	DBRef.collection('comments').findOne({"_id": mongojs.ObjectId(commentID)}, function (err, doc){
+    if (err){
+      console.log(err);
+    } else {
+      DBRef.collection('comments').findOne({"_id": mongojs.ObjectId(doc.comment)}, function (err, commentDoc){
+        doc.comment = commentDoc;
+        callback(doc);
+      });
+    }
+  });
+};
+
+//needs to be tested
+module.exports.getAllComments = function(callback) {
+	DBRef.collection('comments').find({}).toArray(function(err, docs) {
+		if (err){
+      console.log(err);
+		} else {
+      var allCommentsObject = {
+        "comment" : docs
+      };
+			callback(allCommentsObject);
+		}
+	});
+};
+//Needs to be tested not sure if it will delte or not but this is taken from delete event
+module.exports.deleteComment = function (commentID){
+  DBRef.collection('comments').findOne({"_id": mongojs.ObjectId(commentID)}, function (err, doc){
+    if (err){
+      console.log(err);
+    } else {
+      DBRef.collection('events').findOne({"_id": mongojs.ObjectId(doc.comment)}, function (err, commentDoc){
+        var index = commentDoc.comments(commentID);
+        if (index > -1){
+          commentDoc.comments.splice(index, 1);
+        }
+        DBRef.collection('event').update({"_id": mongojs.ObjectId(doc.comment)}, commentDoc, function (err, result){
+          if (err){
+            console.log(err);
+          } else {
+              console.log(result);
+          }
+        });
+      });
+      DBRef.collection('comments').remove({"_id": mongojs.ObjectId(commentID)}, false, function (err, result){
+        if (err){
+          console.log(err);
+        } else {
+            console.log(result);
+        }
+      });
+    }
+  });
+};
+
 
