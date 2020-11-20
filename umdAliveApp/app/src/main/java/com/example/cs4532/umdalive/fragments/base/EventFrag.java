@@ -17,7 +17,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
-import com.example.cs4532.umdalive.fragments.create.CreateCommentsViewFrag;
 import com.example.cs4532.umdalive.fragments.edit.EditEventFrag;
 
 import org.json.JSONException;
@@ -26,13 +25,13 @@ import org.w3c.dom.Text;
 
 /**
  * @author Josh Senst
- *
+ * <p>
  * 4/26/2018
- *
+ * <p>
  * This class holds the page for the events
- *
+ * <p>
  * 10/29/2020
- *
+ * <p>
  * view
  */
 public class EventFrag extends Fragment {
@@ -123,17 +122,7 @@ public class EventFrag extends Fragment {
          * Then when clicked on it will send a
          */
         createCommentButton = (Button) view.findViewById(R.id.goToComment);
-        createCommentButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                CommentsViewFrag frag = new CommentsViewFrag();
-                Bundle data = new Bundle();
-                data.putString("eventID", eventName.getTag().toString());
-                frag.setArguments(data);
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
-            }
-        });
 
         editEventFAB = (FloatingActionButton) view.findViewById(R.id.EditEventFAB);
         editEventFAB.setOnClickListener(new View.OnClickListener() {
@@ -172,5 +161,18 @@ public class EventFrag extends Fragment {
         } else {
             editEventFAB.setVisibility(View.GONE);
         }
+
+        final String commentsViewID = res.getString("commentsView");
+        createCommentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CommentsViewFrag frag = new CommentsViewFrag();
+                Bundle data = new Bundle();
+                data.putString("commentsViewID", commentsViewID);
+
+                frag.setArguments(data);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+            }
+        });
     }
 }

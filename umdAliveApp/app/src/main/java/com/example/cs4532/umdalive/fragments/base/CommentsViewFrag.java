@@ -110,9 +110,10 @@ public class CommentsViewFrag extends Fragment {
         goToEventButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String TAG = (String) goToEventButton.getTag();
                 EventFrag frag = new EventFrag();
                 Bundle data = new Bundle();
-                data.putString("eventID", goToEventButton.getTag().toString());
+                data.putString("eventID", TAG);
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
@@ -127,6 +128,7 @@ public class CommentsViewFrag extends Fragment {
      * @see JSONException
      */
     private void updateUI(JSONObject res) throws JSONException {
+        view.setVisibility(View.VISIBLE);
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
         goToEventButton.setTag(res.getJSONObject("eventID").getString("_id"));
         //JSONArray allComments = res.getJSONArray("comments");

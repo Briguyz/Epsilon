@@ -32,7 +32,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-/**11/6Code is buggy with reponse to server
+/**11/6
+ * Code is buggy with response to server
  * -will crash the server
  *11/10
  * -need more time with testing
