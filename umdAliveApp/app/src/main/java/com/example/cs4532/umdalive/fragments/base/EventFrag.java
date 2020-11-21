@@ -21,7 +21,6 @@ import com.example.cs4532.umdalive.fragments.edit.EditEventFrag;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 /**
  * @author Josh Senst
@@ -121,7 +120,7 @@ public class EventFrag extends Fragment {
          * the button functionality switches the view
          * Then when clicked on it will send a
          */
-        createCommentButton = (Button) view.findViewById(R.id.goToComment);
+        createCommentButton = (Button) view.findViewById(R.id.GoToComment);
 
 
         editEventFAB = (FloatingActionButton) view.findViewById(R.id.EditEventFAB);
@@ -169,7 +168,6 @@ public class EventFrag extends Fragment {
                 CommentsViewFrag frag = new CommentsViewFrag();
                 Bundle data = new Bundle();
                 data.putString("commentsViewID", commentsViewID);
-
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
