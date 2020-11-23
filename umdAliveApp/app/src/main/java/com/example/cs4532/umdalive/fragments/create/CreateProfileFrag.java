@@ -22,6 +22,7 @@ import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
 import com.example.cs4532.umdalive.fragments.base.ProfileFrag;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -61,7 +62,7 @@ public class CreateProfileFrag extends Fragment {
 
         getLayoutComponents();
 
-        loadProfileImage();
+        //loadProfileImage();
 
         name.setText(UserSingleton.getInstance().getName());
 
@@ -99,7 +100,7 @@ public class CreateProfileFrag extends Fragment {
      * If a user does not have a profile picture, it defaults to an image of a wagon
      * @return nothing
      */
-    private void loadProfileImage () {
+    /*private void loadProfileImage () {
         if (UserSingleton.getInstance().getProfileUrl() != null) {
             Glide.with(this)
                     .load(UserSingleton.getInstance().getProfileUrl())
@@ -111,7 +112,7 @@ public class CreateProfileFrag extends Fragment {
                     .apply(RequestOptions.circleCropTransform())
                     .into(profileImage);
         }
-    }
+    }*/
 
     /**
      * Upon sign-in this will create the user, and put their information into one of the application's profiles.
@@ -121,12 +122,16 @@ public class CreateProfileFrag extends Fragment {
      */
     private void createUser() throws JSONException {
         JSONObject newUserData = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+
         newUserData.put("name", UserSingleton.getInstance().getName());
         newUserData.put("email", UserSingleton.getInstance().getEmail());
         newUserData.put("major", major.getText());
         newUserData.put("userID", UserSingleton.getInstance().getUserID());
         newUserData.put("description", about.getText());
         newUserData.put("profilePic", UserSingleton.getInstance().getProfileUrl());
+        newUserData.put("clubs", jsonArray);
+
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, RestSingleton.getInstance(view.getContext()).getUrl() + "createUser", newUserData,
                 new Response.Listener<JSONObject>() {

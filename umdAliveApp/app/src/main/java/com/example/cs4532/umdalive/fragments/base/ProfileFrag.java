@@ -1,5 +1,8 @@
 package com.example.cs4532.umdalive.fragments.base;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -17,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
@@ -27,6 +31,9 @@ import com.example.cs4532.umdalive.fragments.edit.EditProfileFrag;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Requires argument with key of userID to be passed into it before it is added to the frame layout
@@ -145,16 +152,18 @@ public class ProfileFrag extends Fragment{
 
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
 
-        if (UserSingleton.getInstance().getProfileUrl() != null) {
+        if (res.getString("profilePic") != null) {
             Glide.with(this)
-                    .load(UserSingleton.getInstance().getProfileUrl())
-                    .apply(RequestOptions.circleCropTransform())
+                    .load(res.getString("profilePic"))
+                    .error(R.drawable.ic_menu_all_clubs)
+                    .transform(new CircleCrop())
                     .into(profileImage);
         } else {
             Glide.with(this)
                     .load("https://images.homedepot-static.com/productImages/42613c1a-7427-4557-ada8-ba2a17cca381/svn/gorilla-carts-yard-carts-gormp-12-64_1000.jpg")
                     .apply(RequestOptions.circleCropTransform())
                     .into(profileImage);
+
         }
 
         profileName.setText(res.getString("name"));

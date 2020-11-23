@@ -1,5 +1,7 @@
 package com.example.cs4532.umdalive.fragments.base;
 
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -20,7 +22,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.DecodeFormat;
+import com.bumptech.glide.load.MultiTransformation;
+import com.bumptech.glide.load.resource.bitmap.CircleCrop;
 import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.Target;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
@@ -30,6 +36,11 @@ import com.example.cs4532.umdalive.fragments.edit.EditClubFrag;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.regex.*;
+
+import jp.wasabeef.glide.transformations.BlurTransformation;
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 /**
  * Requires argument with key of clubID to be passed into it before it is added to the frame layout
@@ -61,6 +72,19 @@ public class ClubFrag extends Fragment{
     private FloatingActionButton addEvent;
 
     private JSONObject joinLeaveObj;
+
+    // Function to validate image string
+    public boolean isValid(String str) {
+            String regex = "([^\\s]+(\\.(?i)(jpe?g|png|gif|bmp))$)";
+
+            Pattern p = Pattern.compile(regex);
+
+            if (str == null) { return false; }
+
+            Matcher m = p.matcher(str);
+
+            return m.matches();
+        }
 
     /**
      * Creates the page whenever the club page is clicked on
@@ -142,24 +166,14 @@ public class ClubFrag extends Fragment{
      */
     private void getLayoutComponents() {
         clubImage = view.findViewById(R.id.clubImage);
-        clubName = (TextView) view.findViewById(R.id.ClubNameView);
-        clubDescription = (TextView) view.findViewById(R.id.DescriptionView);
-        joinLeave= (Button) view.findViewById(R.id.ClubJoinLeave);
-        members = (LinearLayout) view.findViewById(R.id.memberList);
-        eventsList = (LinearLayout) view.findViewById(R.id.eventsList);
-        editClub = (FloatingActionButton) view.findViewById(R.id.EditClub);
-        addEvent = (FloatingActionButton) view.findViewById(R.id.AddEvent);
+        clubName = view.findViewById(R.id.ClubNameView);
+        clubDescription = view.findViewById(R.id.DescriptionView);
+        joinLeave= view.findViewById(R.id.ClubJoinLeave);
+        members = view.findViewById(R.id.memberList);
+        eventsList = view.findViewById(R.id.eventsList);
+        editClub = view.findViewById(R.id.EditClub);
+        addEvent = view.findViewById(R.id.AddEvent);
     }
-
-    /**
-     * {"name":"",
-     * "description":"",
-     * "members":{
-     * "admin":{"name":"","userID":""},
-     * "regular":[]
-     * },
-     * "events":[]}
-     */
 
     /**
      * Adds the club information to the page depending on which club was clicked. Inside there are several onClicks relevant to different items in lists being
@@ -172,12 +186,24 @@ public class ClubFrag extends Fragment{
         view.setVisibility(View.VISIBLE);
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
 
-        // Attempt at changing the images for the clubs
-        /*
-        Glide.with(this)
-                .load("https://images.homedepot-static.com/productImages/42613c1a-7427-4557-ada8-ba2a17cca381/svn/gorilla-carts-yard-carts-gormp-12-64_1000.jpg")
-                .into(clubImage);
-         */
+        //Sets the club image
+        if (res.getString("profilePic") != null && isValid(res.getString("profilePic"))) {
+            Log.d("imageurl", res.getString("profilePic"));
+            Glide.with(this)
+                    .load(res.getString("profilePic"))
+                    .error(R.drawable.ic_menu_all_clubs)
+                    .transform(new CircleCrop())
+                    .into(clubImage);
+        } else {
+            Glide.with(this)
+                    .load(R.drawable.ic_menu_all_clubs)
+                    .apply(new RequestOptions()
+                            .fitCenter()
+                            .format(DecodeFormat.PREFER_ARGB_8888)
+                            .override(Target.SIZE_ORIGINAL))
+                    //.load("https://images.homedepot-static.com/productImages/42613c1a-7427-4557-ada8-ba2a17cca381/svn/gorilla-carts-yard-carts-gormp-12-64_1000.jpg")
+                    .into(clubImage);
+        }
 
         clubName.setText(res.getString("name"));
         clubName.setTag(res.getString("_id"));

@@ -1,5 +1,6 @@
 package com.example.cs4532.umdalive.fragments.edit;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -138,6 +139,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
             //Toast for when the action is complete
             try {
                 Toast.makeText(view.getContext(), "\"" + clubData.getString("name") + "\"" + " was successfully deleted.", Toast.LENGTH_LONG).show();
+
             } catch (JSONException e) {
                e.printStackTrace();
             }
@@ -198,6 +200,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
                 members.put("regular", regular);
 
                 clubData.put("members", members);
+
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -274,7 +277,6 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
      */
     private void updateUI(JSONObject res) throws JSONException {
         EditingClub.setText("Editing Club:\n" + res.getString("name"));
-        EditingClub.setTag(res.getString("_id"));
         DeleteButton.setTag("DELETE");
         NewClubName.setText(res.getString("name"));
         NewClubDescription.setText(res.getString("description"));
