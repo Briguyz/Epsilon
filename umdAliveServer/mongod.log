@@ -22053,3 +22053,10 @@
 2020-11-23T16:51:46.489-0600 [initandlisten] connection accepted from 63.229.208.217:56464 #1048 (85 connections now open)
 2020-11-23T16:51:47.216-0600 [initandlisten] connection accepted from 63.229.208.217:56465 #1049 (86 connections now open)
 2020-11-23T16:51:47.359-0600 [initandlisten] connection accepted from 63.229.208.217:56466 #1050 (87 connections now open)
+2020-11-23T16:55:53.258-0600 [clientcursormon] mem (MB) res:43 virt:630
+2020-11-23T16:55:53.258-0600 [clientcursormon]  mapped (incl journal view):320
+2020-11-23T16:55:53.258-0600 [clientcursormon]  connections:87
+2020-11-23T16:56:26.356-0600 [initandlisten] connection accepted from 140.190.2.48:36348 #1051 (88 connections now open)
+2020-11-23T16:56:26.442-0600 [initandlisten] connection accepted from 140.190.2.48:36349 #1052 (89 connections now open)
+2020-11-23T16:56:28.674-0600 [initandlisten] connection accepted from 140.190.2.48:36358 #1053 (90 connections now open)
+2020-11-23T16:56:28.745-0600 [initandlisten] connection accepted from 140.190.2.48:36359 #1054 (91 connections now open)
