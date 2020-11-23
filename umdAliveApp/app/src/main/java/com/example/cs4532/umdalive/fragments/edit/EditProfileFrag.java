@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -24,6 +25,7 @@ import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
 import com.example.cs4532.umdalive.fragments.base.ProfileFrag;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -139,7 +141,16 @@ public class EditProfileFrag extends Fragment {
         userData.put("major", major.getText().toString());
         userData.put("description", about.getText().toString());
 
-        System.out.println(userData);
+        JSONArray clubs = userData.getJSONArray("clubs");
+        JSONArray club = new JSONArray();
+
+        for(int i = 0; i < clubs.length(); i++){
+            club.put(i, clubs.getJSONObject(i).getString("_id"));
+            Log.d("clubID", clubs.getJSONObject(i).toString());
+        }
+
+        userData.put("clubs", club);
+
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, RestSingleton.getInstance(view.getContext()).getUrl() + "editUser", userData,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -157,6 +168,12 @@ public class EditProfileFrag extends Fragment {
             }
         });
         RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
+        try {
+            Toast.makeText(view.getContext(), "\"" + userData.get("name").toString() +"\'s\"" +
+                    " profile was successfully edited.", Toast.LENGTH_LONG).show();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
 

@@ -9,11 +9,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
@@ -36,10 +39,11 @@ import org.json.JSONObject;
 public class CreateClubFrag extends Fragment {
     View view;
 
-    private EditText ClubImg;
     private EditText ClubName;
     private EditText ClubDescription;
     private Button save;
+    private EditText ClubImage;
+    //private ImageView clubImage;
 
     /**
      * Creates the create club page view
@@ -55,6 +59,8 @@ public class CreateClubFrag extends Fragment {
         view = inflater.inflate(R.layout.create_club_layout, container, false);
 
         getLayoutComponents();
+
+        //loadClubImage();
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,10 +84,27 @@ public class CreateClubFrag extends Fragment {
      */
     private void getLayoutComponents() {
         ClubName = view.findViewById(R.id.createClubName);
-        ClubImg = view.findViewById(R.id.createClubImg);
         ClubDescription = view.findViewById(R.id.createClubDes);
+        ClubImage = view.findViewById(R.id.createClubImg);
         save = view.findViewById(R.id.createClubSave);
     }
+
+
+   /* private void loadClubImage () {
+        if (ClubImage.getText() != null && ClubImage.getText().toString().endsWith(".jpg")) {
+            Log.d("clubimagetext", ClubImage.getText().toString());
+            Glide.with(this)
+                    .load(ClubImage.getText().toString())
+                    .apply(RequestOptions.circleCropTransform())
+                    .into((ImageView)view.findViewById(R.id.clubImage));
+        } else {
+            Glide.with(this)
+                    .load("https://images.homedepot-static.com/productImages/42613c1a-7427-4557-ada8-ba2a17cca381/svn/gorilla-carts-yard-carts-gormp-12-64_1000.jpg")
+                    .apply(RequestOptions.circleCropTransform())
+                    .into((ImageView)view.findViewById(R.id.clubImage));
+            Log.d("clubimagetext", ClubImage.getText().toString());
+        }
+    }*/
 
     /**
      * Called whenever a user wishes to create a club, and makes the that user and admin
@@ -96,22 +119,14 @@ public class CreateClubFrag extends Fragment {
         members.put("regular",regulars);
 
         JSONArray events = new JSONArray();
-
         JSONObject newClubData = new JSONObject();
 
         newClubData.put("name", ClubName.getText());
         newClubData.put("description", ClubDescription.getText());
-
-
-
-        if(ClubImg.getText().length()>0){
-            newClubData.put("profilePic", ClubImg.getText());
-        } else{
-            newClubData.put("profilePic", null);
-        }
-
         newClubData.put("events", events);
         newClubData.put("members", members);
+        newClubData.put("profilePic", ClubImage.getText());
+
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, RestSingleton.getInstance(view.getContext()).getUrl() + "createClub", newClubData,
                 new Response.Listener<JSONObject>() {

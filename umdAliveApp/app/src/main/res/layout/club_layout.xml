@@ -50,7 +50,8 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/clubImage" />
+                app:layout_constraintTop_toBottomOf="@+id/clubImage"
+                android:gravity="center_horizontal" />
 
             <TextView
                 android:id="@+id/DescriptionView"
