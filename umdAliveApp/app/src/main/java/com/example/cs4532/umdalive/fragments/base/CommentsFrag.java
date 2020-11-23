@@ -5,11 +5,13 @@ package com.example.cs4532.umdalive.fragments.base;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -95,6 +97,7 @@ public class CommentsFrag extends Fragment {
         profileName = (TextView) view.findViewById(R.id.CommentUsername);
         timePosted = (TextView) view.findViewById(R.id.CommentTime);
         userComment = (TextView) view.findViewById(R.id.CommentDescriptionView);
+        userComment.setMovementMethod(new ScrollingMovementMethod());
         commentEditFAB = (FloatingActionButton) view.findViewById(R.id.EditCommentFAB);
 
         goToComments = view.findViewById(R.id.GoToComment);
@@ -102,7 +105,7 @@ public class CommentsFrag extends Fragment {
             @Override
             public void onClick(View view) {
                 String TAG = (String) goToComments.getTag();
-                EventFrag frag = new EventFrag();
+                CommentsViewFrag frag = new CommentsViewFrag();
                 Bundle data = new Bundle();
                 data.putString("commentsViewID", TAG);
                 frag.setArguments(data);
@@ -119,14 +122,13 @@ public class CommentsFrag extends Fragment {
         profileName.setTag(res.getString("_id"));
         timePosted.setText(res.getString("time"));
         goToComments.setTag(res.getJSONObject("commentsView").getString("_id"));
-
-        final String name = res.getString("name");
+        
         profileName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ProfileFrag frag = new ProfileFrag();
                 Bundle data = new Bundle();
-                data.putString("userID", name);
+                data.putString("userID", UserSingleton.getInstance().getUserID());
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
             }

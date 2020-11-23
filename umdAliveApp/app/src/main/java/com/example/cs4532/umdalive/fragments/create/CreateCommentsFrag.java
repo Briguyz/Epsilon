@@ -90,8 +90,8 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
             newCommentData.put("comment", CommentText.getText());
             newCommentData.put("name", UserSingleton.getInstance().getName());
             newCommentData.put("time", getCurrentTime());
-            newCommentData.put("userID",UserSingleton.getInstance().getUserID());
-            newCommentData.put("commentsViewID", commentViewData.getString("commentsViewID"));
+            newCommentData.put("userID", UserSingleton.getInstance().getUserID());
+            newCommentData.put("commentsView", commentViewData.getString("commentsViewID"));
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -133,10 +133,13 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
         goToComments.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String TAG = (String) goToComments.getTag();
                 CommentsViewFrag frag = new CommentsViewFrag();
                 Bundle data = new Bundle();
-                data.putString("commentsViewID", TAG);
+                try {
+                    data.putString("commentsViewID", commentViewData.getString("commentsViewID"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
@@ -149,7 +152,7 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
     private String getCurrentTime() {
         //Time parameter with calender, date import
         Date currentTime = Calendar.getInstance().getTime();
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        DateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy hh:mm aa");
         String strDate = dateFormat.format(currentTime);
 
         return strDate;
