@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -17,12 +18,15 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
+import com.example.cs4532.umdalive.UserSingleton;
 import com.example.cs4532.umdalive.fragments.base.AllClubsFrag;
 import com.example.cs4532.umdalive.fragments.base.ClubFrag;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.Object;
 /**
  * Created by Josh on 4/25/2018.
  */
@@ -95,7 +99,9 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
      */
     @Override
     public void onClick(View v) {
-        if (v.getTag() != null && v.getTag().toString() == "DELETE") {
+        switch(v.getId()){
+            //Delete Club Case
+            case R.id.DeleteClub:
             RestSingleton restSingleton = RestSingleton.getInstance(view.getContext());
             StringRequest stringRequest = null;
             try {
@@ -119,7 +125,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
                 e.printStackTrace();
             }
             restSingleton.addToRequestQueue(stringRequest);
-            //Thread is put to sleep to allow request to be fulfilled and not show null reference to deleted club
+            //Thread is put to sleep for the request
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
@@ -129,9 +135,30 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
             Bundle data = new Bundle();
             frag.setArguments(data);
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
-        } else {
+            //Toast for when the action is complete
+            try {
+                Toast.makeText(view.getContext(), "\"" + clubData.getString("name") + "\"" + " was successfully deleted.", Toast.LENGTH_LONG).show();
+            } catch (JSONException e) {
+               e.printStackTrace();
+            }
+            break;
+        //Save Event Case
+        case R.id.SaveClub:
+            String prevname = null;
+            try {
+                prevname = clubData.getString("name");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            String clubid = null;
+            try {
+                clubid = clubData.getString("_id");
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             if (NewClubName.getText().toString().trim().length() != 0) {
                 try {
+                    Log.d("Name", NewClubName.getText().toString());
                     clubData.put("name", NewClubName.getText().toString());
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -139,6 +166,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
             }
             if (NewClubDescription.getText().toString().trim().length() != 0) {
                 try {
+                    Log.d("Description", NewClubDescription.getText().toString());
                     clubData.put("description", NewClubDescription.getText().toString());
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -146,12 +174,48 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
             }
             if (NewImageURL.getText().toString().trim().length() != 0) {
                 try {
+                    Log.d("ProfilePic", NewImageURL.getText().toString());
                     clubData.put("profilePic", NewImageURL.getText().toString());
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
-            RestSingleton restSingleton = RestSingleton.getInstance(view.getContext());
+            //Gets the members and sends them to the server
+            try {
+                String jsonstring = "{\"admin\": \" \", \"regular\": []}}";
+                JSONObject members = new JSONObject(jsonstring);
+
+                //Adding admin
+                String admin = clubData.getJSONObject("members").getJSONObject("admin").getString("userID");
+                members.put("admin", admin);
+
+                //Adding regulars
+                JSONArray regulars = clubData.getJSONObject("members").getJSONArray("regular");
+                JSONArray regular = new JSONArray();
+                for(int i = 0; i < regulars.length(); i++){
+                    regular.put(i, regulars.getJSONObject(i).getString("userID"));
+                }
+                members.put("regular", regular);
+
+                clubData.put("members", members);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            //Gets the events and sends them to the sever
+            try {
+                JSONArray eventsarray = clubData.getJSONArray("events");
+                JSONArray events = new JSONArray();
+                for(int i = 0; i < eventsarray.length(); i++){
+                    events.put(i, eventsarray.getJSONObject(i).getString("_id"));
+                    }
+
+                clubData.put("events", events);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    }
+
+            restSingleton = RestSingleton.getInstance(view.getContext());
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, restSingleton.getUrl() + "editClub/", clubData,
                     new Response.Listener<JSONObject>() {
                         @Override
@@ -165,13 +229,27 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
                 }
             });
             restSingleton.addToRequestQueue(jsonObjectRequest);
-            ClubFrag frag = new ClubFrag();
-            Bundle data = new Bundle();
-            data.putString("clubID", EditingClub.getTag().toString());
+            //Thread is put to sleep for the request
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            frag = new AllClubsFrag();
+            data = new Bundle();
+            data.putString("clubID", clubid);
             frag.setArguments(data);
-            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
-        }
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
+            try {
+                Toast.makeText(view.getContext(), "\"" + prevname +"\"" +
+                        " was successfully edited to " + "\"" + clubData.getString("name") + "\"", Toast.LENGTH_LONG).show();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            break;}
     }
+
 
     /**
      * Gets the layout components from edit_club_layout.xml

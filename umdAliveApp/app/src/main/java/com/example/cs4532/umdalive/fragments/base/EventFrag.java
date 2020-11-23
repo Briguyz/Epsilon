@@ -24,13 +24,13 @@ import org.json.JSONObject;
 
 /**
  * @author Josh Senst
- *
+ * <p>
  * 4/26/2018
- *
+ * <p>
  * This class holds the page for the events
- *
+ * <p>
  * 10/29/2020
- *
+ * <p>
  * view
  */
 public class EventFrag extends Fragment {
@@ -44,13 +44,10 @@ public class EventFrag extends Fragment {
     private TextView eventDate;
     private TextView eventTime;
     private Button goTo;
+    private FloatingActionButton editEventFAB;
 
     //10/29/2020 Henry Trinh, Brian, Josh
     private Button createCommentButton;
-
-    private FloatingActionButton editEventFAB;
-
-    //
 
 
     /**
@@ -100,11 +97,11 @@ public class EventFrag extends Fragment {
      * @return nothing
      */
     private void getLayoutComponents() {
-        eventName = view.findViewById(R.id.EventNameView);
-        eventDate = view.findViewById(R.id.EventDateView);
-        eventDescription = view.findViewById(R.id.EventDescriptionView);
-        eventTime = view.findViewById(R.id.EventTimeView);
-        goTo = view.findViewById(R.id.GoToClub);
+        eventName = (TextView) view.findViewById(R.id.EventNameView);
+        eventDate = (TextView) view.findViewById(R.id.EventDateView);
+        eventDescription = (TextView) view.findViewById(R.id.EventDescriptionView);
+        eventTime = (TextView) view.findViewById(R.id.EventTimeView);
+        goTo = (Button) view.findViewById(R.id.GoToClub);
         goTo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -114,30 +111,13 @@ public class EventFrag extends Fragment {
                 data.putString("clubID", TAG);
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
-
-
-            }
-        });
-        /**
-         * Functionality of the button for createComment
-         * 10/30/2020- Henry Trinh
-         * the button functionality switches the view
-         * Then when clicked on it will send a
-         */
-        createCommentButton = view.findViewById(R.id.goToComment);
-        createCommentButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String TAG = (String) createCommentButton.getTag();
-                CommentsFrag frag = new CommentsFrag();
-                Bundle data = new Bundle();
-                data.putString("commentID", TAG);
-                frag.setArguments(data);
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
         });
 
-        editEventFAB = view.findViewById(R.id.EditEventFAB);
+        createCommentButton = (Button) view.findViewById(R.id.GoToComment);
+
+
+        editEventFAB = (FloatingActionButton) view.findViewById(R.id.EditEventFAB);
         editEventFAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -174,5 +154,23 @@ public class EventFrag extends Fragment {
         } else {
             editEventFAB.setVisibility(View.GONE);
         }
+
+        final String commentsViewID = res.getString("commentsView");
+
+        /**
+         * Functionality of the button for goToCommentsView
+         * 10/30/2020- Henry Trinh, Jacob Willmsen
+         * The button switches to the commentsView associated with events
+         */
+        createCommentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CommentsViewFrag frag = new CommentsViewFrag();
+                Bundle data = new Bundle();
+                data.putString("commentsViewID", commentsViewID);
+                frag.setArguments(data);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+            }
+        });
     }
 }
