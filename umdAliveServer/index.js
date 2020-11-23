@@ -180,18 +180,22 @@ app.put('/createEvent', function (req, res){
   if (!req.body){
     return res.sendStatus(400);
   }
-  var eventData = {
-    "name" : req.body.name,
-    "description" : req.body.description,
-    "date" : req.body.date,
-    "time" : req.body.time,
-    "club" : req.body.club,
-    "commentsView": req.body.commentsView
-  };
-  dataBase.createEvent(eventData, function(doc){
-		console.log(doc);
-      res.send(doc);
-  });
+    var eventData = {
+        "name" : req.body.name,
+        "description" : req.body.description,
+        "date" : req.body.date,
+        "time" : req.body.time,
+        "club" : req.body.club,
+        "commentsView": req.body.commentsView
+    };
+    var commentsViewData = {
+        "comments" : req.body.comments,
+        "eventID" : req.body._id
+    }
+    dataBase.createEvent(eventData, commentsViewData, function(doc){
+	console.log(doc);
+        res.send(doc);
+    });
 });
 
 app.put('/editEvent', function (req, res){
@@ -214,6 +218,7 @@ app.put('/editEvent', function (req, res){
 
 app.get('/getEvent/:eventID', function (req, res) {
     console.log("getEvent");
+    console.log(req.params.eventID);
     dataBase.getEvent(req.params.eventID, function (docs) {
 	console.log(docs);
         res.send(docs);
@@ -298,20 +303,6 @@ app.get('/getCommentsView/:commentsViewID', function (req, res) {
     dataBase.getCommentsView(req.params.commentsViewID, function (docs){
         console.log(docs);
         res.send(docs);
-    });
-});
-
-app.put('/createCommentsView' , function(req, res) {
-    if (!req.body) {
-        return res.sendStatus(400);
-    }
-    var commentsViewData = {
-        "comments" : req.body.comments,
-        "eventID" : req.body.eventID
-    };
-    dataBase.createCommentsView(commentsViewData, function (doc) {
-        console.log(doc);
-        res.send(doc);
     });
 });
 
@@ -669,9 +660,6 @@ app.get('/posts/:clubName', function (req, res) {
                 res.send(stringArray);
     });
 });
-
-
-
 
 function getClubKeyword(position) {
     return clubs.items[position].keywords;
