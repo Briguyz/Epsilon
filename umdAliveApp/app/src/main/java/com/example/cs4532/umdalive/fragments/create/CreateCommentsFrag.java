@@ -79,6 +79,7 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
 
     /**
      * Allows for the clicked to edit on the text box
+     *
      * @param v The textView clicked
      * @return nothing
      */

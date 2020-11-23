@@ -40,6 +40,7 @@ public class CommentsViewFrag extends Fragment {
     View view;
 
     //Layout Components
+    private TextView commentViewName;
     private ListView commentBoxShow;
     private FloatingActionButton addCommentButton;
     private Button goToEventButton;
@@ -91,15 +92,16 @@ public class CommentsViewFrag extends Fragment {
      * @return nothing
      */
     private void getLayoutComponents() {
+        commentViewName = (TextView) view.findViewById(R.id.commentHeader);
         commentBoxShow = (ListView) view.findViewById(R.id.commentsSection);
         addCommentButton = view.findViewById(R.id.addCommentButtonView);
         addCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String TAG = (String) addCommentButton.getTag();
+                String TAG = (String) commentViewName.getTag();
                 CreateCommentsFrag frag = new CreateCommentsFrag();
                 Bundle data = new Bundle();
-                data.putString("commentID", TAG);
+                data.putString("commentsViewID", TAG);
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
@@ -131,6 +133,7 @@ public class CommentsViewFrag extends Fragment {
         view.setVisibility(View.VISIBLE);
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
         goToEventButton.setTag(res.getJSONObject("eventID").getString("_id"));
+        commentViewName.setTag(res.getString("_id"));
         //JSONArray allComments = res.getJSONArray("comments");
         /* Code to Make Comments appear in here
         * for (int i=0; i<allComments.length(); i++) {
