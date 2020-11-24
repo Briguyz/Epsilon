@@ -8,12 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.DecodeFormat;
+import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.Target;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
@@ -21,6 +26,11 @@ import com.example.cs4532.umdalive.fragments.edit.EditEventFrag;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 /**
  * @author Josh Senst
@@ -43,15 +53,27 @@ public class EventFrag extends Fragment {
     private TextView eventDescription;
     private TextView eventDate;
     private TextView eventTime;
+    private ImageView eventImage;
+
     private Button goTo;
 
     //10/29/2020 Henry Trinh, Brian, Josh
-    private Button createCommentButton;
+    private FloatingActionButton createCommentButton;
 
     private FloatingActionButton editEventFAB;
 
-    //
+    // Function to validate image string
+    public boolean isValid(String str) {
+        String regex = "([^\\s]+(\\.(?i)(jpe?g|png|gif|bmp))$)";
 
+        Pattern p = Pattern.compile(regex);
+
+        if (str == null) { return false; }
+
+        Matcher m = p.matcher(str);
+
+        return m.matches();
+    }
 
     /**
      * Creates the event page when navigating to it
@@ -104,6 +126,7 @@ public class EventFrag extends Fragment {
         eventDate = view.findViewById(R.id.EventDateView);
         eventDescription = view.findViewById(R.id.EventDescriptionView);
         eventTime = view.findViewById(R.id.EventTimeView);
+        eventImage = view.findViewById(R.id.eventurl);
         goTo = view.findViewById(R.id.GoToClub);
         goTo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,12 +185,33 @@ public class EventFrag extends Fragment {
      */
     private void updateUI(JSONObject res) throws JSONException {
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
+
+        //Sets the Event image
+        if (res.getString("imageurl") != null && isValid(res.getString("imageurl"))) {
+            Log.d("imageurl", res.getString("imageurl"));
+            Glide.with(this)
+                    .load(res.getString("imageurl"))
+                    .error(R.drawable.ic_menu_events)
+                    .transform(new RoundedCornersTransformation(30, 10))
+                    .into(eventImage);
+            Log.d("if", "went through the if");
+        } else {
+            Glide.with(this)
+                    .load(R.drawable.ic_menu_events)
+                    .apply(new RequestOptions()
+                            .fitCenter()
+                            .format(DecodeFormat.PREFER_ARGB_8888)
+                            .override(Target.SIZE_ORIGINAL))
+                    //.load("https://images.homedepot-static.com/productImages/42613c1a-7427-4557-ada8-ba2a17cca381/svn/gorilla-carts-yard-carts-gormp-12-64_1000.jpg")
+                    .into(eventImage);
+            Log.d("else", "went through the else");
+        }
         eventName.setText(res.getString("name"));
         eventName.setTag(res.getString("_id"));
         eventDate.setText(res.getString("date"));
         eventDescription.setText(res.getString("description"));
         eventTime.setText(res.getString("time"));
-        goTo.setTag(res.getJSONObject("club").getString("_id").toString());
+        goTo.setTag(res.getJSONObject("club").getString("_id"));
 
         if (res.getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID())) {
             editEventFAB.setVisibility(View.VISIBLE);
