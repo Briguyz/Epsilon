@@ -3,7 +3,10 @@ package com.example.cs4532.umdalive.fragments.base;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -19,11 +23,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
+import com.example.cs4532.umdalive.UserSingleton;
 import com.example.cs4532.umdalive.fragments.create.CreateCommentsFrag;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 /**
  * @author Henry Trinch, Josh Tindell, Jacob Willmsen, Brian Zhagnay
@@ -41,9 +48,11 @@ public class CommentsViewFrag extends Fragment {
 
     //Layout Components
     private TextView commentViewName;
-    private ListView commentBoxShow;
+    private RecyclerView commentBoxShow;
     private FloatingActionButton addCommentButton;
     private Button goToEventButton;
+    private ProgressBar commentProgressCosmetic;
+    private ArrayList<CommentFragMaker> commentArray;
 
     /**
      * Create the comment view page when navigating to it
@@ -93,8 +102,9 @@ public class CommentsViewFrag extends Fragment {
      */
     private void getLayoutComponents() {
         commentViewName = (TextView) view.findViewById(R.id.commentHeader);
-        commentBoxShow = (ListView) view.findViewById(R.id.commentsSection);
+        commentBoxShow =  view.findViewById(R.id.comment_ViewSection);
         addCommentButton = view.findViewById(R.id.addCommentButtonView);
+        commentProgressCosmetic = view.findViewById(R.id.commentProgressBar);
         addCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -134,14 +144,47 @@ public class CommentsViewFrag extends Fragment {
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
         goToEventButton.setTag(res.getJSONObject("eventID").getString("_id"));
         commentViewName.setTag(res.getString("_id"));
-        //JSONArray allComments = res.getJSONArray("comments");
-        /* Code to Make Comments appear in here
-        * for (int i=0; i<allComments.length(); i++) {
-        *
-        *
-        *
-        * }
-        * */
+        commentArray = new ArrayList<>();
+
+        addTestData(res);
+        //addTest2Data();
+        CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
+        RecyclerView.LayoutManager CommentLayoutManager = new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL, false );
+        commentBoxShow.setLayoutManager(CommentLayoutManager);
+        commentBoxShow.setAdapter(adapter);
+
+        //This statement is for the progress bar after grabbing data
+        if(commentArray.size() == 0) {
+            commentProgressCosmetic.setVisibility(View.VISIBLE);
+        } else {
+            commentProgressCosmetic.setVisibility(View.GONE);
+        }
+    }
+
+    /**
+     *
+     * @param res
+     * @throws JSONException
+     */
+    public void addTestData(JSONObject res) throws JSONException {
+        JSONArray comments = res.getJSONArray("comments");
+        for (int i = 0; i < comments.length(); i++) {
+            final JSONObject comment = comments.getJSONObject(i);
+
+            String name = comment.getString("name");
+            String time = comment.getString("time");
+            String userComment = comment.getString("comment");
+
+            commentArray.add(new CommentFragMaker("henry", name, userComment, time));
+        }
+        RecyclerView.LayoutManager CommentLayoutManager = new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL, false );
+        commentBoxShow.setLayoutManager(CommentLayoutManager);
+        CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
+        commentBoxShow.setAdapter(adapter);
+    }
+
+    public void addTest2Data() {
+        commentArray.add(new CommentFragMaker("henry", "is", "stupid", "ye"));
     }
 }
 
