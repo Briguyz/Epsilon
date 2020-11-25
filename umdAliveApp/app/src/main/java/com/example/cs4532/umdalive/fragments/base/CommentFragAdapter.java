@@ -1,9 +1,11 @@
 package com.example.cs4532.umdalive.fragments.base;
 
 import android.content.Context;
+import android.graphics.BitmapFactory;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,8 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.UserSingleton;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -23,7 +27,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Author: Henry Trinh
+ * @author : Henry Trinh
  * This is the comment frag holder which will add to the recycler view in CommentsView
  *
  */
@@ -47,17 +51,12 @@ public class CommentFragAdapter extends RecyclerView.Adapter<CommentFragAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull CommentViewHolder holder, int position) {
-        if (UserSingleton.getInstance().getProfileUrl() != null) {
-            Glide.with(mContext)
-                    .load(UserSingleton.getInstance().getProfileUrl())
-                    .apply(RequestOptions.circleCropTransform())
-                    .into(holder.userProfile);
-        } else {
-            Glide.with(mContext)
-                    .load("https://images.homedepot-static.com/productImages/42613c1a-7427-4557-ada8-ba2a17cca381/svn/gorilla-carts-yard-carts-gormp-12-64_1000.jpg")
-                    .apply(RequestOptions.circleCropTransform())
-                    .into(holder.userProfile);
-        }
+       Log.d("imageUrl", mData.get(position).getImage());
+       Glide.with(mContext)
+               .load(mData.get(position).getImage())
+               .apply(RequestOptions.circleCropTransform())
+               .into(holder.userProfile);
+        
 
         holder.commentName.setText(mData.get(position).getUserName());
         holder.commentString.setText(mData.get(position).getUserComment());

@@ -79,10 +79,6 @@ public class CommentsViewFrag extends Fragment {
                     public void onResponse(String response) {
                         try {
                             updateUI(new JSONObject(response));
-                            CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
-                            RecyclerView.LayoutManager CommentLayoutManager = new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL, false );
-                            commentBoxShow.setLayoutManager(CommentLayoutManager);
-                            commentBoxShow.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -154,26 +150,32 @@ public class CommentsViewFrag extends Fragment {
         JSONArray comments = res.getJSONArray("comments");
         Log.d("comment.length", comments.length() + "");
 
+        /**
+         * @author: Henry Trinh, Jacob Willmsen
+         * Is the for loop that will iterate through the commentView: comments array
+         * Since the comments array will return an object
+         * This for loop allows to grab the data stored in the object
+         */
         for(int i = 0; i < comments.length(); i++){
-            Log.d("give me the comments", comments.get(i).toString());
-            JSONObject indv = comments.getJSONObject(i);
             
-            //final JSONObject indv = comments.getJSONObject(i);
-            //Log.d("tag", comments.getJSONObject(i).toString());
-            comments.get(i);
+            String userProfilePic = comments.getJSONObject(i).getString("profilePic");
             String name = comments.getJSONObject(i).getString("name");
-            String id = comments.getJSONObject(i).getString("_id").toString();
             String userComment = comments.getJSONObject(i).getString("comment").toString();
             String userTime = comments.getJSONObject(i).getString("time").toString();
-            CommentFragMaker indiviualComment = new CommentFragMaker("empty", name, userComment, userTime);
+
+            String commentID;
+            //Wil take the data from the String into a CommentFragMaker whchi will then be added to the recyclerview
+            CommentFragMaker indiviualComment = new CommentFragMaker(userProfilePic, name, userComment, userTime);
             commentArray.add(indiviualComment);
             CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
             commentBoxShow.setAdapter(adapter);
-
         }
 
-
-
+        /**
+         * This part takes the CommentFragAdapter class with CommentFragMaker
+         * and will take the single comments views and add them to the recycler view
+         *
+         */
         CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
         RecyclerView.LayoutManager CommentLayoutManager = new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL, false );
         commentBoxShow.setLayoutManager(CommentLayoutManager);
@@ -189,52 +191,12 @@ public class CommentsViewFrag extends Fragment {
     }
 
     /**
-     *
-     * @param res
-     * @throws JSONException
+     * @author: Henry Trinh
+     * This function is an example of how to manually add data on the app side for testing and referencing
+     * @return void
      */
-    public void addTestData(JSONObject res) throws JSONException {
-        JSONArray comments = res.getJSONArray("comments");
-        for (int i = 0; i < comments.length(); i++) {
-            final JSONObject comment = comments.getJSONObject(i);
-
-            String name = comment.getString("name");
-            String time = comment.getString("time");
-            String userComment = comment.getString("comment");
-
-            commentArray.add(new CommentFragMaker("henry", name, userComment, time));
-            Log.d("made it", "Made it");
-        }
-
-        commentBoxShow.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false ));
-        CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
-        commentBoxShow.setAdapter(adapter);
-    }
-
     public void addTest2Data() {
-        commentArray.add(new CommentFragMaker("henry", "i69", "stupid", "ye"));
-    }
-
-    public void tester() {
-        //Use Volley Singleton to Update Page UI
-        RestSingleton restSingleton = RestSingleton.getInstance(view.getContext());
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, restSingleton.getUrl() + "getComment/" + getArguments().getString("commentID"),
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            updateUI(new JSONObject(response));
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.d("Error connecting", String.valueOf(error));
-            }
-        });
-        restSingleton.addToRequestQueue(stringRequest);
+        commentArray.add(new CommentFragMaker("henry", "FireBall", "Roll For Damage", ""));
     }
 }
 
