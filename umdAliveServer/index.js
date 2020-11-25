@@ -62,67 +62,67 @@ app.get('/getClub/:clubID', function (req, res) {
 });
 
 app.get('/getAllClubs', function (req, res) {
-  dataBase.getAllClubs(function (docs){
-    res.send(docs);
-  });
+    dataBase.getAllClubs(function (docs){
+        res.send(docs);
+    });
 });
 
 app.put('/joinClub', function (req, res){
-  if (!req.body){
-    return res.sendStatus(400);
+    if (!req.body){
+      return res.sendStatus(400);
   }
-  dataBase.joinClub(req.body.userID, req.body.clubID);
-  res.send({});
+    dataBase.joinClub(req.body.userID, req.body.clubID);
+    res.send({});
 
 });
 
 app.put('/leaveClub', function (req, res){
-  if (!req.body){
-    return res.sendStatus(400);
+    if (!req.body){
+      return res.sendStatus(400);
   }
-  dataBase.leaveClub(req.body.userID, req.body.clubID);
-  res.send({});
+    dataBase.leaveClub(req.body.userID, req.body.clubID);
+    res.send({});
 });
 
 app.delete('/deleteClub/:clubID', function (req, res){
-  dataBase.deleteClub(req.params.clubID);
-  res.send({});
+    dataBase.deleteClub(req.params.clubID);
+    res.send({});
 });
 
 //User server Calls
 app.put('/createUser', function (req, res){
-  if (!req.body){
-    return res.sendStatus(400);
-  }
-  console.log(req.body);
-  var userData = {
-    "name" : req.body.name,
-    "email" : req.body.email,
-    "major" : req.body.major,
-    "description" : req.body.description,
-    "clubs" : req.body.clubs,
-    "userID" : req.body.userID,
-    "profilePic" : req.body.profilePic
-  };
-  dataBase.createUser(userData);
-  res.send({});
+    if (!req.body){
+        return res.sendStatus(400);
+    }
+    console.log(req.body);
+    var userData = {
+        "name" : req.body.name,
+        "email" : req.body.email,
+        "major" : req.body.major,
+        "description" : req.body.description,
+        "clubs" : req.body.clubs,
+        "userID" : req.body.userID,
+        "profilePic" : req.body.profilePic
+    };
+    dataBase.createUser(userData);
+    res.send({});
 });
 
 app.put('/editUser', function (req, res){
-  if (!req.body){
-    return res.sendStatus(400);
-  }
-  var userData = {
-    "name" : req.body.name,
-    "email" : req.body.email,
-    "major" : req.body.major,
-    "description" : req.body.description,
-    "clubs" : req.body.clubs,
-    "userID" : req.body.userID,
-    "profilePic" : req.body.profilePic
-  };
-  dataBase.editUser(req.body.userID, userData);
-  res.send({});
+    if (!req.body){
+        return res.sendStatus(400);
+    }
+    var userData = {
+        "name" : req.body.name,
+        "email" : req.body.email,
+        "major" : req.body.major,
+        "description" : req.body.description,
+        "clubs" : req.body.clubs,
+        "userID" : req.body.userID,
+        "profilePic" : req.body.profilePic
+    };
+    dataBase.editUser(req.body.userID, userData);
+    res.send({});
 });
 
 app.get('/getUser/:userID', function (req, res){
@@ -133,24 +133,20 @@ app.get('/getUser/:userID', function (req, res){
 
 app.get('/users/:email', function (req, res) {
     var user;
-        console.log("Looking for " + req.params.email);
-
+    console.log("Looking for " + req.params.email);
     mongodb.findUser(req.params.email, function(result){
-
         if(result.length > 0){
-                        var user = result[0];
-                        console.log(user);
-                        console.log("Found user.");
-                        //console.log(res.body);
+            var user = result[0];
+            console.log(user);
+            console.log("Found user.");
+            //console.log(res.body);
             //            res.query = JSON.stringify(user.userData);//was user.userData
             //                        console.log("-------------------")
             //                                    res.send(res.query);
             //
         } else {
-                        res.send(404);
-
+            res.send(404);
         }
-
     });
     //    res.send(JSON.stringify(dummyUser1));
     //
@@ -184,18 +180,22 @@ app.put('/createEvent', function (req, res){
   if (!req.body){
     return res.sendStatus(400);
   }
-  var eventData = {
-    "name" : req.body.name,
-    "description" : req.body.description,
-    "date" : req.body.date,
-    "time" : req.body.time,
-    "club" : req.body.club,
-    "comments": req.body.comments
-  };
-  dataBase.createEvent(eventData, function(doc){
-		console.log(doc);
-		res.send(doc);
-  });
+    var eventData = {
+        "name" : req.body.name,
+        "description" : req.body.description,
+        "date" : req.body.date,
+        "time" : req.body.time,
+        "club" : req.body.club,
+        "commentsView": req.body.commentsView
+    };
+    var commentsViewData = {
+        "comments" : req.body.comments,
+        "eventID" : req.body._id
+    }
+    dataBase.createEvent(eventData, commentsViewData, function(doc){
+	console.log(doc);
+        res.send(doc);
+    });
 });
 
 app.put('/editEvent', function (req, res){
@@ -209,7 +209,7 @@ app.put('/editEvent', function (req, res){
     "date" : req.body.date,
     "time" : req.body.time,
     "club" : req.body.club,
-    "comments": req.body.comments
+    "commentsView": req.body.commentsView
   };
 
   dataBase.editEvent(req.body._id, eventData);
@@ -218,6 +218,7 @@ app.put('/editEvent', function (req, res){
 
 app.get('/getEvent/:eventID', function (req, res) {
     console.log("getEvent");
+    console.log(req.params.eventID);
     dataBase.getEvent(req.params.eventID, function (docs) {
 	console.log(docs);
         res.send(docs);
@@ -249,7 +250,7 @@ app.put('/createComment' , function (req, res) {
         "comment" : req.body.comment,
         "time" : req.body.time,
         "userID" : req.body.userID,
-        "eventID" : req.body.eventID
+        "commentsView" : req.body.commentsView
     };
     dataBase.createComment(commentData, function (doc) {
         console.log(doc);
@@ -268,11 +269,11 @@ app.put('/editComment', function (req, res){
           "comment" : req.body.comment,
           "time" : req.body.time,
           "userID" : req.body.userID,
-          "eventID" : req.body.eventID
+          "commentsView" : req.body.commentsView
       };
     dataBase.editEvent(req.body._id, eventData);
       res.send({});
-  };
+});
 
 //Requires Testing taken from previous functions
 app.get('/getComment/:commentID', function (req, res) {
@@ -295,6 +296,16 @@ app.delete('/deleteComment/:commentID', function (req, res){
   res.send({});
 });
 
+//CommentView Server Calls
+//Requires Testing
+app.get('/getCommentsView/:commentsViewID', function (req, res) {
+    console.log("getCommentsView");
+    dataBase.getCommentsView(req.params.commentsViewID, function (docs){
+        console.log(docs);
+        res.send(docs);
+    });
+});
+
 ////////// SECOND TEAM STUFF
 
 /*///////////////////////////
@@ -311,10 +322,8 @@ app.delete("/delete", function(req, res){
     if (!req.body)
         return res.sendStatus(400);
 
-    console.log("GIMME DATA" + req.body.clubName);	
+    console.log("GIMME DATA" + req.body.clubName);
     mongodb.delete(req.body.clubName);
-
-    
     console.log("Club has been deleted: " + req.body.clubName);
 
     res.sendStatus(200);
@@ -322,13 +331,9 @@ app.delete("/delete", function(req, res){
 );
 
 app.delete("/delete/:clubName", function(req, res){
-    
-    console.log("GIMME DATA" + req.body.clubName);	
+    console.log("GIMME DATA" + req.body.clubName);
     mongodb.delete(req.params.clubName);
-
-    
     console.log("Club has been deleted: " + req.body.clubName);
-
     res.sendStatus(200);
 }
 );
@@ -350,11 +355,11 @@ app.delete("/deletePost", function(req, res){
 		return res.sendStatus(400);
 
 	mongodb.deletePost(req.body.title);
-	
+
 	res.sendStatus(200);
 
 	console.log("Post has been deleted: " + req.body.title);
-	
+
 }
 );
 
@@ -368,8 +373,8 @@ app.put('/clubs', function (req, res) {
     // If for some reason the JSON isn't parsed, return HTTP error 400
     if (!req.body)
         return res.sendStatus(400);
-	
-    //console.log(req.body);	
+
+    //console.log(req.body);
     // Takes data from request and makes a new object
     var clubData = {
         clubName: req.body.clubName,
@@ -655,9 +660,6 @@ app.get('/posts/:clubName', function (req, res) {
                 res.send(stringArray);
     });
 });
-
-
-
 
 function getClubKeyword(position) {
     return clubs.items[position].keywords;

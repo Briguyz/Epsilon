@@ -1,7 +1,10 @@
 package com.example.cs4532.umdalive.fragments.create;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +22,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
+import com.example.cs4532.umdalive.fragments.base.CommentsViewFrag;
 import com.example.cs4532.umdalive.fragments.base.EventFrag;
 
 import org.json.JSONArray;
@@ -31,13 +35,13 @@ import org.json.JSONObject;
 
 /**
  * @author Josh Senst
- *
+ * <p>
  * 4/26/2018
- *
+ * <p>
  * Class that allows for the editing of events on the edit events page
  */
 
-public class CreateEventFrag  extends Fragment implements View.OnClickListener {
+public class CreateEventFrag extends Fragment implements View.OnClickListener {
     //View
     View view;
 
@@ -52,6 +56,7 @@ public class CreateEventFrag  extends Fragment implements View.OnClickListener {
 
     /**
      * Creates the page for Editing Events when the edit events button is pressed
+     *
      * @param inflater
      * @param container
      * @param savedInstanceState
@@ -94,6 +99,7 @@ public class CreateEventFrag  extends Fragment implements View.OnClickListener {
 
     /**
      * Allows for the clicked to edit on the text box
+     *
      * @param v The textView clicked
      * @return nothing
      */
@@ -101,13 +107,25 @@ public class CreateEventFrag  extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
 
         JSONObject newEventData = new JSONObject();
-        JSONArray comments = new JSONArray();
+        final String commentsView = new String();
+
         try {
             newEventData.put("name", EventName.getText());
             newEventData.put("description", EventDescription.getText());
-            newEventData.put("time",EventTime.getText());
+            newEventData.put("time", EventTime.getText());
             newEventData.put("date", EventDate.getText());
-            newEventData.put("club",clubData.getString("clubID"));
+            newEventData.put("club", clubData.getString("clubID"));
+            newEventData.put("commentsView", commentsView);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        //Creating Data for CommentsView
+        JSONArray comments = new JSONArray();
+        String eventID = new String();
+
+        try {
+            newEventData.put("eventID", eventID);
             newEventData.put("comments", comments);
             newEventData.put("imageurl", EventImage.getText());
 
@@ -124,9 +142,10 @@ public class CreateEventFrag  extends Fragment implements View.OnClickListener {
                             Bundle data = new Bundle();
                             data.putString("eventID", response.getString("eventID"));
                             data.putString("clubID", clubData.getString("clubID"));
+                            data.putString("commentsViewID", response.getString("commentsViewID"));
                             frag.setArguments(data);
                             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
-                        } catch (JSONException e){
+                        } catch (JSONException e) {
                             Log.d("Error getting eventID", String.valueOf(e));
                         }
                     }
@@ -136,7 +155,6 @@ public class CreateEventFrag  extends Fragment implements View.OnClickListener {
                 Log.d("Error connecting", String.valueOf(error));
             }
         });
-
         RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
     }
 }

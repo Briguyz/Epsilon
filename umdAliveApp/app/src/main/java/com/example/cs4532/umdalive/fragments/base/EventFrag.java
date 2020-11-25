@@ -34,13 +34,13 @@ import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 /**
  * @author Josh Senst
- *
+ * <p>
  * 4/26/2018
- *
+ * <p>
  * This class holds the page for the events
- *
+ * <p>
  * 10/29/2020
- *
+ * <p>
  * view
  */
 public class EventFrag extends Fragment {
@@ -56,11 +56,10 @@ public class EventFrag extends Fragment {
     private ImageView eventImage;
 
     private Button goTo;
+    private FloatingActionButton editEventFAB;
 
     //10/29/2020 Henry Trinh, Brian, Josh
     private FloatingActionButton createCommentButton;
-
-    private FloatingActionButton editEventFAB;
 
     // Function to validate image string
     public boolean isValid(String str) {
@@ -74,6 +73,7 @@ public class EventFrag extends Fragment {
 
         return m.matches();
     }
+
 
     /**
      * Creates the event page when navigating to it
@@ -128,6 +128,7 @@ public class EventFrag extends Fragment {
         eventTime = view.findViewById(R.id.EventTimeView);
         eventImage = view.findViewById(R.id.eventurl);
         goTo = view.findViewById(R.id.GoToClub);
+
         goTo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -137,30 +138,13 @@ public class EventFrag extends Fragment {
                 data.putString("clubID", TAG);
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
-
-
-            }
-        });
-        /**
-         * Functionality of the button for createComment
-         * 10/30/2020- Henry Trinh
-         * the button functionality switches the view
-         * Then when clicked on it will send a
-         */
-        createCommentButton = view.findViewById(R.id.goToComment);
-        createCommentButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String TAG = (String) createCommentButton.getTag();
-                CommentsFrag frag = new CommentsFrag();
-                Bundle data = new Bundle();
-                data.putString("commentID", TAG);
-                frag.setArguments(data);
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
         });
 
-        editEventFAB = view.findViewById(R.id.EditEventFAB);
+        createCommentButton = view.findViewById(R.id.GoToComment);
+
+
+        editEventFAB =  view.findViewById(R.id.EditEventFAB);
         editEventFAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -218,5 +202,23 @@ public class EventFrag extends Fragment {
         } else {
             editEventFAB.setVisibility(View.GONE);
         }
+
+        final String commentsViewID = res.getString("commentsView");
+
+        /**
+         * Functionality of the button for goToCommentsView
+         * 10/30/2020- Henry Trinh, Jacob Willmsen
+         * The button switches to the commentsView associated with events
+         */
+       createCommentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CommentsViewFrag frag = new CommentsViewFrag();
+                Bundle data = new Bundle();
+                data.putString("commentsViewID", commentsViewID);
+                frag.setArguments(data);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+            }
+        });
     }
 }
