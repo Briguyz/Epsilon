@@ -50,6 +50,7 @@ public class CreateEventFrag extends Fragment implements View.OnClickListener {
     private EditText EventDescription;
     private EditText EventTime;
     private EditText EventDate;
+    private EditText EventImage;
     private Button CreateEventButton;
     private JSONObject clubData;
 
@@ -83,6 +84,20 @@ public class CreateEventFrag extends Fragment implements View.OnClickListener {
     }
 
     /**
+     * Gets the layout components from edit_event_layout.xml
+     * @return nothing
+     */
+    private void getLayoutComponents() {
+        EventName = view.findViewById(R.id.EventName);
+        EventDescription = view.findViewById(R.id.EventDescription);
+        EventTime = view.findViewById(R.id.EventTime);
+        EventDate = view.findViewById(R.id.EventDate);
+        EventImage = view.findViewById(R.id.EventImage);
+        CreateEventButton = view.findViewById(R.id.CreateEvent);
+        CreateEventButton.setOnClickListener(this);
+    }
+
+    /**
      * Allows for the clicked to edit on the text box
      *
      * @param v The textView clicked
@@ -112,6 +127,8 @@ public class CreateEventFrag extends Fragment implements View.OnClickListener {
         try {
             newEventData.put("eventID", eventID);
             newEventData.put("comments", comments);
+            newEventData.put("imageurl", EventImage.getText());
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -139,20 +156,5 @@ public class CreateEventFrag extends Fragment implements View.OnClickListener {
             }
         });
         RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
-    }
-
-
-    /**
-     * Gets the layout components from edit_event_layout.xml
-     *
-     * @return nothing
-     */
-    private void getLayoutComponents() {
-        EventName = view.findViewById(R.id.EventName);
-        EventDescription = view.findViewById(R.id.EventDescription);
-        EventTime = view.findViewById(R.id.EventTime);
-        EventDate = view.findViewById(R.id.EventDate);
-        CreateEventButton = view.findViewById(R.id.CreateEvent);
-        CreateEventButton.setOnClickListener(this);
     }
 }
