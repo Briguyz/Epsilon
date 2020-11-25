@@ -81,9 +81,10 @@
 
     <Button
         android:id="@+id/CreateEvent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100sp"
+        android:layout_height="53sp"
         android:layout_marginTop="16dp"
+        android:background="@color/colorAccent"
         android:text="Save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

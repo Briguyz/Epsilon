@@ -71,8 +71,8 @@
         android:layout_marginBottom="16dp"
         android:text="Go to Club"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/EditEventFAB"
-        app:layout_constraintStart_toEndOf="@+id/GoToComment" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/EditEventFAB"
