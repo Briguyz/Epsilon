@@ -1,5 +1,9 @@
 package com.example.cs4532.umdalive.fragments.base;
 
+/**
+ * Author: Henry Trinh
+ * This is the class that will take in comment data
+ */
 public class CommentFragMaker {
     String Image;
     String UserName;

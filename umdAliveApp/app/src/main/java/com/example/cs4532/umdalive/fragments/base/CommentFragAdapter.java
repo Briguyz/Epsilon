@@ -22,6 +22,11 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Author: Henry Trinh
+ * This is the comment frag holder which will add to the recycler view in CommentsView
+ *
+ */
 public class CommentFragAdapter extends RecyclerView.Adapter<CommentFragAdapter.CommentViewHolder> {
 
     private Context mContext;

@@ -1,5 +1,6 @@
 package com.example.cs4532.umdalive.fragments.base;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -78,6 +79,10 @@ public class CommentsViewFrag extends Fragment {
                     public void onResponse(String response) {
                         try {
                             updateUI(new JSONObject(response));
+                            CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
+                            RecyclerView.LayoutManager CommentLayoutManager = new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL, false );
+                            commentBoxShow.setLayoutManager(CommentLayoutManager);
+                            commentBoxShow.setAdapter(adapter);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -144,14 +149,36 @@ public class CommentsViewFrag extends Fragment {
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
         goToEventButton.setTag(res.getJSONObject("eventID").getString("_id"));
         commentViewName.setTag(res.getString("_id"));
-        commentArray = new ArrayList<>();
 
-        addTestData(res);
-        //addTest2Data();
+        commentArray = new ArrayList<>();
+        JSONArray comments = res.getJSONArray("comments");
+        Log.d("comment.length", comments.length() + "");
+
+        for(int i = 0; i < comments.length(); i++){
+            Log.d("give me the comments", comments.get(i).toString());
+            JSONObject indv = comments.getJSONObject(i);
+            
+            //final JSONObject indv = comments.getJSONObject(i);
+            //Log.d("tag", comments.getJSONObject(i).toString());
+            comments.get(i);
+            String name = comments.getJSONObject(i).getString("name");
+            String id = comments.getJSONObject(i).getString("_id").toString();
+            String userComment = comments.getJSONObject(i).getString("comment").toString();
+            String userTime = comments.getJSONObject(i).getString("time").toString();
+            CommentFragMaker indiviualComment = new CommentFragMaker("empty", name, userComment, userTime);
+            commentArray.add(indiviualComment);
+            CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
+            commentBoxShow.setAdapter(adapter);
+
+        }
+
+
+
         CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
         RecyclerView.LayoutManager CommentLayoutManager = new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL, false );
         commentBoxShow.setLayoutManager(CommentLayoutManager);
         commentBoxShow.setAdapter(adapter);
+
 
         //This statement is for the progress bar after grabbing data
         if(commentArray.size() == 0) {
@@ -176,15 +203,38 @@ public class CommentsViewFrag extends Fragment {
             String userComment = comment.getString("comment");
 
             commentArray.add(new CommentFragMaker("henry", name, userComment, time));
+            Log.d("made it", "Made it");
         }
-        RecyclerView.LayoutManager CommentLayoutManager = new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL, false );
-        commentBoxShow.setLayoutManager(CommentLayoutManager);
+
+        commentBoxShow.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false ));
         CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
         commentBoxShow.setAdapter(adapter);
     }
 
     public void addTest2Data() {
-        commentArray.add(new CommentFragMaker("henry", "is", "stupid", "ye"));
+        commentArray.add(new CommentFragMaker("henry", "i69", "stupid", "ye"));
+    }
+
+    public void tester() {
+        //Use Volley Singleton to Update Page UI
+        RestSingleton restSingleton = RestSingleton.getInstance(view.getContext());
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, restSingleton.getUrl() + "getComment/" + getArguments().getString("commentID"),
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            updateUI(new JSONObject(response));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d("Error connecting", String.valueOf(error));
+            }
+        });
+        restSingleton.addToRequestQueue(stringRequest);
     }
 }
 
