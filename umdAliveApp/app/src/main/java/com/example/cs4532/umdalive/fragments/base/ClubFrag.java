@@ -192,7 +192,7 @@ public class ClubFrag extends Fragment{
             Glide.with(this)
                     .load(res.getString("profilePic"))
                     .error(R.drawable.ic_menu_all_clubs)
-                    .transform(new CircleCrop())
+                    .transform(new RoundedCornersTransformation(30, 10))
                     .into(clubImage);
         } else {
             Glide.with(this)

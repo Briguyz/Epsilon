@@ -122,7 +122,7 @@ public class CommentsFrag extends Fragment {
         profileName.setTag(res.getString("_id"));
         timePosted.setText(res.getString("time"));
         goToComments.setTag(res.getJSONObject("commentsView").getString("_id"));
-        
+
         profileName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
