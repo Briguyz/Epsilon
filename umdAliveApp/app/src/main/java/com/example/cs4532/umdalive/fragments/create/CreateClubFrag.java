@@ -43,7 +43,6 @@ public class CreateClubFrag extends Fragment {
     private EditText ClubDescription;
     private Button save;
     private EditText ClubImage;
-    //private ImageView clubImage;
 
     /**
      * Creates the create club page view
@@ -59,8 +58,6 @@ public class CreateClubFrag extends Fragment {
         view = inflater.inflate(R.layout.create_club_layout, container, false);
 
         getLayoutComponents();
-
-        //loadClubImage();
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,23 +85,6 @@ public class CreateClubFrag extends Fragment {
         ClubImage = view.findViewById(R.id.createClubImg);
         save = view.findViewById(R.id.createClubSave);
     }
-
-
-   /* private void loadClubImage () {
-        if (ClubImage.getText() != null && ClubImage.getText().toString().endsWith(".jpg")) {
-            Log.d("clubimagetext", ClubImage.getText().toString());
-            Glide.with(this)
-                    .load(ClubImage.getText().toString())
-                    .apply(RequestOptions.circleCropTransform())
-                    .into((ImageView)view.findViewById(R.id.clubImage));
-        } else {
-            Glide.with(this)
-                    .load("https://images.homedepot-static.com/productImages/42613c1a-7427-4557-ada8-ba2a17cca381/svn/gorilla-carts-yard-carts-gormp-12-64_1000.jpg")
-                    .apply(RequestOptions.circleCropTransform())
-                    .into((ImageView)view.findViewById(R.id.clubImage));
-            Log.d("clubimagetext", ClubImage.getText().toString());
-        }
-    }*/
 
     /**
      * Called whenever a user wishes to create a club, and makes the that user and admin

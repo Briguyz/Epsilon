@@ -194,6 +194,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
                 //Adding regulars
                 JSONArray regulars = clubData.getJSONObject("members").getJSONArray("regular");
                 JSONArray regular = new JSONArray();
+                
                 for(int i = 0; i < regulars.length(); i++){
                     regular.put(i, regulars.getJSONObject(i).getString("userID"));
                 }
@@ -276,7 +277,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
      * @see JSONException
      */
     private void updateUI(JSONObject res) throws JSONException {
-        EditingClub.setText("Editing Club:\n" + res.getString("name"));
+        EditingClub.setText( res.getString("name"));
         DeleteButton.setTag("DELETE");
         NewClubName.setText(res.getString("name"));
         NewClubDescription.setText(res.getString("description"));

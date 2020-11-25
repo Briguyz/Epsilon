@@ -8,15 +8,23 @@
 
     <EditText
         android:id="@+id/addCommentTextBox"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
+        android:gravity="top|left"
         android:hint="@string/comment"
         android:importantForAutofill="no"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine|textCapSentences"
+        android:lines="5"
+        android:minLines="6"
+        android:scrollbars="none"
+        android:scrollHorizontally="false"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,23 +32,21 @@
         android:id="@+id/saveCommentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
         android:text="@string/add_comment"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addCommentTextBox"
-        app:layout_constraintVertical_bias="0.302" />
+        app:layout_constraintTop_toBottomOf="@+id/addCommentTextBox" />
 
     <Button
         android:id="@+id/fromCreateCommentToComments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
         android:text="@string/goToCommentString"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/saveCommentButton"
-        app:layout_constraintVertical_bias="0.237" />
+        app:layout_constraintTop_toBottomOf="@+id/addCommentTextBox" />
 </android.support.constraint.ConstraintLayout>

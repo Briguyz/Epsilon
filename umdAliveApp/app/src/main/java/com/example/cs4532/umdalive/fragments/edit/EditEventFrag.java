@@ -48,6 +48,7 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
     private EditText NewEventDescription;
     private EditText NewEventTime;
     private EditText NewEventDate;
+    private EditText NewEventUrl;
     private Button SaveEvent;
     private Button DeleteEvent;
 
@@ -195,6 +196,13 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
                         e.printStackTrace();
                     }
                 }
+                if (NewEventUrl.getText().toString().trim().length() != 0) {
+                    try {
+                        eventData.put("imageurl", NewEventUrl.getText().toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
                 try {
                     eventData.put("club", eventData.getJSONObject("club").getString("_id"));
                 } catch (JSONException e) {
@@ -238,6 +246,7 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
         }
     }
 
+
     /**
      * Gets the layout components from edit_event_layout.xml
      *
@@ -249,6 +258,7 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
         NewEventDescription = view.findViewById(R.id.EventDescription);
         NewEventDate = view.findViewById(R.id.EventDate);
         NewEventTime = view.findViewById(R.id.EventTime);
+        NewEventUrl = view.findViewById(R.id.EventImage);
         SaveEvent = view.findViewById(R.id.SaveEvent);
         DeleteEvent = view.findViewById(R.id.DeleteEvent);
         SaveEvent.setOnClickListener(this);
@@ -263,12 +273,12 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
      * @see JSONException
      */
     private void updateUI(JSONObject res) throws JSONException {
-        EditingEvent.setText("Editing Event:\n" + res.getString("name"));
         EditingEvent.setTag(res.getString("_id"));
         NewEventName.setText(res.getString("name"));
         NewEventDescription.setText(res.getString("description"));
         NewEventTime.setText(res.getString("time"));
         NewEventDate.setText(res.getString("date"));
+        NewEventUrl.setText(res.getString("imageurl"));
         DeleteEvent.setTag("DELETE");
         eventData = res;
     }
