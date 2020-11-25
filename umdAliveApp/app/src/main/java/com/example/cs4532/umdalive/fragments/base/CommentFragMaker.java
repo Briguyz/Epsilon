@@ -10,14 +10,18 @@ public class CommentFragMaker {
     String UserName;
     String UserComment;
     String UserTime;
+    String CommentID;
+    String UserID;
 
 
 
-    public CommentFragMaker(String image, String name, String comment, String time) {
+    public CommentFragMaker(String image, String name, String comment, String time, String commentID, String userID) {
         Image = image;
         UserName = name;
         UserComment = comment;
         UserTime = time;
+        CommentID = commentID;
+        UserID = userID;
 
 
     }
@@ -53,4 +57,13 @@ public class CommentFragMaker {
     public void setUserTime(String userTime) {
         UserTime = userTime;
     }
+
+    public void setCommentID(String commentID) { CommentID = commentID; }
+
+    public String getCommentID() { return CommentID; }
+
+    public String getUserID() { return UserID; }
+
+    public void setUserID(String userID) { UserID = userID; }
+
 }

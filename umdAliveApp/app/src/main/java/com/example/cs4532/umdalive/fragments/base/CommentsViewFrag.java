@@ -156,16 +156,23 @@ public class CommentsViewFrag extends Fragment {
          * Since the comments array will return an object
          * This for loop allows to grab the data stored in the object
          */
+        String userProfilePic;
         for(int i = 0; i < comments.length(); i++){
-            
-            String userProfilePic = comments.getJSONObject(i).getString("profilePic");
+            if(comments.getJSONObject(i).getString("profilePic") != null) {
+                userProfilePic = comments.getJSONObject(i).getString("profilePic");
+            } else {
+                userProfilePic = "https://images.homedepot-static.com/productImages/42613c1a-7427-4557-ada8-ba2a17cca381/svn/gorilla-carts-yard-carts-gormp-12-64_1000.jpg";
+            }
             String name = comments.getJSONObject(i).getString("name");
             String userComment = comments.getJSONObject(i).getString("comment").toString();
             String userTime = comments.getJSONObject(i).getString("time").toString();
+            Log.d("id for comment", comments.getJSONObject(i).getString("_id"));
 
-            String commentID;
+            //Grabs user Data
+            String commentID = comments.getJSONObject(i).getString("_id");
+            String userID = comments.getJSONObject(i).getString("userID");
             //Wil take the data from the String into a CommentFragMaker whchi will then be added to the recyclerview
-            CommentFragMaker indiviualComment = new CommentFragMaker(userProfilePic, name, userComment, userTime);
+            CommentFragMaker indiviualComment = new CommentFragMaker(userProfilePic, name, userComment, userTime, commentID, userID);
             commentArray.add(indiviualComment);
             CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
             commentBoxShow.setAdapter(adapter);
@@ -190,14 +197,6 @@ public class CommentsViewFrag extends Fragment {
         }
     }
 
-    /**
-     * @author: Henry Trinh
-     * This function is an example of how to manually add data on the app side for testing and referencing
-     * @return void
-     */
-    public void addTest2Data() {
-        commentArray.add(new CommentFragMaker("henry", "FireBall", "Roll For Damage", ""));
-    }
 }
 
 
