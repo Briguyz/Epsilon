@@ -93,7 +93,6 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
             newCommentData.put("userID", UserSingleton.getInstance().getUserID());
             newCommentData.put("commentsView", commentViewData.getString("commentsViewID"));
             newCommentData.put("profilePic", UserSingleton.getInstance().getProfileUrl());
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
