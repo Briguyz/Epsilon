@@ -46,8 +46,9 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
 
     //Layout Components
     private EditText CommentText;
-    private Button CreateCommentButton;
+    private Button saveCommentButton;
     private Button goToComments;
+    private Button deleteCommentButton;
     private JSONObject commentViewData;
     /**
      * Creates the page for Editing Comments when the edit events button is pressed
@@ -122,13 +123,15 @@ public class CreateCommentsFrag  extends Fragment implements View.OnClickListene
         RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
     }
     /**
-     * Gets the layout components from edit_comments_layout.xml
+     * Gets the layout components from edit_comment_layout.xml
      * @return nothing
      */
     private void getLayoutComponents() {
-        CommentText = view.findViewById(R.id.addCommentTextBox);
-        CreateCommentButton = view.findViewById(R.id.saveCommentButton);
-        CreateCommentButton.setOnClickListener(this);
+        CommentText = view.findViewById(R.id.editCommentBox);
+        saveCommentButton = view.findViewById(R.id.saveCommentButton);
+        saveCommentButton.setOnClickListener(this);
+        deleteCommentButton = view.findViewById(R.id.deleteComment);
+        deleteCommentButton.setOnClickListener(this);
         goToComments = view.findViewById(R.id.fromCreateCommentToComments);
         goToComments.setOnClickListener(new View.OnClickListener() {
             @Override
