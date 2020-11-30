@@ -132,7 +132,7 @@ public class CommentFragAdapter extends RecyclerView.Adapter<CommentFragAdapter.
             commentName = itemView.findViewById(R.id.comment_UserName);
             commentString = itemView.findViewById(R.id.comment_UserComment);
             commentTime = itemView.findViewById(R.id.comment_UserTime);
-            commentString.setMovementMethod(new ScrollingMovementMethod());
+            //commentString.setMovementMethod(new ScrollingMovementMethod());
         }
     }
 

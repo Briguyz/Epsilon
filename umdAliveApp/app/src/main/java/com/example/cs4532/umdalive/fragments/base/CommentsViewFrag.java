@@ -30,7 +30,7 @@ import com.example.cs4532.umdalive.fragments.create.CreateCommentsFrag;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import android.widget.Toast;
 import java.util.ArrayList;
 
 /**
@@ -192,8 +192,10 @@ public class CommentsViewFrag extends Fragment {
         //This statement is for the progress bar after grabbing data
         if(commentArray.size() == 0) {
             commentProgressCosmetic.setVisibility(View.VISIBLE);
+            Toast.makeText(view.getContext(), "There are no comments. Please make a comment by pressing the + icon", Toast.LENGTH_LONG).show();
         } else {
             commentProgressCosmetic.setVisibility(View.GONE);
+
         }
     }
 
