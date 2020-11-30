@@ -1,9 +1,13 @@
 package com.example.cs4532.umdalive.fragments.base;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -19,11 +24,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
+import com.example.cs4532.umdalive.UserSingleton;
 import com.example.cs4532.umdalive.fragments.create.CreateCommentsFrag;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 /**
  * @author Henry Trinch, Josh Tindell, Jacob Willmsen, Brian Zhagnay
@@ -41,9 +49,11 @@ public class CommentsViewFrag extends Fragment {
 
     //Layout Components
     private TextView commentViewName;
-    private ListView commentBoxShow;
+    private RecyclerView commentBoxShow;
     private FloatingActionButton addCommentButton;
     private Button goToEventButton;
+    private ProgressBar commentProgressCosmetic;
+    private ArrayList<CommentFragMaker> commentArray;
 
     /**
      * Create the comment view page when navigating to it
@@ -93,8 +103,9 @@ public class CommentsViewFrag extends Fragment {
      */
     private void getLayoutComponents() {
         commentViewName = (TextView) view.findViewById(R.id.commentHeader);
-        commentBoxShow = (ListView) view.findViewById(R.id.commentsSection);
+        commentBoxShow =  view.findViewById(R.id.comment_ViewSection);
         addCommentButton = view.findViewById(R.id.addCommentButtonView);
+        commentProgressCosmetic = view.findViewById(R.id.commentProgressBar);
         addCommentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -134,15 +145,58 @@ public class CommentsViewFrag extends Fragment {
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
         goToEventButton.setTag(res.getJSONObject("eventID").getString("_id"));
         commentViewName.setTag(res.getString("_id"));
-        //JSONArray allComments = res.getJSONArray("comments");
-        /* Code to Make Comments appear in here
-        * for (int i=0; i<allComments.length(); i++) {
-        *
-        *
-        *
-        * }
-        * */
+
+        commentArray = new ArrayList<>();
+        JSONArray comments = res.getJSONArray("comments");
+        Log.d("comment.length", comments.length() + "");
+
+        /**
+         * @author: Henry Trinh, Jacob Willmsen
+         * Is the for loop that will iterate through the commentView: comments array
+         * Since the comments array will return an object
+         * This for loop allows to grab the data stored in the object
+         */
+        String userProfilePic;
+        for(int i = 0; i < comments.length(); i++){
+            if(comments.getJSONObject(i).getString("profilePic") != null) {
+                userProfilePic = comments.getJSONObject(i).getString("profilePic");
+            } else {
+                userProfilePic = "https://images.homedepot-static.com/productImages/42613c1a-7427-4557-ada8-ba2a17cca381/svn/gorilla-carts-yard-carts-gormp-12-64_1000.jpg";
+            }
+            String name = comments.getJSONObject(i).getString("name");
+            String userComment = comments.getJSONObject(i).getString("comment").toString();
+            String userTime = comments.getJSONObject(i).getString("time").toString();
+            Log.d("id for comment", comments.getJSONObject(i).getString("_id"));
+
+            //Grabs user Data
+            String commentID = comments.getJSONObject(i).getString("_id");
+            String userID = comments.getJSONObject(i).getString("userID");
+            //Wil take the data from the String into a CommentFragMaker whchi will then be added to the recyclerview
+            CommentFragMaker indiviualComment = new CommentFragMaker(userProfilePic, name, userComment, userTime, commentID, userID);
+            commentArray.add(indiviualComment);
+            CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
+            commentBoxShow.setAdapter(adapter);
+        }
+
+        /**
+         * This part takes the CommentFragAdapter class with CommentFragMaker
+         * and will take the single comments views and add them to the recycler view
+         *
+         */
+        CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
+        RecyclerView.LayoutManager CommentLayoutManager = new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL, false );
+        commentBoxShow.setLayoutManager(CommentLayoutManager);
+        commentBoxShow.setAdapter(adapter);
+
+
+        //This statement is for the progress bar after grabbing data
+        if(commentArray.size() == 0) {
+            commentProgressCosmetic.setVisibility(View.VISIBLE);
+        } else {
+            commentProgressCosmetic.setVisibility(View.GONE);
+        }
     }
+
 }
 
 

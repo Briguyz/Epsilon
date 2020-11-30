@@ -22,15 +22,12 @@
         android:id="@+id/GoToComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/goToCommentString"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/GoToClub"
-        app:layout_constraintVertical_bias="0.01" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/CommentDescriptionView"
@@ -52,17 +49,13 @@
         android:id="@+id/EditCommentFAB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="336dp"
-        android:layout_marginLeft="336dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_edit"
-        android:layout_marginEnd="16dp" />
+        app:srcCompat="@drawable/ic_edit" />
 
     <TextView
         android:id="@+id/CommentUsername"

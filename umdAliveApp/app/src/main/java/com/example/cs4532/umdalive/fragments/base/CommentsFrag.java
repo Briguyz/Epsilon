@@ -122,13 +122,14 @@ public class CommentsFrag extends Fragment {
         profileName.setTag(res.getString("_id"));
         timePosted.setText(res.getString("time"));
         goToComments.setTag(res.getJSONObject("commentsView").getString("_id"));
-        
+        final String userID = res.getString("userID");
+
         profileName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ProfileFrag frag = new ProfileFrag();
                 Bundle data = new Bundle();
-                data.putString("userID", UserSingleton.getInstance().getUserID());
+                data.putString("userID", userID);
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
             }
