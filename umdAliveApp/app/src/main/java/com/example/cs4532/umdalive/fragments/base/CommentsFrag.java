@@ -135,7 +135,7 @@ public class CommentsFrag extends Fragment {
             }
         });
 
-        if (res.getJSONObject("commentsView").getJSONObject("eventID").getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID()) || UserSingleton.getInstance().getUserID().equals(res.getString("name"))) {
+        if (res.getJSONObject("commentsView").getJSONObject("eventID").getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID()) || UserSingleton.getInstance().getUserID().equals(userID)) {
             commentEditFAB.setVisibility(View.VISIBLE);
         } else {
             commentEditFAB.setVisibility(View.GONE);
