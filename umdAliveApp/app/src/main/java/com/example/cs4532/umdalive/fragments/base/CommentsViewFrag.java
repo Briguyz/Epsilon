@@ -193,6 +193,7 @@ public class CommentsViewFrag extends Fragment {
         if(commentArray.size() == 0) {
             commentProgressCosmetic.setVisibility(View.VISIBLE);
             Toast.makeText(view.getContext(), "There are no comments. Please make a comment by pressing the + icon", Toast.LENGTH_LONG).show();
+            commentProgressCosmetic.setVisibility(View.GONE);
         } else {
             commentProgressCosmetic.setVisibility(View.GONE);
 

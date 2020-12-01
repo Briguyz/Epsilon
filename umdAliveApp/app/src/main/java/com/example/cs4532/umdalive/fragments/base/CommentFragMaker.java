@@ -25,7 +25,7 @@ public class CommentFragMaker {
 
 
     }
-
+    //Getters and Setters for the parameters needed for CommentsViewFrag and CommentFragAdapter
     public String getImage() {
         return Image;
     }
