@@ -38,7 +38,6 @@ public class CreateProfileFrag extends Fragment {
     //View
     View view;
 
-    private ImageView profileImage;
     private TextView name;
     private EditText major;
     private EditText about;
@@ -86,7 +85,6 @@ public class CreateProfileFrag extends Fragment {
      */
     //Sets the Text views of the profile layout
     private void getLayoutComponents() {
-        profileImage = view.findViewById(R.id.createProfileImage);
         name = view.findViewById(R.id.createProfileName);
         major = view.findViewById(R.id.createProfileMajor);
         about = view.findViewById(R.id.createProfileAbout);

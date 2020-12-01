@@ -156,12 +156,6 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
             //Save Event Case
             case R.id.SaveEvent:
                 Log.d("info", "Entered Save");
-                String prevname = null;
-                try {
-                    prevname = eventData.getString("name");
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
                 String clubid = null;
                 try {
                     clubid = eventData.getJSONObject("club").getString("_id");
@@ -237,8 +231,8 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
                 //Toast for when the action is complete
                 try {
-                    Toast.makeText(view.getContext(), "\"" + prevname + "\"" +
-                            " was successfully edited to " + "\"" + eventData.getString("name") + "\"", Toast.LENGTH_LONG).show();
+                    Toast.makeText(view.getContext(), "\"" + eventData.getString("name") + "\"" +
+                            " was successfully edited.", Toast.LENGTH_LONG).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

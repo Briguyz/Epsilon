@@ -122,19 +122,20 @@ public class CommentsFrag extends Fragment {
         profileName.setTag(res.getString("_id"));
         timePosted.setText(res.getString("time"));
         goToComments.setTag(res.getJSONObject("commentsView").getString("_id"));
-        
+        final String userID = res.getString("userID");
+
         profileName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ProfileFrag frag = new ProfileFrag();
                 Bundle data = new Bundle();
-                data.putString("userID", UserSingleton.getInstance().getUserID());
+                data.putString("userID", userID);
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
             }
         });
 
-        if (res.getJSONObject("commentsView").getJSONObject("eventID").getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID()) || UserSingleton.getInstance().getUserID().equals(res.getString("name"))) {
+        if (res.getJSONObject("commentsView").getJSONObject("eventID").getJSONObject("club").getJSONObject("members").getString("admin").equals(UserSingleton.getInstance().getUserID()) || UserSingleton.getInstance().getUserID().equals(userID)) {
             commentEditFAB.setVisibility(View.VISIBLE);
         } else {
             commentEditFAB.setVisibility(View.GONE);

@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -343,6 +344,9 @@ public class ClubFrag extends Fragment{
         });
 
         RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
+        //Toast for when the action is complete
+        Toast.makeText(view.getContext(), "You successfully joined " + "\"" + clubName.getText().toString() + "\"."
+                , Toast.LENGTH_LONG).show();
     }
 
     private void leaveClub() {
@@ -364,5 +368,8 @@ public class ClubFrag extends Fragment{
         });
 
         RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
+        //Toast for when the action is complete
+        Toast.makeText(view.getContext(), "You successfully left " + "\"" + clubName.getText().toString() + "\"."
+                , Toast.LENGTH_LONG).show();
     }
 }
