@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -55,14 +57,15 @@ public class CommentFragAdapter extends RecyclerView.Adapter<CommentFragAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CommentViewHolder holder, @SuppressLint("RecyclerView") final int position) {
+    public void onBindViewHolder(@NonNull final CommentViewHolder holder, @SuppressLint("RecyclerView") final int position) {
        Log.d("imageUrl", mData.get(position).getImage());
+       //Got this from profile_layout
        Glide.with(mContext)
                .load(mData.get(position).getImage())
                .apply(RequestOptions.circleCropTransform())
                .into(holder.userProfile);
         
-
+        //Set the data with the view in single_comment_layout
         holder.commentName.setText(mData.get(position).getUserName());
         holder.commentString.setText(mData.get(position).getUserComment());
         holder.commentTime.setText(mData.get(position).getUserTime());
@@ -114,6 +117,23 @@ public class CommentFragAdapter extends RecyclerView.Adapter<CommentFragAdapter.
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
             }
         });
+
+        holder.hideCommentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(holder.userProfile.getVisibility() == View.VISIBLE) {
+                    holder.userProfile.setVisibility(View.GONE);
+                    holder.commentName.setVisibility(View.GONE);
+                    holder.commentString.setVisibility(View.GONE);
+                    holder.commentTime.setVisibility(View.GONE);
+                } else {
+                    holder.userProfile.setVisibility(View.VISIBLE);
+                    holder.commentName.setVisibility(View.VISIBLE);
+                    holder.commentString.setVisibility(View.VISIBLE);
+                    holder.commentTime.setVisibility(View.VISIBLE);
+                }
+            }
+        });
     }
 
     @Override
@@ -125,6 +145,7 @@ public class CommentFragAdapter extends RecyclerView.Adapter<CommentFragAdapter.
     public class CommentViewHolder extends RecyclerView.ViewHolder {
         ImageView userProfile;
         TextView commentName, commentString, commentTime;
+        ImageButton hideCommentButton;
 
         public CommentViewHolder(View itemView) {
             super(itemView);
@@ -132,21 +153,7 @@ public class CommentFragAdapter extends RecyclerView.Adapter<CommentFragAdapter.
             commentName = itemView.findViewById(R.id.comment_UserName);
             commentString = itemView.findViewById(R.id.comment_UserComment);
             commentTime = itemView.findViewById(R.id.comment_UserTime);
-            commentString.setMovementMethod(new ScrollingMovementMethod());
+            hideCommentButton = itemView.findViewById(R.id.hideButton);
         }
-    }
-
-    /**
-     *  What will be displayed with each comment
-     * @param
-     * @return strDate
-     */
-    private String getCurrentCommentTime() {
-        //Time parameter with calender, date import
-        Date currentTime = Calendar.getInstance().getTime();
-        DateFormat dateFormat = new SimpleDateFormat("hh:mm:ss dd-MM-yyyy");
-        String strDate = dateFormat.format(currentTime);
-
-        return strDate;
     }
 }
