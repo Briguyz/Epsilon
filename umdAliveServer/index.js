@@ -186,6 +186,7 @@ app.put('/createEvent', function (req, res){
         "date" : req.body.date,
         "time" : req.body.time,
         "club" : req.body.club,
+        "imageurl": req.body.imageurl,
         "commentsView": req.body.commentsView
     };
     var commentsViewData = {
@@ -200,18 +201,17 @@ app.put('/createEvent', function (req, res){
 
 app.put('/editEvent', function (req, res){
   if (!req.body){
-    return res.sendStatus(400);
+      return res.sendStatus(400);
   }
-
-  var eventData = {
-    "name" : req.body.name,
-    "description" : req.body.description,
-    "date" : req.body.date,
-    "time" : req.body.time,
-    "club" : req.body.club,
-    "commentsView": req.body.commentsView
-  };
-
+    var eventData = {
+        "name" : req.body.name,
+        "description" : req.body.description,
+        "date" : req.body.date,
+        "time" : req.body.time,
+        "club" : req.body.club,
+        "imageurl" : req.body.imageurl,
+        "commentsView": req.body.commentsView
+    };
   dataBase.editEvent(req.body._id, eventData);
   res.send({});
 });
@@ -250,7 +250,8 @@ app.put('/createComment' , function (req, res) {
         "comment" : req.body.comment,
         "time" : req.body.time,
         "userID" : req.body.userID,
-        "commentsView" : req.body.commentsView
+        "commentsView" : req.body.commentsView,
+        "profilePic" : req.body.profilePic
     };
     dataBase.createComment(commentData, function (doc) {
         console.log(doc);
@@ -261,18 +262,19 @@ app.put('/createComment' , function (req, res) {
 
 //Requires Testing taken from previous functions
 app.put('/editComment', function (req, res){
-  if (!req.body){
-    return res.sendStatus(400);
-  }
-  var commentData = {
-          "name" : req.body.name,
-          "comment" : req.body.comment,
-          "time" : req.body.time,
-          "userID" : req.body.userID,
-          "commentsView" : req.body.commentsView
-      };
-    dataBase.editEvent(req.body._id, eventData);
-      res.send({});
+    if (!req.body){
+        return res.sendStatus(400);
+    }
+    var commentData = {
+        "name" : req.body.name,
+        "comment" : req.body.comment,
+        "time" : req.body.time,
+        "userID" : req.body.userID,
+        "commentsView" : req.body.commentsView,
+        "profilePic" : req.body.profilePic
+    };
+    dataBase.editComment(req.body._id, commentData);
+    res.send({});
 });
 
 //Requires Testing taken from previous functions
