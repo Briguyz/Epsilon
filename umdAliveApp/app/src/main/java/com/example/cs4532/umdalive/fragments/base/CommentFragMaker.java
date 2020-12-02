@@ -1,5 +1,7 @@
 package com.example.cs4532.umdalive.fragments.base;
 
+import android.support.annotation.NonNull;
+
 /**
  * @author : Henry Trinh
  * This is the class that will take in single comment data
@@ -65,5 +67,6 @@ public class CommentFragMaker {
     public String getUserID() { return UserID; }
 
     public void setUserID(String userID) { UserID = userID; }
-
+    
 }
+

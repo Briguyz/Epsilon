@@ -54,6 +54,7 @@ public class CommentsViewFrag extends Fragment {
     private Button goToEventButton;
     private ProgressBar commentProgressCosmetic;
     private ArrayList<CommentFragMaker> commentArray;
+    private ArrayList<CommentFragMaker> commentTempArray;
 
     /**
      * Create the comment view page when navigating to it
@@ -156,6 +157,7 @@ public class CommentsViewFrag extends Fragment {
          * Since the comments array will return an object
          * This for loop allows to grab the data stored in the object
          */
+
         String userProfilePic;
         for(int i = 0; i < comments.length(); i++){
             if(comments.getJSONObject(i).getString("profilePic") != null) {
@@ -171,11 +173,14 @@ public class CommentsViewFrag extends Fragment {
             //Grabs user Data
             String commentID = comments.getJSONObject(i).getString("_id");
             String userID = comments.getJSONObject(i).getString("userID");
+
             //Wil take the data from the String into a CommentFragMaker whchi will then be added to the recyclerview
             CommentFragMaker indiviualComment = new CommentFragMaker(userProfilePic, name, userComment, userTime, commentID, userID);
             commentArray.add(indiviualComment);
+
             CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
             commentBoxShow.setAdapter(adapter);
+            Log.d("time:",indiviualComment.getUserTime());
         }
 
         /**
@@ -185,6 +190,7 @@ public class CommentsViewFrag extends Fragment {
          */
         CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
         RecyclerView.LayoutManager CommentLayoutManager = new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL, false );
+
         commentBoxShow.setLayoutManager(CommentLayoutManager);
         commentBoxShow.setAdapter(adapter);
 
