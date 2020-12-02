@@ -146,12 +146,6 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
             break;
         //Save Event Case
         case R.id.SaveClub:
-            String prevname = null;
-            try {
-                prevname = clubData.getString("name");
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
             String clubid = null;
             try {
                 clubid = clubData.getString("_id");
@@ -194,6 +188,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
                 //Adding regulars
                 JSONArray regulars = clubData.getJSONObject("members").getJSONArray("regular");
                 JSONArray regular = new JSONArray();
+                
                 for(int i = 0; i < regulars.length(); i++){
                     regular.put(i, regulars.getJSONObject(i).getString("userID"));
                 }
@@ -245,8 +240,8 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
             frag.setArguments(data);
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
             try {
-                Toast.makeText(view.getContext(), "\"" + prevname +"\"" +
-                        " was successfully edited to " + "\"" + clubData.getString("name") + "\"", Toast.LENGTH_LONG).show();
+                Toast.makeText(view.getContext(), "\"" + clubData.getString("name") +"\"" +
+                        " was successfully edited.", Toast.LENGTH_LONG).show();
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -276,7 +271,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
      * @see JSONException
      */
     private void updateUI(JSONObject res) throws JSONException {
-        EditingClub.setText("Editing Club:\n" + res.getString("name"));
+        EditingClub.setText( res.getString("name"));
         DeleteButton.setTag("DELETE");
         NewClubName.setText(res.getString("name"));
         NewClubDescription.setText(res.getString("description"));

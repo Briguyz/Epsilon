@@ -48,6 +48,7 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
     private EditText NewEventDescription;
     private EditText NewEventTime;
     private EditText NewEventDate;
+    private EditText NewEventUrl;
     private Button SaveEvent;
     private Button DeleteEvent;
 
@@ -155,12 +156,6 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
             //Save Event Case
             case R.id.SaveEvent:
                 Log.d("info", "Entered Save");
-                String prevname = null;
-                try {
-                    prevname = eventData.getString("name");
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
                 String clubid = null;
                 try {
                     clubid = eventData.getJSONObject("club").getString("_id");
@@ -191,6 +186,13 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
                 if (NewEventTime.getText().toString().trim().length() != 0) {
                     try {
                         eventData.put("time", NewEventTime.getText().toString());
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if (NewEventUrl.getText().toString().trim().length() != 0) {
+                    try {
+                        eventData.put("imageurl", NewEventUrl.getText().toString());
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -229,14 +231,15 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
                 //Toast for when the action is complete
                 try {
-                    Toast.makeText(view.getContext(), "\"" + prevname + "\"" +
-                            " was successfully edited to " + "\"" + eventData.getString("name") + "\"", Toast.LENGTH_LONG).show();
+                    Toast.makeText(view.getContext(), "\"" + eventData.getString("name") + "\"" +
+                            " was successfully edited.", Toast.LENGTH_LONG).show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
                 break;
         }
     }
+
 
     /**
      * Gets the layout components from edit_event_layout.xml
@@ -249,6 +252,7 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
         NewEventDescription = view.findViewById(R.id.EventDescription);
         NewEventDate = view.findViewById(R.id.EventDate);
         NewEventTime = view.findViewById(R.id.EventTime);
+        NewEventUrl = view.findViewById(R.id.EventImage);
         SaveEvent = view.findViewById(R.id.SaveEvent);
         DeleteEvent = view.findViewById(R.id.DeleteEvent);
         SaveEvent.setOnClickListener(this);
@@ -263,12 +267,12 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
      * @see JSONException
      */
     private void updateUI(JSONObject res) throws JSONException {
-        EditingEvent.setText("Editing Event:\n" + res.getString("name"));
         EditingEvent.setTag(res.getString("_id"));
         NewEventName.setText(res.getString("name"));
         NewEventDescription.setText(res.getString("description"));
         NewEventTime.setText(res.getString("time"));
         NewEventDate.setText(res.getString("date"));
+        NewEventUrl.setText(res.getString("imageurl"));
         DeleteEvent.setTag("DELETE");
         eventData = res;
     }

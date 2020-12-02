@@ -38,7 +38,6 @@ public class CreateProfileFrag extends Fragment {
     //View
     View view;
 
-    private ImageView profileImage;
     private TextView name;
     private EditText major;
     private EditText about;
@@ -61,8 +60,6 @@ public class CreateProfileFrag extends Fragment {
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
 
         getLayoutComponents();
-
-        //loadProfileImage();
 
         name.setText(UserSingleton.getInstance().getName());
 
@@ -88,31 +85,11 @@ public class CreateProfileFrag extends Fragment {
      */
     //Sets the Text views of the profile layout
     private void getLayoutComponents() {
-        profileImage = view.findViewById(R.id.createProfileImage);
         name = view.findViewById(R.id.createProfileName);
         major = view.findViewById(R.id.createProfileMajor);
         about = view.findViewById(R.id.createProfileAbout);
         save = view.findViewById(R.id.createProfileSave);
     }
-
-    /**
-     * Loads the image used as a profile picture for the user, which is taken from their Google profile
-     * If a user does not have a profile picture, it defaults to an image of a wagon
-     * @return nothing
-     */
-    /*private void loadProfileImage () {
-        if (UserSingleton.getInstance().getProfileUrl() != null) {
-            Glide.with(this)
-                    .load(UserSingleton.getInstance().getProfileUrl())
-                    .apply(RequestOptions.circleCropTransform())
-                    .into(profileImage);
-        } else {
-            Glide.with(this)
-                    .load("https://images.homedepot-static.com/productImages/42613c1a-7427-4557-ada8-ba2a17cca381/svn/gorilla-carts-yard-carts-gormp-12-64_1000.jpg")
-                    .apply(RequestOptions.circleCropTransform())
-                    .into(profileImage);
-        }
-    }*/
 
     /**
      * Upon sign-in this will create the user, and put their information into one of the application's profiles.
