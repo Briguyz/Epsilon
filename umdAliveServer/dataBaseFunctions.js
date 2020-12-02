@@ -157,23 +157,81 @@ module.exports.deleteClub = function (clubID){
                     console.log(result);
                 }
             });
-        DBRef.collection('events').remove({"club": clubID}, false, function (err, result){
-            if (err){
-                console.log(err);
-            } else {
-                //Completed
-                console.log(result);
+
+            function getEventsDoc() {
+                return new Promise((resolve, reject) => {
+                    DBRef.collection('events').find({"club": clubID}).toArray(function (err, doc) {
+                        if (err) {
+                            console.log(err);
+                            return reject('Error');
+                        }
+                        else {
+                            //Completed
+                            console.log(doc);
+                            return resolve(doc);
+                        }
+                    });
+                });
             }
-        });
-        DBRef.collection('clubs').remove({"_id":mongojs.ObjectId(clubID)}, false, function (err, result){
-            if (err){
-                console.log(err);
-            } else {
-                //Completed
-                console.log(result);
+            function removeComments(eventsDoc){
+                var i;
+                for (i=0; i < eventsDoc.length; i++) {
+                    DBRef.collection('comments').remove({"commentsView":eventsDoc[i].commentsView}, false, function(err,result){
+                        if (err) {
+                            console.log(err);
+                        }
+                        else {
+                            //Completed
+                            console.log(result);
+                        }
+                        });
+                    DBRef.collection('commentsView').remove({"_id": mongojs.ObjectId(eventsDoc[i].commentsView)}, false, function (err,result){
+                        if (err) {
+                            console.log(err);
+                        }
+                        else {
+                            //Completed
+                            console.log(result);
+                        }
+                    });
+                }
             }
-        });
-    }
+            function removeEvents() {
+                DBRef.collection('events').remove({"club": clubID}, false, function (err, result){
+                    if (err){
+                        console.log(err);
+                } else {
+                    //Completed
+                    console.log(result);
+                }
+                });
+            }
+
+            function removeClub() {
+                DBRef.collection('clubs').remove({"_id":mongojs.ObjectId(clubID)}, false, function (err, result){
+                    if (err){
+                        console.log(err);
+                    } else {
+                        //Completed
+                        console.log(result);
+                    }
+                });
+            }
+
+            getEventsDoc()
+                .then((doc) => {
+                    removeComments(doc);
+                })
+                .then(() => {
+                    removeEvents();
+                })
+                .then(() => {
+                    removeClub();
+                })
+                .catch(err => {
+                    console.log(err);
+                })
+        }
     });
 };
 
@@ -346,15 +404,49 @@ module.exports.deleteEvent = function (eventID){
                 }
             });
         }
-        DBRef.collection('events').remove({"_id": mongojs.ObjectId(eventID)}, false, function (err, result){
-            if (err){
+        function removeComments() {
+            return new Promise((resolve, reject) => {
+                DBRef.collection('comments').remove({"commentsView": doc.commentsView}, false, function(err, result) {
+                    if (err) {
+                        console.log(err);
+                        return reject(err);
+                    }
+                    else {
+                        //Completed
+                        console.log(result);
+                    }
+                });
+                DBRef.collection('commentsView').remove({"eventID" : eventID}, false, function(err, result) {
+                    if (err) {
+                        console.log(err);
+                        return reject(err);
+                    }
+                    else {
+                        //Completed
+                        console.log(result);
+                    }
+                });
+                return resolve();
+            });
+        }
+        function removeEvents() {
+            DBRef.collection('events').remove({"_id": mongojs.ObjectId(eventID)}, false, function (err, result){
+                if (err){
+                    console.log(err);
+                }
+                else {
+                    //Completed
+                    console.log(result);
+                }
+            });
+        }
+        removeComments()
+            .then(() => {
+                removeEvents();
+            })
+            .catch(err => {
                 console.log(err);
-            }
-            else {
-                //Completed
-                console.log(result);
-            }
-        });
+            })
     });
 };
 
@@ -369,7 +461,6 @@ module.exports.createComment = function(commentData, callback){
                 if (err){
                     console.log(err);
                 } else {
-                    //took from create event as a sub in
                     console.log(doc);
                 }
                 doc.comments.push(result._id + "");
@@ -391,6 +482,7 @@ module.exports.createComment = function(commentData, callback){
 };
 
 //needs to be tested
+//Updates the comment to what it was edited to
 module.exports.editComment = function(commentID, commentData){
   DBRef.collection('comments').update({"_id":mongojs.ObjectId(commentID)},commentData,function(err, result){
     if (err){
@@ -401,64 +493,67 @@ module.exports.editComment = function(commentID, commentData){
   });
 };
 
-//needs to be tested
+//Retrieves the comment
 module.exports.getComment = function(commentID, callback) {
     DBRef.collection('comments').findOne({"_id": mongojs.ObjectId(commentID)}, function (err, doc){
     if (err){
       console.log(err);
     } else {
-      DBRef.collection('commentsView').findOne({"_id": mongojs.ObjectId(doc.commentsView)}, function (err, commentDoc){
-        doc.commentsView = commentDoc;
-        callback(doc);
+      DBRef.collection('commentsView').findOne({"_id": mongojs.ObjectId(doc.commentsView)}, function (err, commentsViewDoc){
+          DBRef.collection('events').findOne({"_id": mongojs.ObjectId(commentsViewDoc.eventID)}, function (err, eventDoc) {
+              DBRef.collection('clubs').findOne({"_id": mongojs.ObjectId(eventDoc.club)}, function (err, clubDoc) {
+                  eventDoc.club = clubDoc;
+                  commentsViewDoc.eventID = eventDoc;
+                  doc.commentsView = commentsViewDoc;
+                  callback(doc);
+              });
+          });
       });
     }
   });
 };
 
 //needs to be tested
+//Retrieves all the comments in the database
 module.exports.getAllComments = function(callback) {
     DBRef.collection('comments').find({}).toArray(function(err, docs) {
 	if (err){
             console.log(err);
 	} else {
             var allCommentsObject = {
-                "comment" : docs
+                "comments" : docs
             };
 	    callback(allCommentsObject);
 	}
     });
 };
-//Needs to be tested not sure if it will delte or not but this is taken from delete event
+//Deletes the comment
 module.exports.deleteComment = function (commentID){
     DBRef.collection('comments').findOne({"_id": mongojs.ObjectId(commentID)}, function (err, doc){
         if (err){
             console.log(err);
         } else {
-            DBRef.collection('events').findOne({"_id": mongojs.ObjectId(doc.comment)}, function (err, commentDoc){
-                var index = commentDoc.comments(commentID);
-        if (index > -1){
-            commentDoc.comments.splice(index, 1);
-        }
-                DBRef.collection('event').update({"_id": mongojs.ObjectId(doc.comment)}, commentDoc, function (err, result){
-                    if (err){
-                        console.log(err);
-                    } else {
-                        console.log(result);
-                    }
-                });
-            });
-            DBRef.collection('comments').remove({"_id": mongojs.ObjectId(commentID)}, false, function (err, result){
-                if (err){
+            DBRef.collection('commentsView').update({"_id": mongojs.ObjectId(doc.commentsView)}, {$pull:{comments:{$in:[commentID]}}},function (err, result) {
+                if (err) {
                     console.log(err);
-                } else {
-            console.log(result);
+                }
+                else {
+                    //Completed
+                    console.log(result);
                 }
             });
         }
+        DBRef.collection('comments').remove({"_id": mongojs.ObjectId(commentID)}, false, function (err, result){
+            if (err){
+                console.log(err);
+            } else {
+                console.log(result);
+            }
+        });
     });
 };
 
-//needs to be tested
+//Retrieves the commentsView
 module.exports.getCommentsView = function (commentsViewID, callback){
     DBRef.collection('commentsView').findOne({"_id": mongojs.ObjectId(commentsViewID)},function (err, doc) {
         if (err) {
@@ -468,6 +563,9 @@ module.exports.getCommentsView = function (commentsViewID, callback){
             //Completed
             DBRef.collection('events').findOne({"_id": mongojs.ObjectId(doc.eventID)}, function (err, eventDoc) {
                 doc.eventID = eventDoc;
+            });
+            DBRef.collection('comments').find({"commentsView": commentsViewID}).toArray(function (err, commentsDoc) {
+                doc.comments = commentsDoc;
                 callback(doc);
             });
         }
