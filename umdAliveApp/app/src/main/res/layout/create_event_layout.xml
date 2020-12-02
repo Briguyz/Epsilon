@@ -43,7 +43,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Event Description"
-        android:inputType="textMultiLine|textCapSentences"
+        android:inputType="textMultiLine"
         android:lines="3"
         android:minLines="1"
         android:scrollbars="none"
