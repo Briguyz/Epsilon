@@ -21,6 +21,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
 import com.example.cs4532.umdalive.UserSingleton;
+import com.example.cs4532.umdalive.fragments.edit.EditCommentsFrag;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -99,6 +100,17 @@ public class CommentsFrag extends Fragment {
         userComment = (TextView) view.findViewById(R.id.CommentDescriptionView);
         userComment.setMovementMethod(new ScrollingMovementMethod());
         commentEditFAB = (FloatingActionButton) view.findViewById(R.id.EditCommentFAB);
+        commentEditFAB.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                String TAG = (String) userComment.getTag();
+                EditCommentsFrag frag = new EditCommentsFrag();
+                Bundle data = new Bundle();
+                data.putString("commentID", TAG);
+                frag.setArguments(data);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+            }
+        });
 
         goToComments = view.findViewById(R.id.GoToComment);
         goToComments.setOnClickListener(new View.OnClickListener() {

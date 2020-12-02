@@ -8,13 +8,21 @@
 
     <EditText
         android:id="@+id/editCommentBox"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:ems="10"
+        android:gravity="top|left"
         android:hint="@string/comment"
         android:importantForAutofill="no"
-        android:inputType="textPersonName"
+        android:inputType="textMultiLine|textCapSentences"
+        android:lines="5"
+        android:minLines="6"
+        android:scrollHorizontally="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,23 +32,32 @@
         android:id="@+id/saveComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
         android:text="Save Comment"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="244dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCommentBox" />
 
     <Button
         android:id="@+id/deleteComment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
         android:text="Delete Comment"
-        tools:layout_editor_absoluteX="229dp"
-        tools:layout_editor_absoluteY="244dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editCommentBox" />
 
     <Button
         android:id="@+id/backToComments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="Back to Comments"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="341dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
