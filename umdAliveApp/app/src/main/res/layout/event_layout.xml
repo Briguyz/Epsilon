@@ -21,36 +21,36 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/EventNameView"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:autoSizeTextType="uniform"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:gravity="center"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@android:dimen/app_icon_size"
-        android:textStyle="bold"
-        app:fontFamily="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eventurl" />
+            <TextView
+                android:id="@+id/EventNameView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@android:dimen/app_icon_size"
+                android:textStyle="bold"
+                app:autoSizeTextType="uniform"
+                app:fontFamily="serif"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eventurl" />
 
-    <TextView
-        android:id="@+id/EventDateView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:fontFamily="serif"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EventNameView" />
+            <TextView
+                android:id="@+id/EventDateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:fontFamily="serif"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/EventNameView" />
 
             <TextView
                 android:id="@+id/EventTimeView"

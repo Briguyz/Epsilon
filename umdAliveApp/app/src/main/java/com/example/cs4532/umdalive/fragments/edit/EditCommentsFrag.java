@@ -8,13 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.RestSingleton;
+import com.example.cs4532.umdalive.fragments.base.CommentsViewFrag;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -92,13 +95,32 @@ public class EditCommentsFrag extends Fragment implements View.OnClickListener {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+                restSingleton.addToRequestQueue(stringRequest);
+                //Thread is put to sleep to allow request to be fulfilled so it doesn't reference null
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                //Creates the commentsView to go back into
+                CommentsViewFrag frag = new CommentsViewFrag();
+                Bundle data = new Bundle();
+                try {
+                    data.putString("commentsViewID", commentData.getJSONObject("commentsView").getString("_id"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                frag.setArguments(data);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+                Toast.makeText(view.getContext(), "Comment was successfully deleted.", Toast.LENGTH_LONG).show();
+                break;
 
             //Save Comment Case
             case R.id.saveComment:
-                Log.d("info", "Entered Save");
-                String newComment = null;
+                String commentsviewid = null;
                 try {
-                    newComment = commentData.getString("comment");
+                    commentsviewid = commentData.getJSONObject("commentsView").getString("_id");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -110,7 +132,59 @@ public class EditCommentsFrag extends Fragment implements View.OnClickListener {
                         e.printStackTrace();
                     }
                 }
+                try {
+                    commentData.put("commentsView", commentsviewid);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                restSingleton = RestSingleton.getInstance(view.getContext());
+
+                JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.PUT, restSingleton.getUrl() + "editComment/", commentData,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.d("Error connecting", String.valueOf(error));
+                    }
+                });
+                restSingleton.addToRequestQueue(jsonObjectRequest);
+
+                //Thread is put to sleep to allow request to be fulfilled so it doesn't reference null
+                try {
+                    Thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+                //Creates the commentsView to go back to
+                frag = new CommentsViewFrag();
+                data = new Bundle();
+                data.putString("commentsViewID", commentsviewid);
+                frag.setArguments(data);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+
+                //Toast for when action is complete
+                Toast.makeText(view.getContext(), "Comment was successfully edited.", Toast.LENGTH_LONG).show();
+                break;
+
+            //Go back to CommentsView Case
+            case R.id.backToComments:
+                //Creates the commentsView to go back into
+                frag = new CommentsViewFrag();
+                data = new Bundle();
+                try {
+                    data.putString("commentsViewID", commentData.getJSONObject("commentsView").getString("_id"));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                frag.setArguments(data);
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+                break;
         }
+
     }
 
     private void getLayoutComponents() {
@@ -124,6 +198,8 @@ public class EditCommentsFrag extends Fragment implements View.OnClickListener {
     }
 
     private void updateUI(JSONObject res) throws JSONException {
-
+        editComments.setText(res.getString("comment"));
+        deleteComment.setTag("DELETE");
+        commentData = res;
     }
 }
