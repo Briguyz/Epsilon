@@ -32,6 +32,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.widget.Toast;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * @author Henry Trinch, Josh Tindell, Jacob Willmsen, Brian Zhagnay
@@ -177,7 +178,7 @@ public class CommentsViewFrag extends Fragment {
             //Wil take the data from the String into a CommentFragMaker whchi will then be added to the recyclerview
             CommentFragMaker indiviualComment = new CommentFragMaker(userProfilePic, name, userComment, userTime, commentID, userID);
             commentArray.add(indiviualComment);
-
+            Collections.sort(commentArray);
             CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
             commentBoxShow.setAdapter(adapter);
             Log.d("time:",indiviualComment.getUserTime());
