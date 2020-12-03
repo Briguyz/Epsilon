@@ -9,8 +9,8 @@
     tools:layout_editor_absoluteY="81dp">
 
     <ScrollView
-        android:layout_width="423dp"
-        android:layout_height="600dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:fillViewport="true"
         android:scrollbarStyle="insideInset"
         android:scrollbars="vertical">
