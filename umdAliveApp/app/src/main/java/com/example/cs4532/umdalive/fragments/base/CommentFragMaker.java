@@ -18,6 +18,8 @@ public class CommentFragMaker implements Comparable<CommentFragMaker>{
     String UserTime;
     String CommentID;
     String UserID;
+
+    //This is for the sort functions to have temp variables for sorting
     Date TempDate;
     Date Temp2Date;
 
@@ -81,6 +83,14 @@ public class CommentFragMaker implements Comparable<CommentFragMaker>{
         return Temp2Date;
     }
 
+    /**
+     * @author Henry Trinh
+     * @param o object coming in
+     * @return int
+     *
+     * This function will compareTo entries one coming in and the current object
+     * Then returns an int depending on the condition
+     */
     @Override
     public int compareTo(@NonNull CommentFragMaker o) {
         SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy hh:mm aa");
