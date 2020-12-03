@@ -30,24 +30,25 @@
 
     <Button
         android:id="@+id/saveComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
+        android:layout_width="100sp"
+        android:layout_height="53sp"
         android:layout_marginTop="16dp"
-        android:text="Save Comment"
+        android:background="@color/colorAccent"
+        android:text="Save"
+        app:layout_constraintEnd_toStartOf="@+id/deleteComment"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editCommentBox" />
 
     <Button
         android:id="@+id/deleteComment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100sp"
+        android:layout_height="53sp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
+        android:background="@color/colorPrimary"
         android:text="Delete Comment"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/saveComment"
         app:layout_constraintTop_toBottomOf="@+id/editCommentBox" />
 
     <Button
