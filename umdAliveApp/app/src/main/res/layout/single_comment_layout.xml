@@ -73,8 +73,8 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
-        android:background="#3C3F41"
-        android:tint="#B7000000"
+        android:background="#00FFFFFF"
+        android:tint="#C6000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_view" />
