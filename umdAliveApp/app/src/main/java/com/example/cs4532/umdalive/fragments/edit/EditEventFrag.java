@@ -2,6 +2,7 @@ package com.example.cs4532.umdalive.fragments.edit;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -159,6 +161,7 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
                 }
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+
                 //Toast for when the action is complete
                 try {
                     Toast.makeText(view.getContext(), "\"" + eventData.getString("name") + "\"" + " was successfully deleted.", Toast.LENGTH_LONG).show();
@@ -242,6 +245,11 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
                 data.putString("clubID", clubid);
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+
+                //hide keyboard
+                InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
                 //Toast for when the action is complete
                 try {
                     Toast.makeText(view.getContext(), "\"" + eventData.getString("name") + "\"" +

@@ -116,10 +116,6 @@ public class EditCommentsFrag extends Fragment implements View.OnClickListener {
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
                 Toast.makeText(view.getContext(), "Comment was successfully deleted.", Toast.LENGTH_LONG).show();
-                
-                //hide keyboard
-                InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
                 break;
 
             //Save Comment Case
@@ -172,6 +168,11 @@ public class EditCommentsFrag extends Fragment implements View.OnClickListener {
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
 
+                //hide keyboard
+                InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
+
                 //Toast for when action is complete
                 Toast.makeText(view.getContext(), "Comment was successfully edited.", Toast.LENGTH_LONG).show();
                 break;
@@ -188,6 +189,11 @@ public class EditCommentsFrag extends Fragment implements View.OnClickListener {
                 }
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+
+                //hide keyboard
+                inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
                 break;
         }
 
