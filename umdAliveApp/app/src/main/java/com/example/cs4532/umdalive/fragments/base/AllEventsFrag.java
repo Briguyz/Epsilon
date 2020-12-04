@@ -21,7 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * @author Jacob Willmsen, Brian, Josh Tindell, Henry Trinh
+ * @author Henry Trinh
  *
  * 12/3/2020
  * Version 1.0

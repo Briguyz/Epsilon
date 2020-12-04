@@ -69,7 +69,7 @@ public class UpcomingEventsMaker implements Comparable<UpcomingEventsMaker> {
      */
     @Override
     public int compareTo(@NonNull UpcomingEventsMaker o) {
-        SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy");
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
         try {
             DateofEvent = formatter.parse(getEventDate());
         } catch (ParseException e) {

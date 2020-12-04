@@ -166,7 +166,7 @@ public class CreateEventFrag extends Fragment implements View.OnClickListener {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int day) {
                 month = month + 1;
-                Log.d("CreateEvent", "onDateSet: mm/dd/yyyy: " + month + "/" + day + "/" + year);
+                Log.d("CreateEvent", "onDateSet: MM/dd/yyyy: " + month + "/" + day + "/" + year);
 
                 String date = month + "/" + day + "/" + year;
                 EventDate.setText(date);

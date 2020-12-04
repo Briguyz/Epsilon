@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity
             frag.setArguments(data);
             getSupportFragmentManager().beginTransaction().replace(fragContainer.getId(), frag).commit();
 
-        } else if (id == R.id.nav_all_events) {
+        } else if (id == R.id.nav_upcoming_events) {
                 //Show loading bar
                 findViewById(R.id.PageLoading).setVisibility(View.VISIBLE);
 

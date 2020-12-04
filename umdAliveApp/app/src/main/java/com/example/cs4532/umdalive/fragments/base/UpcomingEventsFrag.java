@@ -28,12 +28,12 @@ import java.util.Collections;
 import java.util.Date;
 
 /**
- * @author Jacob Willmsen, Brian, Josh Tindell, Henry Trinh
+ * @author Henry Trinh
  *
  * 12/3/2020
  * Version 1.0
  *
- * Class that creates the All Events Page
+ * Class that creates the upcoming Events Page
  */
 public class UpcomingEventsFrag extends Fragment implements View.OnClickListener {
 
@@ -43,6 +43,8 @@ public class UpcomingEventsFrag extends Fragment implements View.OnClickListener
     //Layout Components
     private LinearLayout allEventsLinearLayout;
     private ArrayList<UpcomingEventsMaker> tempUpcomingEventArray;
+    private Date strDate;
+
 
     /**
      * Creates the page whenever All Events is clicked in the app
@@ -85,7 +87,7 @@ public class UpcomingEventsFrag extends Fragment implements View.OnClickListener
     }
 
     /**
-     * Allows a user to click on a club name to go to that club's page
+     * Allows a user to click on a event name to go to that event's page
      * @param clickedView The event name clicked
      * @return nothing
      */
@@ -110,7 +112,7 @@ public class UpcomingEventsFrag extends Fragment implements View.OnClickListener
     }
 
     /**
-     * Adds club names stored in the database
+     * Adds event names stored in the database
      * @param res The response from the database
      * @return nothing
      * @exception JSONException Error in JSON processing
@@ -119,42 +121,61 @@ public class UpcomingEventsFrag extends Fragment implements View.OnClickListener
     private void updateUI(JSONObject res) throws JSONException {
         getActivity().findViewById(R.id.PageLoading).setVisibility(View.GONE);
         JSONArray allEvents = res.getJSONArray("events");
+        tempUpcomingEventArray = new ArrayList<>();
+
         for (int i=0;i<allEvents.length();i++) {
             String name = allEvents.getJSONObject(i).getString("name");
             String date = allEvents.getJSONObject(i).getString("date");
             String time = allEvents.getJSONObject(i).getString("time");
             String id = allEvents.getJSONObject(i).getString("_id").toString();
-            UpcomingEventsMaker singleEvent = new UpcomingEventsMaker(name, date, time, id);
-            tempUpcomingEventArray.add(singleEvent);
-            Collections.sort(tempUpcomingEventArray);
-        }
+            Log.d("comment", name);
+            if((date != null) && (isValidDate(date))) {
+                UpcomingEventsMaker singleEvent = new UpcomingEventsMaker(name, date, time, id);
+                tempUpcomingEventArray.add(singleEvent);
+                Log.d("size", String.valueOf(tempUpcomingEventArray.size()));
+                Collections.sort(tempUpcomingEventArray);
+            }
 
-        for(int i=0;i<tempUpcomingEventArray.size();i++) {
-            UpcomingEventsMaker tempItem = tempUpcomingEventArray.get(i);
+        }
+        //This will take the temparray and move it to the view
+        Collections.sort(tempUpcomingEventArray);
+        Log.d("size", String.valueOf(tempUpcomingEventArray.size()));
+        for(int j=0;j<tempUpcomingEventArray.size();j++) {
+            UpcomingEventsMaker tempItem = tempUpcomingEventArray.get(j);
             Calendar cal = Calendar.getInstance();
-            SimpleDateFormat sdf = new SimpleDateFormat("mm/dd/yyyy");
+            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
             try {
-                Date strDate = sdf.parse(tempItem.getEventDate());
-                if(System.currentTimeMillis() > strDate.getTime()) {
-                    TextView eventName = new TextView(view.getContext());
-                    eventName.setText(tempItem.getEventName()+ ":    " +tempItem.getEventDate());
-                    eventName.setTextSize(24);
-                    eventName.setOnClickListener(this);
-                    eventName.setTag(tempItem.getEventId());
-                    allEventsLinearLayout.addView(eventName);
-                }
+                strDate = sdf.parse(tempItem.getEventDate());
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-
-
-
-
+            if(System.currentTimeMillis() < strDate.getTime()) {
+                TextView eventName = new TextView(view.getContext());
+                eventName.setText(tempItem.getEventName()+ ":    " +tempItem.getEventDate());
+                eventName.setTextSize(24);
+                eventName.setOnClickListener(this);
+                eventName.setTag(tempItem.getEventId());
+                allEventsLinearLayout.addView(eventName);
+            }
 
 
         }
+    }
 
-
+    /**
+     *
+     * @param str
+     * @return boolean
+     * A function to check if the date is a valid date
+     */
+    private boolean isValidDate(String str) {
+        SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
+        try{
+            formatter.parse(str);
+        } catch (ParseException e) {
+            return false;
+        }
+        return true;
     }
 
 }
