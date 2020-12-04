@@ -19,8 +19,10 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.cs4532.umdalive.fragments.base.AllClubsFrag;
+import com.example.cs4532.umdalive.fragments.base.AllEventsFrag;
 import com.example.cs4532.umdalive.fragments.base.ClubFrag;
 import com.example.cs4532.umdalive.fragments.base.ProfileFrag;
+import com.example.cs4532.umdalive.fragments.base.UpcomingEventsFrag;
 import com.example.cs4532.umdalive.fragments.create.CreateClubFrag;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -157,6 +159,26 @@ public class MainActivity extends AppCompatActivity
             Bundle data = new Bundle();
             frag.setArguments(data);
             getSupportFragmentManager().beginTransaction().replace(fragContainer.getId(),frag).commit();
+        //12/3/2020 Epsilon Added an all events tab
+        } else if (id == R.id.nav_all_events) {
+            //Show loading bar
+            findViewById(R.id.PageLoading).setVisibility(View.VISIBLE);
+
+            //Add All Events Fragment
+            AllEventsFrag frag = new AllEventsFrag();
+            Bundle data = new Bundle();
+            frag.setArguments(data);
+            getSupportFragmentManager().beginTransaction().replace(fragContainer.getId(), frag).commit();
+
+        } else if (id == R.id.nav_all_events) {
+                //Show loading bar
+                findViewById(R.id.PageLoading).setVisibility(View.VISIBLE);
+
+                //Add All Events Fragment
+                UpcomingEventsFrag frag = new UpcomingEventsFrag();
+                Bundle data = new Bundle();
+                frag.setArguments(data);
+                getSupportFragmentManager().beginTransaction().replace(fragContainer.getId(),frag).commit();
 
         } else if (id == R.id.nav_sign_out) {
             signOut();

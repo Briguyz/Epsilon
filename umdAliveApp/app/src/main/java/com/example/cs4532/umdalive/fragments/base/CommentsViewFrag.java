@@ -55,7 +55,6 @@ public class CommentsViewFrag extends Fragment {
     private Button goToEventButton;
     private ProgressBar commentProgressCosmetic;
     private ArrayList<CommentFragMaker> commentArray;
-    private ArrayList<CommentFragMaker> commentTempArray;
 
     /**
      * Create the comment view page when navigating to it
