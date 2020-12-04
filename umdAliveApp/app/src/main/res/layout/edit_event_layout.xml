@@ -66,6 +66,8 @@
         android:ems="10"
         android:hint="New Event Date"
         android:inputType="textPersonName"
+        android:clickable="true"
+        android:focusable = "false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EventDescription" />
@@ -80,6 +82,8 @@
         android:ems="10"
         android:hint="New Event Time"
         android:inputType="textPersonName"
+        android:clickable="true"
+        android:focusable="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"

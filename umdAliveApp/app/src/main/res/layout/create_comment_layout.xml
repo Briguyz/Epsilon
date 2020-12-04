@@ -30,8 +30,9 @@
 
     <Button
         android:id="@+id/saveCommentButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120sp"
+        android:layout_height="53sp"
+        android:background="@color/colorAccent"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
         android:layout_marginTop="16dp"
@@ -41,8 +42,8 @@
 
     <Button
         android:id="@+id/fromCreateCommentToComments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120sp"
+        android:layout_height="53sp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
         android:layout_marginRight="36dp"
