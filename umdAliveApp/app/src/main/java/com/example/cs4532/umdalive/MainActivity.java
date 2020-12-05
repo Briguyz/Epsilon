@@ -20,10 +20,9 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.cs4532.umdalive.fragments.base.AllClubsFrag;
 import com.example.cs4532.umdalive.fragments.base.AllEventsFrag;
-import com.example.cs4532.umdalive.fragments.base.ClubFrag;
 import com.example.cs4532.umdalive.fragments.base.ProfileFrag;
 import com.example.cs4532.umdalive.fragments.base.UpcomingEventsFrag;
-import com.example.cs4532.umdalive.fragments.base.ReportFrag;
+import com.example.cs4532.umdalive.fragments.create.CreateReportFrag;
 import com.example.cs4532.umdalive.fragments.create.CreateClubFrag;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -189,7 +188,7 @@ public class MainActivity extends AppCompatActivity
             findViewById(R.id.PageLoading).setVisibility(View.VISIBLE);
 
             //shows up report screen
-            ReportFrag report = new ReportFrag();
+            CreateReportFrag report = new CreateReportFrag();
             Bundle data = new Bundle();
             report.setArguments(data);
             getSupportFragmentManager().beginTransaction().replace(fragContainer.getId(),report).commit();
