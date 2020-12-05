@@ -572,22 +572,17 @@ module.exports.getCommentsView = function (commentsViewID, callback){
     });
 };
 
-//retrieves the reports from users
-module.exports.sendReports = function (reportData, callback){
-	DBRef.collection('reports').save(reportData, function(err, result) {
-	console.log(result);
-	if (err) {
-	    console.log(result);
-	} else {
-	    DBRef.collection('reports').findOne({"_id": mongojs.ObjectId(result.reports)}, function (err, doc){
-		if (err) {
-		    console.log(err);
-		} else {
-		    console.log(doc);
-		}
-	    //Completed
-	    callback({"reportID" : result._id});
-	}
-      });
- };
-	
+
+//Create the Report
+module.exports.createReport = function (reportData, callback){
+    DBRef.collection('reports').save(reportData, function(err, result) {
+        console.log(result);
+        if(err) {
+            console.log(err);
+        }
+        else {
+            //Completed
+            callback({"reportID": result._id});
+        }
+    });
+};

@@ -22060,3 +22060,150 @@
 2020-11-23T16:56:26.442-0600 [initandlisten] connection accepted from 140.190.2.48:36349 #1052 (89 connections now open)
 2020-11-23T16:56:28.674-0600 [initandlisten] connection accepted from 140.190.2.48:36358 #1053 (90 connections now open)
 2020-11-23T16:56:28.745-0600 [initandlisten] connection accepted from 140.190.2.48:36359 #1054 (91 connections now open)
+2020-12-04T19:40:47.199-0600 ***** SERVER RESTARTED *****
+2020-12-04T19:40:47.210-0600 [initandlisten] MongoDB starting : pid=68982 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-12-04T19:40:47.211-0600 [initandlisten] 
+2020-12-04T19:40:47.211-0600 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-12-04T19:40:47.211-0600 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-12-04T19:40:47.211-0600 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-12-04T19:40:47.211-0600 [initandlisten] 
+2020-12-04T19:40:47.211-0600 [initandlisten] db version v2.6.10
+2020-12-04T19:40:47.211-0600 [initandlisten] git version: nogitversion
+2020-12-04T19:40:47.211-0600 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-12-04T19:40:47.211-0600 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-12-04T19:40:47.211-0600 [initandlisten] allocator: tcmalloc
+2020-12-04T19:40:47.211-0600 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-12-04T19:40:47.215-0600 [initandlisten] exception in initAndListen: 12596 old lock file, terminating
+2020-12-04T19:40:47.215-0600 [initandlisten] dbexit: 
+2020-12-04T19:40:47.215-0600 [initandlisten] shutdown: going to close listening sockets...
+2020-12-04T19:40:47.215-0600 [initandlisten] shutdown: going to flush diaglog...
+2020-12-04T19:40:47.215-0600 [initandlisten] shutdown: going to close sockets...
+2020-12-04T19:40:47.215-0600 [initandlisten] shutdown: waiting for fs preallocator...
+2020-12-04T19:40:47.215-0600 [initandlisten] shutdown: lock for final commit...
+2020-12-04T19:40:47.215-0600 [initandlisten] shutdown: final commit...
+2020-12-04T19:40:47.215-0600 [initandlisten] shutdown: closing all files...
+2020-12-04T19:40:47.216-0600 [initandlisten] closeAllFiles() finished
+2020-12-04T19:40:47.216-0600 [initandlisten] dbexit: really exiting now
+2020-12-04T19:41:03.725-0600 ***** SERVER RESTARTED *****
+2020-12-04T19:41:03.735-0600 [initandlisten] MongoDB starting : pid=68992 port=12750 dbpath=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile 64-bit host=akka
+2020-12-04T19:41:03.736-0600 [initandlisten] 
+2020-12-04T19:41:03.736-0600 [initandlisten] ** WARNING: You are running on a NUMA machine.
+2020-12-04T19:41:03.736-0600 [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2020-12-04T19:41:03.736-0600 [initandlisten] **              numactl --interleave=all mongod [other options]
+2020-12-04T19:41:03.736-0600 [initandlisten] 
+2020-12-04T19:41:03.736-0600 [initandlisten] db version v2.6.10
+2020-12-04T19:41:03.736-0600 [initandlisten] git version: nogitversion
+2020-12-04T19:41:03.736-0600 [initandlisten] OpenSSL version: OpenSSL 1.0.2g  1 Mar 2016
+2020-12-04T19:41:03.736-0600 [initandlisten] build info: Linux lgw01-12 3.19.0-25-generic #26~14.04.1-Ubuntu SMP Fri Jul 24 21:16:20 UTC 2015 x86_64 BOOST_LIB_VERSION=1_58
+2020-12-04T19:41:03.736-0600 [initandlisten] allocator: tcmalloc
+2020-12-04T19:41:03.736-0600 [initandlisten] options: { config: "mongod.conf", net: { bindIp: "0.0.0.0", port: 12750 }, storage: { dbPath: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile" }, systemLog: { destination: "file", logAppend: true, path: "/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/mongod.log" } }
+2020-12-04T19:41:03.743-0600 [initandlisten] journal dir=/home/csugrads/willm071/cs3541/teamLab/umdAliveServer/dbfile/journal
+2020-12-04T19:41:03.743-0600 [initandlisten] recover : no journal files present, no recovery needed
+2020-12-04T19:41:04.406-0600 [initandlisten] waiting for connections on port 12750
+2020-12-04T19:41:04.945-0600 [initandlisten] connection accepted from 131.212.41.37:47160 #1 (1 connection now open)
+2020-12-04T19:41:09.491-0600 [conn1] end connection 131.212.41.37:47160 (0 connections now open)
+2020-12-04T19:41:34.077-0600 [initandlisten] connection accepted from 131.212.41.37:47194 #2 (1 connection now open)
+2020-12-04T19:42:00.959-0600 [initandlisten] connection accepted from 140.190.2.48:17812 #3 (2 connections now open)
+2020-12-04T19:42:04.407-0600 [clientcursormon] mem (MB) res:59 virt:541
+2020-12-04T19:42:04.407-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T19:42:04.407-0600 [clientcursormon]  connections:2
+2020-12-04T19:42:05.281-0600 [initandlisten] connection accepted from 140.190.2.48:17814 #4 (3 connections now open)
+2020-12-04T19:42:13.036-0600 [initandlisten] connection accepted from 140.190.2.48:17817 #5 (4 connections now open)
+2020-12-04T19:42:21.881-0600 [initandlisten] connection accepted from 140.190.2.48:17821 #6 (5 connections now open)
+2020-12-04T19:42:22.513-0600 [initandlisten] connection accepted from 140.190.2.48:17822 #7 (6 connections now open)
+2020-12-04T19:42:22.585-0600 [initandlisten] connection accepted from 140.190.2.48:17823 #8 (7 connections now open)
+2020-12-04T19:42:31.169-0600 [initandlisten] connection accepted from 140.190.2.48:17827 #9 (8 connections now open)
+2020-12-04T19:42:31.240-0600 [initandlisten] connection accepted from 140.190.2.48:17828 #10 (9 connections now open)
+2020-12-04T19:42:36.820-0600 [initandlisten] connection accepted from 140.190.2.48:17830 #11 (10 connections now open)
+2020-12-04T19:42:36.895-0600 [initandlisten] connection accepted from 140.190.2.48:17831 #12 (11 connections now open)
+2020-12-04T19:42:42.039-0600 [initandlisten] connection accepted from 140.190.2.48:17834 #13 (12 connections now open)
+2020-12-04T19:42:42.113-0600 [initandlisten] connection accepted from 140.190.2.48:17835 #14 (13 connections now open)
+2020-12-04T19:42:44.117-0600 [initandlisten] connection accepted from 140.190.2.48:17836 #15 (14 connections now open)
+2020-12-04T19:42:44.569-0600 [initandlisten] connection accepted from 140.190.2.48:17837 #16 (15 connections now open)
+2020-12-04T19:42:46.741-0600 [initandlisten] connection accepted from 140.190.2.48:17838 #17 (16 connections now open)
+2020-12-04T19:42:46.809-0600 [initandlisten] connection accepted from 140.190.2.48:17839 #18 (17 connections now open)
+2020-12-04T19:42:56.212-0600 [conn15] end connection 140.190.2.48:17836 (16 connections now open)
+2020-12-04T19:42:56.906-0600 [conn5] end connection 140.190.2.48:17817 (15 connections now open)
+2020-12-04T19:42:57.431-0600 [conn16] end connection 140.190.2.48:17837 (14 connections now open)
+2020-12-04T19:42:57.637-0600 [conn6] end connection 140.190.2.48:17821 (13 connections now open)
+2020-12-04T19:42:58.077-0600 [conn3] end connection 140.190.2.48:17812 (12 connections now open)
+2020-12-04T19:42:58.262-0600 [conn7] end connection 140.190.2.48:17822 (11 connections now open)
+2020-12-04T19:42:58.262-0600 [conn8] end connection 140.190.2.48:17823 (10 connections now open)
+2020-12-04T19:42:58.423-0600 [conn10] end connection 140.190.2.48:17828 (9 connections now open)
+2020-12-04T19:42:58.423-0600 [conn9] end connection 140.190.2.48:17827 (8 connections now open)
+2020-12-04T19:42:58.618-0600 [conn11] end connection 140.190.2.48:17830 (7 connections now open)
+2020-12-04T19:42:58.619-0600 [conn12] end connection 140.190.2.48:17831 (6 connections now open)
+2020-12-04T19:42:58.798-0600 [conn13] end connection 140.190.2.48:17834 (5 connections now open)
+2020-12-04T19:42:58.800-0600 [conn14] end connection 140.190.2.48:17835 (4 connections now open)
+2020-12-04T19:42:58.988-0600 [conn17] end connection 140.190.2.48:17838 (3 connections now open)
+2020-12-04T19:42:58.988-0600 [conn18] end connection 140.190.2.48:17839 (2 connections now open)
+2020-12-04T19:43:16.191-0600 [initandlisten] connection accepted from 140.190.2.48:17871 #19 (3 connections now open)
+2020-12-04T19:46:49.454-0600 [conn2] end connection 131.212.41.37:47194 (2 connections now open)
+2020-12-04T19:46:59.945-0600 [initandlisten] connection accepted from 131.212.41.37:47588 #20 (3 connections now open)
+2020-12-04T19:47:04.421-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T19:47:04.421-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T19:47:04.421-0600 [clientcursormon]  connections:3
+2020-12-04T19:48:15.993-0600 [initandlisten] connection accepted from 131.212.41.37:47682 #21 (4 connections now open)
+2020-12-04T19:48:16.000-0600 [initandlisten] connection accepted from 131.212.41.37:47684 #22 (5 connections now open)
+2020-12-04T19:51:37.969-0600 [conn4] build index on: umdAliveDatabase.reports properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "umdAliveDatabase.reports" }
+2020-12-04T19:51:37.970-0600 [conn4] 	 added index to empty collection
+2020-12-04T19:52:02.794-0600 [conn22] end connection 131.212.41.37:47684 (4 connections now open)
+2020-12-04T19:52:02.794-0600 [conn20] end connection 131.212.41.37:47588 (4 connections now open)
+2020-12-04T19:52:02.794-0600 [conn21] end connection 131.212.41.37:47682 (4 connections now open)
+2020-12-04T19:52:04.435-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T19:52:04.436-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T19:52:04.436-0600 [clientcursormon]  connections:2
+2020-12-04T19:52:04.683-0600 [initandlisten] connection accepted from 131.212.41.37:47962 #23 (3 connections now open)
+2020-12-04T19:52:04.724-0600 [initandlisten] connection accepted from 131.212.41.37:47964 #24 (4 connections now open)
+2020-12-04T19:57:04.450-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T19:57:04.450-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T19:57:04.450-0600 [clientcursormon]  connections:4
+2020-12-04T20:02:04.465-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T20:02:04.465-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:02:04.465-0600 [clientcursormon]  connections:4
+2020-12-04T20:02:07.537-0600 [conn23] end connection 131.212.41.37:47962 (3 connections now open)
+2020-12-04T20:02:07.537-0600 [conn24] end connection 131.212.41.37:47964 (3 connections now open)
+2020-12-04T20:02:19.151-0600 [initandlisten] connection accepted from 131.212.41.37:48702 #25 (3 connections now open)
+2020-12-04T20:05:39.078-0600 [conn25] end connection 131.212.41.37:48702 (2 connections now open)
+2020-12-04T20:06:28.831-0600 [initandlisten] connection accepted from 131.212.41.37:49004 #26 (3 connections now open)
+2020-12-04T20:07:01.546-0600 [initandlisten] connection accepted from 140.190.2.48:25210 #27 (4 connections now open)
+2020-12-04T20:07:01.623-0600 [initandlisten] connection accepted from 140.190.2.48:25211 #28 (5 connections now open)
+2020-12-04T20:07:04.480-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T20:07:04.480-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:07:04.480-0600 [clientcursormon]  connections:5
+2020-12-04T20:12:04.494-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T20:12:04.494-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:12:04.494-0600 [clientcursormon]  connections:5
+2020-12-04T20:16:01.857-0600 [initandlisten] connection accepted from 131.212.41.37:49690 #29 (6 connections now open)
+2020-12-04T20:17:04.509-0600 [clientcursormon] mem (MB) res:44 virt:557
+2020-12-04T20:17:04.509-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:17:04.509-0600 [clientcursormon]  connections:6
+2020-12-04T20:22:04.523-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T20:22:04.524-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:22:04.524-0600 [clientcursormon]  connections:6
+2020-12-04T20:27:04.538-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T20:27:04.539-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:27:04.539-0600 [clientcursormon]  connections:6
+2020-12-04T20:32:04.553-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T20:32:04.554-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:32:04.554-0600 [clientcursormon]  connections:6
+2020-12-04T20:32:11.460-0600 [initandlisten] connection accepted from 131.93.238.44:60295 #30 (7 connections now open)
+2020-12-04T20:32:11.568-0600 [initandlisten] connection accepted from 131.93.238.44:60296 #31 (8 connections now open)
+2020-12-04T20:32:15.413-0600 [initandlisten] connection accepted from 131.93.238.44:60297 #32 (9 connections now open)
+2020-12-04T20:32:15.533-0600 [initandlisten] connection accepted from 131.93.238.44:60298 #33 (10 connections now open)
+2020-12-04T20:32:20.991-0600 [initandlisten] connection accepted from 131.93.238.44:60299 #34 (11 connections now open)
+2020-12-04T20:32:21.102-0600 [initandlisten] connection accepted from 131.93.238.44:60300 #35 (12 connections now open)
+2020-12-04T20:36:03.399-0600 [conn26] end connection 131.212.41.37:49004 (11 connections now open)
+2020-12-04T20:36:03.399-0600 [conn29] end connection 131.212.41.37:49690 (11 connections now open)
+2020-12-04T20:37:04.568-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T20:37:04.569-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:37:04.569-0600 [clientcursormon]  connections:10
+2020-12-04T20:37:45.218-0600 [initandlisten] connection accepted from 131.212.41.37:51260 #36 (11 connections now open)
+2020-12-04T20:42:04.583-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T20:42:04.583-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:42:04.583-0600 [clientcursormon]  connections:11
+2020-12-04T20:42:10.828-0600 [initandlisten] connection accepted from 131.212.41.37:51578 #37 (12 connections now open)
+2020-12-04T20:42:10.835-0600 [initandlisten] connection accepted from 131.212.41.37:51580 #38 (13 connections now open)
+2020-12-04T20:44:32.506-0600 [conn38] end connection 131.212.41.37:51580 (12 connections now open)
+2020-12-04T20:44:32.506-0600 [conn37] end connection 131.212.41.37:51578 (12 connections now open)
+2020-12-04T20:44:32.506-0600 [conn36] end connection 131.212.41.37:51260 (12 connections now open)
