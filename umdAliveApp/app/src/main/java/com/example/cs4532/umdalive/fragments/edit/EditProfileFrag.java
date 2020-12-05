@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -92,6 +94,7 @@ public class EditProfileFrag extends Fragment {
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
+
                 }
             }
         });
@@ -172,8 +175,10 @@ public class EditProfileFrag extends Fragment {
         RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
 
         //hide keyboard
-        InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+        if (view != null && getActivity() != null) {
+            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getApplicationWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
 
         try {
             Toast.makeText(view.getContext(), "\"" + userData.get("name").toString() +"\'s\"" +
