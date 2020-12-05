@@ -1,85 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Creating Club"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:fontFamily="serif"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical">
 
-    <EditText
-        android:id="@+id/createClubName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/GucciGang"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/createClubDes"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Description"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createClubName" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="Creating Club"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:fontFamily="serif"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/createClubImg"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Image URL"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createClubDes" />
+            <EditText
+                android:id="@+id/createClubName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:ems="10"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <Button
-        android:id="@+id/createClubSave"
-        android:layout_width="100sp"
-        android:layout_height="53sp"
-        android:layout_marginTop="16dp"
-        android:background="@color/colorAccent"
-        android:text="Save"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createClubImg" />
+            <EditText
+                android:id="@+id/createClubDes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:ems="10"
+                android:hint="Description"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createClubName" />
+
+            <EditText
+                android:id="@+id/createClubImg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:ems="10"
+                android:hint="Image URL"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createClubDes" />
+
+            <Button
+                android:id="@+id/createClubSave"
+                android:layout_width="100sp"
+                android:layout_height="53sp"
+                android:layout_marginTop="16dp"
+                android:background="@color/colorAccent"
+                android:text="Save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createClubImg" />
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

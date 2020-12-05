@@ -171,10 +171,6 @@ public class EditProfileFrag extends Fragment {
         });
         RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
 
-        //hide keyboard
-        InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-        inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
-
         try {
             Toast.makeText(view.getContext(), "\"" + userData.get("name").toString() +"\'s\"" +
                     " profile was successfully edited.", Toast.LENGTH_LONG).show();
