@@ -4,7 +4,7 @@ var mongojs = require("mongojs");
 var url = 'mongodb://akka.d.umn.edu:12750/umdAliveDatabase';
 
 //array of collections we will use
-var collections = ['clubs', 'users', 'events', 'commentsView', 'comments'];
+var collections = ['clubs', 'users', 'events', 'commentsView', 'comments', 'reports'];
 
 var assert = require('assert');
 
@@ -568,6 +568,20 @@ module.exports.getCommentsView = function (commentsViewID, callback){
                 doc.comments = commentsDoc;
                 callback(doc);
             });
+        }
+    });
+};
+
+//Create the Report
+module.exports.createReport = function (reportData, callback){
+    DBRef.collection('reports').save(reportData, function(err, result) {
+        console.log(result);
+        if(err) {
+            console.log(err);
+        }
+        else {
+            //Completed
+            callback({"reportID": result._id});
         }
     });
 };
