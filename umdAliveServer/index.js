@@ -308,6 +308,22 @@ app.get('/getCommentsView/:commentsViewID', function (req, res) {
     });
 });
 
+//Reports
+app.put('/createReport' , function (req, res) {
+    if (!req.body){
+        return res.sendStatus(400);
+    }
+    var reportData = {
+        "message" : req.body.message,
+        "description" : req.body.description,
+        "userID" : req.body.userID
+    };
+    dataBase.createReport(reportData, function(doc){
+        console.log(doc);
+        res.send(doc);
+    });
+});
+
 ////////// SECOND TEAM STUFF
 
 /*///////////////////////////

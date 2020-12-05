@@ -100,6 +100,7 @@ public class CreateEventFrag extends Fragment implements View.OnClickListener {
 
     /**
      * Gets the layout components from edit_event_layout.xml
+     *
      * @return nothing
      */
     private void getLayoutComponents() {
@@ -110,7 +111,7 @@ public class CreateEventFrag extends Fragment implements View.OnClickListener {
         EventImage = view.findViewById(R.id.EventImage);
         CreateEventButton = view.findViewById(R.id.CreateEvent);
         CreateEventButton.setOnClickListener(this);
-        EventTime.setOnClickListener(new View.OnClickListener(){
+        EventTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Calendar cal = Calendar.getInstance();
@@ -120,7 +121,7 @@ public class CreateEventFrag extends Fragment implements View.OnClickListener {
                 TimePickerDialog dialog = new TimePickerDialog(getActivity(),
                         android.R.style.Theme_Holo_Light_Dialog,
                         onTimeSetListener,
-                        hour,minute, false);
+                        hour, minute, false);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.show();
             }
@@ -145,7 +146,7 @@ public class CreateEventFrag extends Fragment implements View.OnClickListener {
             }
         };
 
-        EventDate.setOnClickListener(new View.OnClickListener(){
+        EventDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Calendar cal = Calendar.getInstance();
@@ -156,7 +157,7 @@ public class CreateEventFrag extends Fragment implements View.OnClickListener {
                 DatePickerDialog dialog = new DatePickerDialog(getActivity(),
                         android.R.style.Theme_Holo_Light_Dialog,
                         onDateSetListener,
-                        year,month,day);
+                        year, month, day);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
                 dialog.show();
