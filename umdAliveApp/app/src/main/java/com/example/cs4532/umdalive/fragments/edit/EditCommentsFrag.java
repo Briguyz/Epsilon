@@ -1,11 +1,13 @@
 package com.example.cs4532.umdalive.fragments.edit;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -166,6 +168,11 @@ public class EditCommentsFrag extends Fragment implements View.OnClickListener {
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
 
+                //hide keyboard
+                InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
+
                 //Toast for when action is complete
                 Toast.makeText(view.getContext(), "Comment was successfully edited.", Toast.LENGTH_LONG).show();
                 break;
@@ -182,6 +189,11 @@ public class EditCommentsFrag extends Fragment implements View.OnClickListener {
                 }
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+
+                //hide keyboard
+                inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
                 break;
         }
 

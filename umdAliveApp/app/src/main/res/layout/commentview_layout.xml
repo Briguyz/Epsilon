@@ -7,11 +7,15 @@
 
     <TextView
         android:id="@+id/commentHeader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="217dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
         android:text="@string/comments"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="36sp"
+        android:textStyle="bold"
+        app:fontFamily="serif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -51,11 +55,13 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/comment_ViewSection"
-        android:layout_width="346dp"
-        android:layout_height="508dp"
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/commentHeader" />
+        app:layout_constraintTop_toBottomOf="@+id/commentHeader"
+        app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

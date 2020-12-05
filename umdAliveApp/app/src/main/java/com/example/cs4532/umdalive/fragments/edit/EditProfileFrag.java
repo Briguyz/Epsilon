@@ -1,12 +1,14 @@
 
 package com.example.cs4532.umdalive.fragments.edit;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -168,6 +170,7 @@ public class EditProfileFrag extends Fragment {
             }
         });
         RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
+
         try {
             Toast.makeText(view.getContext(), "\"" + userData.get("name").toString() +"\'s\"" +
                     " profile was successfully edited.", Toast.LENGTH_LONG).show();

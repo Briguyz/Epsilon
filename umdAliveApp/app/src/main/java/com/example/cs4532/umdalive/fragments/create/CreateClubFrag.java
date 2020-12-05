@@ -1,12 +1,14 @@
 package com.example.cs4532.umdalive.fragments.create;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -131,5 +133,9 @@ public class CreateClubFrag extends Fragment {
         });
 
         RestSingleton.getInstance(getContext()).addToRequestQueue(jsonObjectRequest);
+
+        //hide keyboard
+        InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+        inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
     }
 }

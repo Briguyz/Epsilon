@@ -1,5 +1,6 @@
 package com.example.cs4532.umdalive.fragments.edit;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -136,6 +138,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
             Bundle data = new Bundle();
             frag.setArguments(data);
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
+
             //Toast for when the action is complete
             try {
                 Toast.makeText(view.getContext(), "\"" + clubData.getString("name") + "\"" + " was successfully deleted.", Toast.LENGTH_LONG).show();
@@ -143,6 +146,7 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
             } catch (JSONException e) {
                e.printStackTrace();
             }
+
             break;
         //Save Event Case
         case R.id.SaveClub:
@@ -239,6 +243,11 @@ public class EditClubFrag extends Fragment implements View.OnClickListener {
             data.putString("clubID", clubid);
             frag.setArguments(data);
             getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
+
+            //hide keyboard
+            InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
             try {
                 Toast.makeText(view.getContext(), "\"" + clubData.getString("name") +"\"" +
                         " was successfully edited.", Toast.LENGTH_LONG).show();

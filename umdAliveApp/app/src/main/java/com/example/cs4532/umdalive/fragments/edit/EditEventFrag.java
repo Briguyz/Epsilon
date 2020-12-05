@@ -1,14 +1,22 @@
 package com.example.cs4532.umdalive.fragments.edit;
 
+import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -25,6 +33,11 @@ import com.example.cs4532.umdalive.fragments.base.EventFrag;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * Created by Josh on 4/25/2018.
@@ -47,7 +60,9 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
     private EditText NewEventName;
     private EditText NewEventDescription;
     private EditText NewEventTime;
+    private TimePickerDialog.OnTimeSetListener onTimeSetListener;
     private EditText NewEventDate;
+    private DatePickerDialog.OnDateSetListener onDateSetListener;
     private EditText NewEventUrl;
     private Button SaveEvent;
     private Button DeleteEvent;
@@ -146,6 +161,7 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
                 }
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+
                 //Toast for when the action is complete
                 try {
                     Toast.makeText(view.getContext(), "\"" + eventData.getString("name") + "\"" + " was successfully deleted.", Toast.LENGTH_LONG).show();
@@ -229,6 +245,11 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
                 data.putString("clubID", clubid);
                 frag.setArguments(data);
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+
+                //hide keyboard
+                InputMethodManager inputManager = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                inputManager.toggleSoftInput(InputMethodManager.HIDE_IMPLICIT_ONLY, 0);
+
                 //Toast for when the action is complete
                 try {
                     Toast.makeText(view.getContext(), "\"" + eventData.getString("name") + "\"" +
@@ -257,6 +278,69 @@ public class EditEventFrag extends Fragment implements View.OnClickListener {
         DeleteEvent = view.findViewById(R.id.DeleteEvent);
         SaveEvent.setOnClickListener(this);
         DeleteEvent.setOnClickListener(this);
+        NewEventDate.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(getActivity(),
+                        android.R.style.Theme_Holo_Light_Dialog,
+                        onDateSetListener,
+                        year,month,day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.getDatePicker().setMinDate(System.currentTimeMillis() - 1000);
+                dialog.show();
+            }
+        });
+
+        onDateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int day) {
+                month = month + 1;
+                Log.d("CreateEvent", "onDateSet: mm/dd/yyyy: " + month + "/" + day + "/" + year);
+
+                String date = month + "/" + day + "/" + year;
+                NewEventDate.setText(date);
+            }
+        };
+
+        NewEventTime.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Calendar cal = Calendar.getInstance();
+                int hour = cal.get(Calendar.HOUR_OF_DAY);
+                int minute = cal.get(Calendar.MINUTE);
+
+                TimePickerDialog dialog = new TimePickerDialog(getActivity(),
+                        android.R.style.Theme_Holo_Light_Dialog,
+                        onTimeSetListener,
+                        hour,minute, false);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+
+        onTimeSetListener = new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hour, int minute) {
+                String time = hour + ":" + minute;
+                SimpleDateFormat f24Hours = new SimpleDateFormat(
+                        "HH:mm"
+                );
+                try {
+                    Date date = f24Hours.parse(time);
+                    SimpleDateFormat f12Hours = new SimpleDateFormat(
+                            "hh:mm aa"
+                    );
+                    NewEventTime.setText(f12Hours.format(date));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
     }
 
     /**

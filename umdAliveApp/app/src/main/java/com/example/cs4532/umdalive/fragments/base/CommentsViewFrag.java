@@ -30,8 +30,9 @@ import com.example.cs4532.umdalive.fragments.create.CreateCommentsFrag;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
+import android.widget.Toast;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * @author Henry Trinch, Josh Tindell, Jacob Willmsen, Brian Zhagnay
@@ -156,8 +157,10 @@ public class CommentsViewFrag extends Fragment {
          * Since the comments array will return an object
          * This for loop allows to grab the data stored in the object
          */
+
         String userProfilePic;
         for(int i = 0; i < comments.length(); i++){
+            //Checker if the profilepic for user is null will put in a substitution.
             if(comments.getJSONObject(i).getString("profilePic") != null) {
                 userProfilePic = comments.getJSONObject(i).getString("profilePic");
             } else {
@@ -171,11 +174,16 @@ public class CommentsViewFrag extends Fragment {
             //Grabs user Data
             String commentID = comments.getJSONObject(i).getString("_id");
             String userID = comments.getJSONObject(i).getString("userID");
-            //Wil take the data from the String into a CommentFragMaker whchi will then be added to the recyclerview
-            CommentFragMaker indiviualComment = new CommentFragMaker(userProfilePic, name, userComment, userTime, commentID, userID);
-            commentArray.add(indiviualComment);
+
+            //Wil take the data from the String into a CommentFragMaker which will then be added to the recyclerview
+            CommentFragMaker individualComment = new CommentFragMaker(userProfilePic, name, userComment, userTime, commentID, userID);
+            commentArray.add(individualComment);
+
+            //Sorts the array with the compareTo function in CommentFragMaker
+            Collections.sort(commentArray);
             CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
             commentBoxShow.setAdapter(adapter);
+            Log.d("time:",individualComment.getUserTime());
         }
 
         /**
@@ -185,6 +193,7 @@ public class CommentsViewFrag extends Fragment {
          */
         CommentFragAdapter adapter = new CommentFragAdapter(view.getContext(),commentArray);
         RecyclerView.LayoutManager CommentLayoutManager = new LinearLayoutManager(view.getContext(),LinearLayoutManager.VERTICAL, false );
+
         commentBoxShow.setLayoutManager(CommentLayoutManager);
         commentBoxShow.setAdapter(adapter);
 
@@ -192,8 +201,11 @@ public class CommentsViewFrag extends Fragment {
         //This statement is for the progress bar after grabbing data
         if(commentArray.size() == 0) {
             commentProgressCosmetic.setVisibility(View.VISIBLE);
+            Toast.makeText(view.getContext(), "There are no comments. Please make a comment by pressing the + icon", Toast.LENGTH_LONG).show();
+            commentProgressCosmetic.setVisibility(View.GONE);
         } else {
             commentProgressCosmetic.setVisibility(View.GONE);
+
         }
     }
 
