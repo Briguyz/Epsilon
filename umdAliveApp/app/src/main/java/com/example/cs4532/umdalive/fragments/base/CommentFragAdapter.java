@@ -22,6 +22,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.cs4532.umdalive.R;
 import com.example.cs4532.umdalive.UserSingleton;
+import com.example.cs4532.umdalive.fragments.create.CreateReportFrag;
 
 import org.json.JSONException;
 
@@ -140,7 +141,7 @@ public class CommentFragAdapter extends RecyclerView.Adapter<CommentFragAdapter.
             @Override
             public void onClick(View v) {
                 AppCompatActivity activity = (AppCompatActivity) v.getContext();
-                ReportFrag frag = new ReportFrag();
+                CreateReportFrag frag = new CreateReportFrag();
                 Bundle data = new Bundle();
                 frag.setArguments(data);
                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
