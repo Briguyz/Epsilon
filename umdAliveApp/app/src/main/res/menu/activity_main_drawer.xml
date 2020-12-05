@@ -25,6 +25,10 @@
             android:icon="@android:drawable/ic_popup_reminder"
             android:title="Upcoming Events" />
         <item
+            android:id="@+id/nav_report"
+            android:icon="@android:drawable/stat_notify_error"
+            android:title="Report" />
+        <item
             android:id="@+id/nav_sign_out"
             android:icon="@drawable/ic_menu_sign_out"
             android:title="Sign Out" />

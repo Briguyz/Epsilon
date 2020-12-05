@@ -22,6 +22,7 @@ import com.example.cs4532.umdalive.fragments.base.AllClubsFrag;
 import com.example.cs4532.umdalive.fragments.base.AllEventsFrag;
 import com.example.cs4532.umdalive.fragments.base.ClubFrag;
 import com.example.cs4532.umdalive.fragments.base.ProfileFrag;
+import com.example.cs4532.umdalive.fragments.base.ReportFrag;
 import com.example.cs4532.umdalive.fragments.base.UpcomingEventsFrag;
 import com.example.cs4532.umdalive.fragments.create.CreateClubFrag;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -180,7 +181,18 @@ public class MainActivity extends AppCompatActivity
                 frag.setArguments(data);
                 getSupportFragmentManager().beginTransaction().replace(fragContainer.getId(),frag).commit();
 
-        } else if (id == R.id.nav_sign_out) {
+        }  else if (id == R.id.nav_report){
+            //show loading bar
+            findViewById(R.id.PageLoading).setVisibility(View.VISIBLE);
+
+            //shows up report screen
+            ReportFrag report = new ReportFrag();
+            Bundle data = new Bundle();
+            report.setArguments(data);
+            getSupportFragmentManager().beginTransaction().replace(fragContainer.getId(),report).commit();
+        }
+
+        else if (id == R.id.nav_sign_out) {
             signOut();
         }
 

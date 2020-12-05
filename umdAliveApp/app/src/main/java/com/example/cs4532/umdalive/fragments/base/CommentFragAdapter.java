@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -134,6 +135,18 @@ public class CommentFragAdapter extends RecyclerView.Adapter<CommentFragAdapter.
                 }
             }
         });
+
+        holder.reportCommentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppCompatActivity activity = (AppCompatActivity) v.getContext();
+                ReportFrag frag = new ReportFrag();
+                Bundle data = new Bundle();
+                frag.setArguments(data);
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,frag).commit();
+                Toast.makeText(v.getContext(), "Moving to Report Page", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     @Override
@@ -145,7 +158,7 @@ public class CommentFragAdapter extends RecyclerView.Adapter<CommentFragAdapter.
     public class CommentViewHolder extends RecyclerView.ViewHolder {
         ImageView userProfile;
         TextView commentName, commentString, commentTime;
-        ImageButton hideCommentButton;
+        ImageButton hideCommentButton , reportCommentButton;
 
         public CommentViewHolder(View itemView) {
             super(itemView);
@@ -154,6 +167,7 @@ public class CommentFragAdapter extends RecyclerView.Adapter<CommentFragAdapter.
             commentString = itemView.findViewById(R.id.comment_UserComment);
             commentTime = itemView.findViewById(R.id.comment_UserTime);
             hideCommentButton = itemView.findViewById(R.id.hideButton);
+            reportCommentButton = itemView.findViewById(R.id.reportButton);
         }
     }
 }
