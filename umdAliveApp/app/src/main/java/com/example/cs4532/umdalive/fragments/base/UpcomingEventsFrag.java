@@ -151,7 +151,7 @@ public class UpcomingEventsFrag extends Fragment implements View.OnClickListener
             }
             if(System.currentTimeMillis() < strDate.getTime()) {
                 TextView eventName = new TextView(view.getContext());
-                eventName.setText(tempItem.getEventName()+ ":    " +tempItem.getEventDate());
+                eventName.setText(tempItem.getEventName()+ ":\n" +tempItem.getEventDate() + "\n");
                 eventName.setTextSize(24);
                 eventName.setOnClickListener(this);
                 eventName.setTag(tempItem.getEventId());

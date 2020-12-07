@@ -116,7 +116,7 @@ public class AllEventsFrag extends Fragment implements View.OnClickListener {
             String time = allEvents.getJSONObject(i).getString("date");
             String id = allEvents.getJSONObject(i).getString("_id").toString();
             TextView eventName = new TextView(view.getContext());
-            eventName.setText(name + ":    " + time);
+            eventName.setText(name + ":\n" + time + "\n");
             eventName.setTextSize(24);
             eventName.setOnClickListener(this);
             eventName.setTag(id);
