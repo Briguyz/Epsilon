@@ -22207,3 +22207,2304 @@
 2020-12-04T20:44:32.506-0600 [conn38] end connection 131.212.41.37:51580 (12 connections now open)
 2020-12-04T20:44:32.506-0600 [conn37] end connection 131.212.41.37:51578 (12 connections now open)
 2020-12-04T20:44:32.506-0600 [conn36] end connection 131.212.41.37:51260 (12 connections now open)
+2020-12-04T20:47:04.598-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T20:47:04.598-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:47:04.598-0600 [clientcursormon]  connections:10
+2020-12-04T20:52:04.613-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T20:52:04.613-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:52:04.613-0600 [clientcursormon]  connections:10
+2020-12-04T20:54:00.898-0600 [conn32] end connection 131.93.238.44:60297 (9 connections now open)
+2020-12-04T20:54:00.904-0600 [conn35] end connection 131.93.238.44:60300 (8 connections now open)
+2020-12-04T20:54:00.904-0600 [conn33] end connection 131.93.238.44:60298 (8 connections now open)
+2020-12-04T20:54:00.904-0600 [conn34] end connection 131.93.238.44:60299 (8 connections now open)
+2020-12-04T20:54:00.917-0600 [conn30] end connection 131.93.238.44:60295 (5 connections now open)
+2020-12-04T20:54:00.921-0600 [conn31] end connection 131.93.238.44:60296 (4 connections now open)
+2020-12-04T20:57:04.627-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T20:57:04.628-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T20:57:04.628-0600 [clientcursormon]  connections:4
+2020-12-04T21:02:04.643-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T21:02:04.643-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:02:04.643-0600 [clientcursormon]  connections:4
+2020-12-04T21:03:52.760-0600 [initandlisten] connection accepted from 131.212.41.37:53150 #39 (5 connections now open)
+2020-12-04T21:07:04.658-0600 [clientcursormon] mem (MB) res:45 virt:557
+2020-12-04T21:07:04.658-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:07:04.658-0600 [clientcursormon]  connections:5
+2020-12-04T21:09:22.309-0600 [initandlisten] connection accepted from 63.229.208.217:49208 #40 (6 connections now open)
+2020-12-04T21:09:22.470-0600 [initandlisten] connection accepted from 63.229.208.217:49209 #41 (7 connections now open)
+2020-12-04T21:09:27.003-0600 [initandlisten] connection accepted from 63.229.208.217:49235 #42 (8 connections now open)
+2020-12-04T21:09:27.148-0600 [initandlisten] connection accepted from 63.229.208.217:49236 #43 (9 connections now open)
+2020-12-04T21:12:04.676-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T21:12:04.677-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:12:04.677-0600 [clientcursormon]  connections:9
+2020-12-04T21:12:41.368-0600 [initandlisten] connection accepted from 131.212.41.37:53792 #44 (10 connections now open)
+2020-12-04T21:17:04.747-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T21:17:04.748-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:17:04.748-0600 [clientcursormon]  connections:10
+2020-12-04T21:22:04.806-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T21:22:04.808-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:22:04.808-0600 [clientcursormon]  connections:10
+2020-12-04T21:27:04.880-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T21:27:04.886-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:27:04.887-0600 [clientcursormon]  connections:10
+2020-12-04T21:32:04.921-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T21:32:04.922-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:32:04.922-0600 [clientcursormon]  connections:10
+2020-12-04T21:37:04.972-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T21:37:04.972-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:37:04.972-0600 [clientcursormon]  connections:10
+2020-12-04T21:42:05.014-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T21:42:05.017-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:42:05.017-0600 [clientcursormon]  connections:10
+2020-12-04T21:47:05.047-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T21:47:05.048-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:47:05.048-0600 [clientcursormon]  connections:10
+2020-12-04T21:52:05.060-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T21:52:05.061-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:52:05.061-0600 [clientcursormon]  connections:10
+2020-12-04T21:57:05.074-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T21:57:05.074-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T21:57:05.074-0600 [clientcursormon]  connections:10
+2020-12-04T22:02:05.089-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:02:05.090-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:02:05.090-0600 [clientcursormon]  connections:10
+2020-12-04T22:07:05.103-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:07:05.103-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:07:05.103-0600 [clientcursormon]  connections:10
+2020-12-04T22:11:36.147-0600 [conn27] end connection 140.190.2.48:25210 (9 connections now open)
+2020-12-04T22:11:36.149-0600 [conn28] end connection 140.190.2.48:25211 (8 connections now open)
+2020-12-04T22:11:36.183-0600 [conn19] end connection 140.190.2.48:17871 (7 connections now open)
+2020-12-04T22:11:36.184-0600 [conn4] end connection 140.190.2.48:17814 (6 connections now open)
+2020-12-04T22:12:05.116-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:12:05.117-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:12:05.117-0600 [clientcursormon]  connections:6
+2020-12-04T22:17:05.130-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:17:05.131-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:17:05.131-0600 [clientcursormon]  connections:6
+2020-12-04T22:22:05.144-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:22:05.145-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:22:05.145-0600 [clientcursormon]  connections:6
+2020-12-04T22:27:05.158-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:27:05.158-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:27:05.158-0600 [clientcursormon]  connections:6
+2020-12-04T22:32:05.173-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:32:05.173-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:32:05.173-0600 [clientcursormon]  connections:6
+2020-12-04T22:37:05.186-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:37:05.186-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:37:05.186-0600 [clientcursormon]  connections:6
+2020-12-04T22:37:40.246-0600 [conn41] end connection 63.229.208.217:49209 (5 connections now open)
+2020-12-04T22:37:40.246-0600 [conn40] end connection 63.229.208.217:49208 (5 connections now open)
+2020-12-04T22:37:44.854-0600 [conn42] end connection 63.229.208.217:49235 (3 connections now open)
+2020-12-04T22:37:44.854-0600 [conn43] end connection 63.229.208.217:49236 (3 connections now open)
+2020-12-04T22:42:05.200-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:42:05.200-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:42:05.200-0600 [clientcursormon]  connections:2
+2020-12-04T22:47:05.217-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:47:05.217-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:47:05.217-0600 [clientcursormon]  connections:2
+2020-12-04T22:52:05.230-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:52:05.231-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:52:05.231-0600 [clientcursormon]  connections:2
+2020-12-04T22:57:05.246-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T22:57:05.247-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T22:57:05.247-0600 [clientcursormon]  connections:2
+2020-12-04T23:02:05.260-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:02:05.260-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:02:05.260-0600 [clientcursormon]  connections:2
+2020-12-04T23:07:05.273-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:07:05.274-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:07:05.274-0600 [clientcursormon]  connections:2
+2020-12-04T23:12:05.287-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:12:05.288-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:12:05.288-0600 [clientcursormon]  connections:2
+2020-12-04T23:17:05.300-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:17:05.301-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:17:05.301-0600 [clientcursormon]  connections:2
+2020-12-04T23:22:05.314-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:22:05.314-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:22:05.314-0600 [clientcursormon]  connections:2
+2020-12-04T23:27:05.327-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:27:05.328-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:27:05.328-0600 [clientcursormon]  connections:2
+2020-12-04T23:32:05.340-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:32:05.341-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:32:05.341-0600 [clientcursormon]  connections:2
+2020-12-04T23:37:05.354-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:37:05.354-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:37:05.354-0600 [clientcursormon]  connections:2
+2020-12-04T23:42:05.369-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:42:05.369-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:42:05.369-0600 [clientcursormon]  connections:2
+2020-12-04T23:47:05.383-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:47:05.383-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:47:05.383-0600 [clientcursormon]  connections:2
+2020-12-04T23:52:05.398-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:52:05.399-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:52:05.399-0600 [clientcursormon]  connections:2
+2020-12-04T23:57:05.412-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-04T23:57:05.412-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-04T23:57:05.412-0600 [clientcursormon]  connections:2
+2020-12-05T00:02:05.427-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:02:05.427-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:02:05.427-0600 [clientcursormon]  connections:2
+2020-12-05T00:07:05.440-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:07:05.440-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:07:05.440-0600 [clientcursormon]  connections:2
+2020-12-05T00:12:05.460-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:12:05.460-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:12:05.460-0600 [clientcursormon]  connections:2
+2020-12-05T00:17:05.473-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:17:05.474-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:17:05.474-0600 [clientcursormon]  connections:2
+2020-12-05T00:22:05.489-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:22:05.489-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:22:05.489-0600 [clientcursormon]  connections:2
+2020-12-05T00:27:05.502-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:27:05.502-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:27:05.502-0600 [clientcursormon]  connections:2
+2020-12-05T00:32:05.516-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:32:05.516-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:32:05.516-0600 [clientcursormon]  connections:2
+2020-12-05T00:37:05.529-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:37:05.530-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:37:05.530-0600 [clientcursormon]  connections:2
+2020-12-05T00:42:05.543-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:42:05.543-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:42:05.543-0600 [clientcursormon]  connections:2
+2020-12-05T00:47:05.561-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:47:05.562-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:47:05.562-0600 [clientcursormon]  connections:2
+2020-12-05T00:52:05.574-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:52:05.575-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:52:05.575-0600 [clientcursormon]  connections:2
+2020-12-05T00:57:05.591-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T00:57:05.591-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T00:57:05.591-0600 [clientcursormon]  connections:2
+2020-12-05T01:02:05.604-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:02:05.604-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:02:05.604-0600 [clientcursormon]  connections:2
+2020-12-05T01:07:05.632-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:07:05.632-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:07:05.632-0600 [clientcursormon]  connections:2
+2020-12-05T01:12:05.645-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:12:05.645-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:12:05.645-0600 [clientcursormon]  connections:2
+2020-12-05T01:17:05.659-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:17:05.659-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:17:05.659-0600 [clientcursormon]  connections:2
+2020-12-05T01:22:05.672-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:22:05.672-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:22:05.673-0600 [clientcursormon]  connections:2
+2020-12-05T01:27:05.687-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:27:05.688-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:27:05.688-0600 [clientcursormon]  connections:2
+2020-12-05T01:32:05.700-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:32:05.701-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:32:05.701-0600 [clientcursormon]  connections:2
+2020-12-05T01:37:05.713-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:37:05.714-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:37:05.714-0600 [clientcursormon]  connections:2
+2020-12-05T01:42:05.726-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:42:05.727-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:42:05.727-0600 [clientcursormon]  connections:2
+2020-12-05T01:47:05.741-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:47:05.742-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:47:05.742-0600 [clientcursormon]  connections:2
+2020-12-05T01:52:05.755-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:52:05.756-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:52:05.756-0600 [clientcursormon]  connections:2
+2020-12-05T01:57:05.769-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T01:57:05.769-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T01:57:05.769-0600 [clientcursormon]  connections:2
+2020-12-05T02:02:05.782-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:02:05.783-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:02:05.783-0600 [clientcursormon]  connections:2
+2020-12-05T02:07:05.796-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:07:05.796-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:07:05.796-0600 [clientcursormon]  connections:2
+2020-12-05T02:12:05.810-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:12:05.810-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:12:05.810-0600 [clientcursormon]  connections:2
+2020-12-05T02:17:05.823-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:17:05.824-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:17:05.824-0600 [clientcursormon]  connections:2
+2020-12-05T02:22:05.836-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:22:05.837-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:22:05.837-0600 [clientcursormon]  connections:2
+2020-12-05T02:27:05.850-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:27:05.850-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:27:05.850-0600 [clientcursormon]  connections:2
+2020-12-05T02:32:05.863-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:32:05.864-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:32:05.864-0600 [clientcursormon]  connections:2
+2020-12-05T02:37:05.877-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:37:05.878-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:37:05.878-0600 [clientcursormon]  connections:2
+2020-12-05T02:42:05.891-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:42:05.891-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:42:05.891-0600 [clientcursormon]  connections:2
+2020-12-05T02:47:05.905-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:47:05.906-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:47:05.906-0600 [clientcursormon]  connections:2
+2020-12-05T02:52:05.919-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:52:05.919-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:52:05.919-0600 [clientcursormon]  connections:2
+2020-12-05T02:57:05.932-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T02:57:05.933-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T02:57:05.933-0600 [clientcursormon]  connections:2
+2020-12-05T03:02:05.947-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:02:05.948-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:02:05.948-0600 [clientcursormon]  connections:2
+2020-12-05T03:07:05.961-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:07:05.962-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:07:05.962-0600 [clientcursormon]  connections:2
+2020-12-05T03:12:05.975-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:12:05.975-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:12:05.975-0600 [clientcursormon]  connections:2
+2020-12-05T03:17:05.988-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:17:05.988-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:17:05.988-0600 [clientcursormon]  connections:2
+2020-12-05T03:22:06.003-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:22:06.003-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:22:06.003-0600 [clientcursormon]  connections:2
+2020-12-05T03:27:06.018-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:27:06.018-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:27:06.018-0600 [clientcursormon]  connections:2
+2020-12-05T03:32:06.031-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:32:06.031-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:32:06.031-0600 [clientcursormon]  connections:2
+2020-12-05T03:37:06.044-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:37:06.045-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:37:06.045-0600 [clientcursormon]  connections:2
+2020-12-05T03:42:06.058-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:42:06.058-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:42:06.059-0600 [clientcursormon]  connections:2
+2020-12-05T03:47:06.071-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:47:06.072-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:47:06.072-0600 [clientcursormon]  connections:2
+2020-12-05T03:52:06.085-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:52:06.085-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:52:06.086-0600 [clientcursormon]  connections:2
+2020-12-05T03:57:06.098-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T03:57:06.099-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T03:57:06.099-0600 [clientcursormon]  connections:2
+2020-12-05T04:02:06.112-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:02:06.113-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:02:06.113-0600 [clientcursormon]  connections:2
+2020-12-05T04:07:06.125-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:07:06.126-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:07:06.126-0600 [clientcursormon]  connections:2
+2020-12-05T04:12:06.139-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:12:06.139-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:12:06.139-0600 [clientcursormon]  connections:2
+2020-12-05T04:17:06.153-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:17:06.153-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:17:06.153-0600 [clientcursormon]  connections:2
+2020-12-05T04:22:06.166-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:22:06.167-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:22:06.167-0600 [clientcursormon]  connections:2
+2020-12-05T04:27:06.181-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:27:06.181-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:27:06.181-0600 [clientcursormon]  connections:2
+2020-12-05T04:32:06.194-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:32:06.195-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:32:06.195-0600 [clientcursormon]  connections:2
+2020-12-05T04:37:06.210-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:37:06.210-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:37:06.210-0600 [clientcursormon]  connections:2
+2020-12-05T04:42:06.223-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:42:06.224-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:42:06.224-0600 [clientcursormon]  connections:2
+2020-12-05T04:47:06.248-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:47:06.248-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:47:06.248-0600 [clientcursormon]  connections:2
+2020-12-05T04:52:06.261-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:52:06.262-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:52:06.262-0600 [clientcursormon]  connections:2
+2020-12-05T04:57:06.276-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T04:57:06.277-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T04:57:06.277-0600 [clientcursormon]  connections:2
+2020-12-05T05:02:06.290-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:02:06.291-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:02:06.291-0600 [clientcursormon]  connections:2
+2020-12-05T05:07:06.304-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:07:06.304-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:07:06.304-0600 [clientcursormon]  connections:2
+2020-12-05T05:12:06.319-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:12:06.319-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:12:06.319-0600 [clientcursormon]  connections:2
+2020-12-05T05:17:06.333-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:17:06.333-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:17:06.333-0600 [clientcursormon]  connections:2
+2020-12-05T05:22:06.346-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:22:06.347-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:22:06.347-0600 [clientcursormon]  connections:2
+2020-12-05T05:27:06.362-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:27:06.362-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:27:06.362-0600 [clientcursormon]  connections:2
+2020-12-05T05:32:06.375-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:32:06.376-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:32:06.376-0600 [clientcursormon]  connections:2
+2020-12-05T05:37:06.389-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:37:06.389-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:37:06.389-0600 [clientcursormon]  connections:2
+2020-12-05T05:42:06.403-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:42:06.403-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:42:06.403-0600 [clientcursormon]  connections:2
+2020-12-05T05:47:06.417-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:47:06.417-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:47:06.417-0600 [clientcursormon]  connections:2
+2020-12-05T05:52:06.430-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:52:06.431-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:52:06.431-0600 [clientcursormon]  connections:2
+2020-12-05T05:57:06.444-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T05:57:06.444-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T05:57:06.444-0600 [clientcursormon]  connections:2
+2020-12-05T06:02:06.458-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:02:06.459-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:02:06.459-0600 [clientcursormon]  connections:2
+2020-12-05T06:07:06.472-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:07:06.472-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:07:06.472-0600 [clientcursormon]  connections:2
+2020-12-05T06:12:06.491-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:12:06.491-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:12:06.491-0600 [clientcursormon]  connections:2
+2020-12-05T06:17:06.504-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:17:06.505-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:17:06.505-0600 [clientcursormon]  connections:2
+2020-12-05T06:22:06.528-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:22:06.529-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:22:06.529-0600 [clientcursormon]  connections:2
+2020-12-05T06:27:06.544-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:27:06.545-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:27:06.545-0600 [clientcursormon]  connections:2
+2020-12-05T06:32:06.557-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:32:06.558-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:32:06.558-0600 [clientcursormon]  connections:2
+2020-12-05T06:37:06.570-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:37:06.571-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:37:06.571-0600 [clientcursormon]  connections:2
+2020-12-05T06:42:06.584-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:42:06.584-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:42:06.584-0600 [clientcursormon]  connections:2
+2020-12-05T06:47:06.598-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:47:06.598-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:47:06.598-0600 [clientcursormon]  connections:2
+2020-12-05T06:52:06.611-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:52:06.611-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:52:06.611-0600 [clientcursormon]  connections:2
+2020-12-05T06:57:06.625-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T06:57:06.625-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T06:57:06.625-0600 [clientcursormon]  connections:2
+2020-12-05T07:02:06.638-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:02:06.639-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:02:06.639-0600 [clientcursormon]  connections:2
+2020-12-05T07:07:06.670-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:07:06.670-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:07:06.670-0600 [clientcursormon]  connections:2
+2020-12-05T07:12:06.698-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:12:06.699-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:12:06.699-0600 [clientcursormon]  connections:2
+2020-12-05T07:17:06.735-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:17:06.735-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:17:06.735-0600 [clientcursormon]  connections:2
+2020-12-05T07:22:06.756-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:22:06.756-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:22:06.757-0600 [clientcursormon]  connections:2
+2020-12-05T07:27:06.801-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:27:06.811-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:27:06.813-0600 [clientcursormon]  connections:2
+2020-12-05T07:32:06.830-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:32:06.831-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:32:06.831-0600 [clientcursormon]  connections:2
+2020-12-05T07:37:06.844-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:37:06.844-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:37:06.844-0600 [clientcursormon]  connections:2
+2020-12-05T07:42:06.858-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:42:06.859-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:42:06.859-0600 [clientcursormon]  connections:2
+2020-12-05T07:47:06.872-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:47:06.872-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:47:06.872-0600 [clientcursormon]  connections:2
+2020-12-05T07:52:06.886-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:52:06.886-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:52:06.886-0600 [clientcursormon]  connections:2
+2020-12-05T07:57:06.899-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T07:57:06.900-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T07:57:06.900-0600 [clientcursormon]  connections:2
+2020-12-05T08:02:06.913-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:02:06.913-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:02:06.913-0600 [clientcursormon]  connections:2
+2020-12-05T08:07:06.927-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:07:06.928-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:07:06.928-0600 [clientcursormon]  connections:2
+2020-12-05T08:12:06.941-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:12:06.941-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:12:06.941-0600 [clientcursormon]  connections:2
+2020-12-05T08:17:06.954-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:17:06.955-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:17:06.955-0600 [clientcursormon]  connections:2
+2020-12-05T08:22:06.967-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:22:06.968-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:22:06.968-0600 [clientcursormon]  connections:2
+2020-12-05T08:27:06.981-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:27:06.981-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:27:06.981-0600 [clientcursormon]  connections:2
+2020-12-05T08:32:06.994-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:32:06.995-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:32:06.995-0600 [clientcursormon]  connections:2
+2020-12-05T08:37:07.008-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:37:07.008-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:37:07.008-0600 [clientcursormon]  connections:2
+2020-12-05T08:42:07.022-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:42:07.022-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:42:07.022-0600 [clientcursormon]  connections:2
+2020-12-05T08:47:07.037-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:47:07.037-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:47:07.037-0600 [clientcursormon]  connections:2
+2020-12-05T08:52:07.051-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:52:07.051-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:52:07.051-0600 [clientcursormon]  connections:2
+2020-12-05T08:57:07.067-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T08:57:07.067-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T08:57:07.067-0600 [clientcursormon]  connections:2
+2020-12-05T09:02:07.081-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:02:07.082-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:02:07.082-0600 [clientcursormon]  connections:2
+2020-12-05T09:07:07.095-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:07:07.096-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:07:07.096-0600 [clientcursormon]  connections:2
+2020-12-05T09:12:07.110-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:12:07.110-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:12:07.110-0600 [clientcursormon]  connections:2
+2020-12-05T09:17:07.124-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:17:07.124-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:17:07.124-0600 [clientcursormon]  connections:2
+2020-12-05T09:22:07.137-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:22:07.138-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:22:07.138-0600 [clientcursormon]  connections:2
+2020-12-05T09:27:07.151-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:27:07.151-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:27:07.151-0600 [clientcursormon]  connections:2
+2020-12-05T09:32:07.165-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:32:07.166-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:32:07.166-0600 [clientcursormon]  connections:2
+2020-12-05T09:37:07.179-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:37:07.180-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:37:07.180-0600 [clientcursormon]  connections:2
+2020-12-05T09:42:07.195-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:42:07.196-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:42:07.196-0600 [clientcursormon]  connections:2
+2020-12-05T09:47:07.209-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:47:07.209-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:47:07.209-0600 [clientcursormon]  connections:2
+2020-12-05T09:52:07.222-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:52:07.223-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:52:07.223-0600 [clientcursormon]  connections:2
+2020-12-05T09:57:07.236-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T09:57:07.236-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T09:57:07.236-0600 [clientcursormon]  connections:2
+2020-12-05T10:02:07.250-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:02:07.250-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:02:07.250-0600 [clientcursormon]  connections:2
+2020-12-05T10:07:07.263-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:07:07.263-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:07:07.263-0600 [clientcursormon]  connections:2
+2020-12-05T10:12:07.277-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:12:07.277-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:12:07.277-0600 [clientcursormon]  connections:2
+2020-12-05T10:17:07.291-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:17:07.292-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:17:07.292-0600 [clientcursormon]  connections:2
+2020-12-05T10:22:07.305-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:22:07.305-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:22:07.305-0600 [clientcursormon]  connections:2
+2020-12-05T10:27:07.318-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:27:07.318-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:27:07.318-0600 [clientcursormon]  connections:2
+2020-12-05T10:32:07.332-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:32:07.332-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:32:07.332-0600 [clientcursormon]  connections:2
+2020-12-05T10:37:07.350-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:37:07.351-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:37:07.351-0600 [clientcursormon]  connections:2
+2020-12-05T10:42:07.364-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:42:07.364-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:42:07.364-0600 [clientcursormon]  connections:2
+2020-12-05T10:47:07.381-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:47:07.381-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:47:07.381-0600 [clientcursormon]  connections:2
+2020-12-05T10:52:07.396-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:52:07.397-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:52:07.397-0600 [clientcursormon]  connections:2
+2020-12-05T10:57:07.413-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T10:57:07.414-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T10:57:07.414-0600 [clientcursormon]  connections:2
+2020-12-05T11:02:07.428-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:02:07.428-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:02:07.428-0600 [clientcursormon]  connections:2
+2020-12-05T11:07:07.441-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:07:07.442-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:07:07.442-0600 [clientcursormon]  connections:2
+2020-12-05T11:12:07.455-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:12:07.455-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:12:07.455-0600 [clientcursormon]  connections:2
+2020-12-05T11:17:07.470-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:17:07.470-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:17:07.470-0600 [clientcursormon]  connections:2
+2020-12-05T11:22:07.484-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:22:07.484-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:22:07.484-0600 [clientcursormon]  connections:2
+2020-12-05T11:27:07.497-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:27:07.498-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:27:07.498-0600 [clientcursormon]  connections:2
+2020-12-05T11:32:07.511-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:32:07.512-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:32:07.512-0600 [clientcursormon]  connections:2
+2020-12-05T11:37:07.524-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:37:07.525-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:37:07.525-0600 [clientcursormon]  connections:2
+2020-12-05T11:42:07.537-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:42:07.538-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:42:07.538-0600 [clientcursormon]  connections:2
+2020-12-05T11:47:07.551-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:47:07.551-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:47:07.551-0600 [clientcursormon]  connections:2
+2020-12-05T11:52:07.574-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:52:07.574-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:52:07.574-0600 [clientcursormon]  connections:2
+2020-12-05T11:57:07.590-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T11:57:07.590-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T11:57:07.590-0600 [clientcursormon]  connections:2
+2020-12-05T12:02:07.606-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:02:07.607-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:02:07.607-0600 [clientcursormon]  connections:2
+2020-12-05T12:07:07.621-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:07:07.622-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:07:07.622-0600 [clientcursormon]  connections:2
+2020-12-05T12:12:07.639-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:12:07.640-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:12:07.640-0600 [clientcursormon]  connections:2
+2020-12-05T12:17:07.659-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:17:07.668-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:17:07.668-0600 [clientcursormon]  connections:2
+2020-12-05T12:22:07.692-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:22:07.693-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:22:07.693-0600 [clientcursormon]  connections:2
+2020-12-05T12:27:07.713-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:27:07.714-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:27:07.714-0600 [clientcursormon]  connections:2
+2020-12-05T12:32:07.735-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:32:07.736-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:32:07.736-0600 [clientcursormon]  connections:2
+2020-12-05T12:37:07.759-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:37:07.759-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:37:07.759-0600 [clientcursormon]  connections:2
+2020-12-05T12:42:07.777-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:42:07.778-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:42:07.778-0600 [clientcursormon]  connections:2
+2020-12-05T12:47:07.794-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:47:07.795-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:47:07.795-0600 [clientcursormon]  connections:2
+2020-12-05T12:52:07.815-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:52:07.815-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:52:07.815-0600 [clientcursormon]  connections:2
+2020-12-05T12:57:07.833-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T12:57:07.834-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T12:57:07.834-0600 [clientcursormon]  connections:2
+2020-12-05T13:02:07.850-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:02:07.851-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:02:07.851-0600 [clientcursormon]  connections:2
+2020-12-05T13:07:07.868-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:07:07.871-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:07:07.871-0600 [clientcursormon]  connections:2
+2020-12-05T13:12:07.890-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:12:07.890-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:12:07.890-0600 [clientcursormon]  connections:2
+2020-12-05T13:17:07.917-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:17:07.918-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:17:07.918-0600 [clientcursormon]  connections:2
+2020-12-05T13:22:07.942-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:22:07.943-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:22:07.943-0600 [clientcursormon]  connections:2
+2020-12-05T13:27:07.958-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:27:07.959-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:27:07.959-0600 [clientcursormon]  connections:2
+2020-12-05T13:32:07.977-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:32:07.977-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:32:07.977-0600 [clientcursormon]  connections:2
+2020-12-05T13:37:08.006-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:37:08.006-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:37:08.006-0600 [clientcursormon]  connections:2
+2020-12-05T13:42:08.023-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:42:08.023-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:42:08.023-0600 [clientcursormon]  connections:2
+2020-12-05T13:47:08.043-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:47:08.043-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:47:08.043-0600 [clientcursormon]  connections:2
+2020-12-05T13:52:08.060-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:52:08.060-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:52:08.061-0600 [clientcursormon]  connections:2
+2020-12-05T13:57:08.083-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T13:57:08.084-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T13:57:08.084-0600 [clientcursormon]  connections:2
+2020-12-05T14:02:08.106-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:02:08.107-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:02:08.107-0600 [clientcursormon]  connections:2
+2020-12-05T14:07:08.128-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:07:08.129-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:07:08.129-0600 [clientcursormon]  connections:2
+2020-12-05T14:12:08.147-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:12:08.148-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:12:08.148-0600 [clientcursormon]  connections:2
+2020-12-05T14:17:08.168-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:17:08.168-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:17:08.168-0600 [clientcursormon]  connections:2
+2020-12-05T14:22:08.188-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:22:08.188-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:22:08.188-0600 [clientcursormon]  connections:2
+2020-12-05T14:27:08.206-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:27:08.207-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:27:08.207-0600 [clientcursormon]  connections:2
+2020-12-05T14:32:08.225-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:32:08.226-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:32:08.226-0600 [clientcursormon]  connections:2
+2020-12-05T14:37:08.241-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:37:08.242-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:37:08.242-0600 [clientcursormon]  connections:2
+2020-12-05T14:42:08.258-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:42:08.259-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:42:08.259-0600 [clientcursormon]  connections:2
+2020-12-05T14:47:08.284-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:47:08.284-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:47:08.284-0600 [clientcursormon]  connections:2
+2020-12-05T14:52:08.302-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:52:08.302-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:52:08.302-0600 [clientcursormon]  connections:2
+2020-12-05T14:57:08.322-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T14:57:08.323-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T14:57:08.323-0600 [clientcursormon]  connections:2
+2020-12-05T15:02:08.337-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:02:08.337-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:02:08.337-0600 [clientcursormon]  connections:2
+2020-12-05T15:07:08.354-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:07:08.355-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:07:08.355-0600 [clientcursormon]  connections:2
+2020-12-05T15:12:08.380-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:12:08.380-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:12:08.380-0600 [clientcursormon]  connections:2
+2020-12-05T15:17:08.396-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:17:08.396-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:17:08.396-0600 [clientcursormon]  connections:2
+2020-12-05T15:22:08.411-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:22:08.412-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:22:08.412-0600 [clientcursormon]  connections:2
+2020-12-05T15:27:08.445-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:27:08.446-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:27:08.446-0600 [clientcursormon]  connections:2
+2020-12-05T15:32:08.464-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:32:08.465-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:32:08.465-0600 [clientcursormon]  connections:2
+2020-12-05T15:37:08.484-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:37:08.485-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:37:08.485-0600 [clientcursormon]  connections:2
+2020-12-05T15:42:08.502-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:42:08.503-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:42:08.503-0600 [clientcursormon]  connections:2
+2020-12-05T15:47:08.521-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:47:08.522-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:47:08.522-0600 [clientcursormon]  connections:2
+2020-12-05T15:52:08.539-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:52:08.540-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:52:08.540-0600 [clientcursormon]  connections:2
+2020-12-05T15:57:08.555-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T15:57:08.555-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T15:57:08.555-0600 [clientcursormon]  connections:2
+2020-12-05T16:02:08.576-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:02:08.577-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:02:08.577-0600 [clientcursormon]  connections:2
+2020-12-05T16:07:08.598-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:07:08.599-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:07:08.599-0600 [clientcursormon]  connections:2
+2020-12-05T16:12:08.615-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:12:08.616-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:12:08.616-0600 [clientcursormon]  connections:2
+2020-12-05T16:17:08.633-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:17:08.634-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:17:08.634-0600 [clientcursormon]  connections:2
+2020-12-05T16:22:08.652-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:22:08.652-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:22:08.653-0600 [clientcursormon]  connections:2
+2020-12-05T16:27:08.673-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:27:08.674-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:27:08.674-0600 [clientcursormon]  connections:2
+2020-12-05T16:32:08.689-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:32:08.690-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:32:08.690-0600 [clientcursormon]  connections:2
+2020-12-05T16:37:08.713-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:37:08.714-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:37:08.714-0600 [clientcursormon]  connections:2
+2020-12-05T16:42:08.734-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:42:08.735-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:42:08.735-0600 [clientcursormon]  connections:2
+2020-12-05T16:47:08.759-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:47:08.760-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:47:08.760-0600 [clientcursormon]  connections:2
+2020-12-05T16:52:08.776-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:52:08.777-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:52:08.777-0600 [clientcursormon]  connections:2
+2020-12-05T16:57:08.793-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T16:57:08.794-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T16:57:08.794-0600 [clientcursormon]  connections:2
+2020-12-05T17:02:08.814-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:02:08.815-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:02:08.815-0600 [clientcursormon]  connections:2
+2020-12-05T17:07:08.832-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:07:08.833-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:07:08.833-0600 [clientcursormon]  connections:2
+2020-12-05T17:12:08.848-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:12:08.848-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:12:08.848-0600 [clientcursormon]  connections:2
+2020-12-05T17:17:08.872-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:17:08.872-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:17:08.873-0600 [clientcursormon]  connections:2
+2020-12-05T17:22:08.887-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:22:08.888-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:22:08.888-0600 [clientcursormon]  connections:2
+2020-12-05T17:27:08.914-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:27:08.915-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:27:08.915-0600 [clientcursormon]  connections:2
+2020-12-05T17:32:08.937-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:32:08.937-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:32:08.937-0600 [clientcursormon]  connections:2
+2020-12-05T17:37:08.953-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:37:08.953-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:37:08.953-0600 [clientcursormon]  connections:2
+2020-12-05T17:42:08.978-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:42:08.980-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:42:08.980-0600 [clientcursormon]  connections:2
+2020-12-05T17:47:08.995-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:47:08.996-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:47:08.996-0600 [clientcursormon]  connections:2
+2020-12-05T17:52:09.024-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:52:09.025-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:52:09.025-0600 [clientcursormon]  connections:2
+2020-12-05T17:57:09.043-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T17:57:09.044-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T17:57:09.044-0600 [clientcursormon]  connections:2
+2020-12-05T18:02:09.059-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:02:09.059-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:02:09.059-0600 [clientcursormon]  connections:2
+2020-12-05T18:07:09.097-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:07:09.098-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:07:09.098-0600 [clientcursormon]  connections:2
+2020-12-05T18:12:09.126-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:12:09.127-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:12:09.127-0600 [clientcursormon]  connections:2
+2020-12-05T18:17:09.167-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:17:09.168-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:17:09.168-0600 [clientcursormon]  connections:2
+2020-12-05T18:22:09.192-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:22:09.192-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:22:09.192-0600 [clientcursormon]  connections:2
+2020-12-05T18:27:09.211-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:27:09.212-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:27:09.212-0600 [clientcursormon]  connections:2
+2020-12-05T18:32:09.231-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:32:09.231-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:32:09.231-0600 [clientcursormon]  connections:2
+2020-12-05T18:37:09.248-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:37:09.248-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:37:09.248-0600 [clientcursormon]  connections:2
+2020-12-05T18:42:09.267-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:42:09.267-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:42:09.267-0600 [clientcursormon]  connections:2
+2020-12-05T18:47:09.289-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:47:09.289-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:47:09.289-0600 [clientcursormon]  connections:2
+2020-12-05T18:52:09.306-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:52:09.307-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:52:09.307-0600 [clientcursormon]  connections:2
+2020-12-05T18:57:09.328-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T18:57:09.328-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T18:57:09.328-0600 [clientcursormon]  connections:2
+2020-12-05T19:02:09.351-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:02:09.352-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:02:09.352-0600 [clientcursormon]  connections:2
+2020-12-05T19:07:09.375-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:07:09.375-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:07:09.375-0600 [clientcursormon]  connections:2
+2020-12-05T19:12:09.393-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:12:09.394-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:12:09.394-0600 [clientcursormon]  connections:2
+2020-12-05T19:17:09.412-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:17:09.413-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:17:09.413-0600 [clientcursormon]  connections:2
+2020-12-05T19:22:09.434-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:22:09.434-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:22:09.434-0600 [clientcursormon]  connections:2
+2020-12-05T19:27:09.453-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:27:09.453-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:27:09.453-0600 [clientcursormon]  connections:2
+2020-12-05T19:32:09.474-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:32:09.474-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:32:09.474-0600 [clientcursormon]  connections:2
+2020-12-05T19:37:09.490-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:37:09.490-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:37:09.490-0600 [clientcursormon]  connections:2
+2020-12-05T19:42:09.507-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:42:09.508-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:42:09.508-0600 [clientcursormon]  connections:2
+2020-12-05T19:47:09.527-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:47:09.528-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:47:09.528-0600 [clientcursormon]  connections:2
+2020-12-05T19:52:09.550-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:52:09.551-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:52:09.551-0600 [clientcursormon]  connections:2
+2020-12-05T19:57:09.567-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T19:57:09.567-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T19:57:09.567-0600 [clientcursormon]  connections:2
+2020-12-05T20:02:09.587-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:02:09.588-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:02:09.588-0600 [clientcursormon]  connections:2
+2020-12-05T20:07:09.604-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:07:09.605-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:07:09.605-0600 [clientcursormon]  connections:2
+2020-12-05T20:12:09.627-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:12:09.628-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:12:09.628-0600 [clientcursormon]  connections:2
+2020-12-05T20:17:09.650-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:17:09.651-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:17:09.651-0600 [clientcursormon]  connections:2
+2020-12-05T20:22:09.670-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:22:09.670-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:22:09.670-0600 [clientcursormon]  connections:2
+2020-12-05T20:27:09.687-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:27:09.687-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:27:09.687-0600 [clientcursormon]  connections:2
+2020-12-05T20:32:09.709-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:32:09.710-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:32:09.710-0600 [clientcursormon]  connections:2
+2020-12-05T20:37:09.727-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:37:09.728-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:37:09.728-0600 [clientcursormon]  connections:2
+2020-12-05T20:42:09.749-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:42:09.749-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:42:09.749-0600 [clientcursormon]  connections:2
+2020-12-05T20:47:09.767-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:47:09.768-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:47:09.768-0600 [clientcursormon]  connections:2
+2020-12-05T20:52:09.786-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:52:09.787-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:52:09.787-0600 [clientcursormon]  connections:2
+2020-12-05T20:57:09.808-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T20:57:09.808-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T20:57:09.808-0600 [clientcursormon]  connections:2
+2020-12-05T21:02:09.830-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:02:09.831-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:02:09.831-0600 [clientcursormon]  connections:2
+2020-12-05T21:07:09.848-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:07:09.849-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:07:09.849-0600 [clientcursormon]  connections:2
+2020-12-05T21:12:09.865-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:12:09.866-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:12:09.866-0600 [clientcursormon]  connections:2
+2020-12-05T21:17:09.881-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:17:09.882-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:17:09.882-0600 [clientcursormon]  connections:2
+2020-12-05T21:22:09.899-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:22:09.900-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:22:09.900-0600 [clientcursormon]  connections:2
+2020-12-05T21:27:09.916-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:27:09.917-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:27:09.917-0600 [clientcursormon]  connections:2
+2020-12-05T21:32:09.936-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:32:09.937-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:32:09.937-0600 [clientcursormon]  connections:2
+2020-12-05T21:37:09.953-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:37:09.954-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:37:09.954-0600 [clientcursormon]  connections:2
+2020-12-05T21:42:09.972-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:42:09.973-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:42:09.973-0600 [clientcursormon]  connections:2
+2020-12-05T21:47:09.990-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:47:09.991-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:47:09.991-0600 [clientcursormon]  connections:2
+2020-12-05T21:52:10.006-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:52:10.007-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:52:10.007-0600 [clientcursormon]  connections:2
+2020-12-05T21:57:10.027-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T21:57:10.028-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T21:57:10.028-0600 [clientcursormon]  connections:2
+2020-12-05T22:02:10.052-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:02:10.053-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:02:10.053-0600 [clientcursormon]  connections:2
+2020-12-05T22:07:10.071-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:07:10.072-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:07:10.072-0600 [clientcursormon]  connections:2
+2020-12-05T22:12:10.087-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:12:10.088-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:12:10.088-0600 [clientcursormon]  connections:2
+2020-12-05T22:17:10.103-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:17:10.105-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:17:10.105-0600 [clientcursormon]  connections:2
+2020-12-05T22:22:10.120-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:22:10.121-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:22:10.121-0600 [clientcursormon]  connections:2
+2020-12-05T22:27:10.137-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:27:10.137-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:27:10.137-0600 [clientcursormon]  connections:2
+2020-12-05T22:32:10.155-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:32:10.156-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:32:10.156-0600 [clientcursormon]  connections:2
+2020-12-05T22:37:10.174-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:37:10.175-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:37:10.175-0600 [clientcursormon]  connections:2
+2020-12-05T22:42:10.197-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:42:10.198-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:42:10.198-0600 [clientcursormon]  connections:2
+2020-12-05T22:47:10.214-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:47:10.215-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:47:10.215-0600 [clientcursormon]  connections:2
+2020-12-05T22:52:10.236-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:52:10.238-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:52:10.238-0600 [clientcursormon]  connections:2
+2020-12-05T22:57:10.253-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T22:57:10.254-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T22:57:10.254-0600 [clientcursormon]  connections:2
+2020-12-05T23:02:10.276-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:02:10.276-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:02:10.276-0600 [clientcursormon]  connections:2
+2020-12-05T23:07:10.292-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:07:10.293-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:07:10.293-0600 [clientcursormon]  connections:2
+2020-12-05T23:12:10.309-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:12:10.310-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:12:10.310-0600 [clientcursormon]  connections:2
+2020-12-05T23:17:10.324-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:17:10.325-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:17:10.325-0600 [clientcursormon]  connections:2
+2020-12-05T23:22:10.345-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:22:10.346-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:22:10.346-0600 [clientcursormon]  connections:2
+2020-12-05T23:27:10.363-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:27:10.363-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:27:10.363-0600 [clientcursormon]  connections:2
+2020-12-05T23:32:10.381-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:32:10.382-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:32:10.382-0600 [clientcursormon]  connections:2
+2020-12-05T23:37:10.397-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:37:10.398-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:37:10.398-0600 [clientcursormon]  connections:2
+2020-12-05T23:42:10.416-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:42:10.416-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:42:10.416-0600 [clientcursormon]  connections:2
+2020-12-05T23:47:10.431-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:47:10.432-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:47:10.432-0600 [clientcursormon]  connections:2
+2020-12-05T23:52:10.449-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:52:10.449-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:52:10.449-0600 [clientcursormon]  connections:2
+2020-12-05T23:57:10.469-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-05T23:57:10.470-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-05T23:57:10.470-0600 [clientcursormon]  connections:2
+2020-12-06T00:02:10.485-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:02:10.485-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:02:10.485-0600 [clientcursormon]  connections:2
+2020-12-06T00:07:10.504-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:07:10.505-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:07:10.505-0600 [clientcursormon]  connections:2
+2020-12-06T00:12:10.519-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:12:10.519-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:12:10.519-0600 [clientcursormon]  connections:2
+2020-12-06T00:17:10.538-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:17:10.538-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:17:10.538-0600 [clientcursormon]  connections:2
+2020-12-06T00:22:10.554-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:22:10.554-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:22:10.554-0600 [clientcursormon]  connections:2
+2020-12-06T00:27:10.573-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:27:10.574-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:27:10.574-0600 [clientcursormon]  connections:2
+2020-12-06T00:32:10.588-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:32:10.589-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:32:10.589-0600 [clientcursormon]  connections:2
+2020-12-06T00:37:10.605-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:37:10.606-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:37:10.606-0600 [clientcursormon]  connections:2
+2020-12-06T00:42:10.638-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:42:10.638-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:42:10.638-0600 [clientcursormon]  connections:2
+2020-12-06T00:47:10.656-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:47:10.656-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:47:10.656-0600 [clientcursormon]  connections:2
+2020-12-06T00:52:10.686-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:52:10.687-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:52:10.687-0600 [clientcursormon]  connections:2
+2020-12-06T00:57:10.707-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T00:57:10.707-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T00:57:10.707-0600 [clientcursormon]  connections:2
+2020-12-06T01:02:10.727-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:02:10.728-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:02:10.728-0600 [clientcursormon]  connections:2
+2020-12-06T01:07:10.747-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:07:10.748-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:07:10.748-0600 [clientcursormon]  connections:2
+2020-12-06T01:12:10.764-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:12:10.765-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:12:10.765-0600 [clientcursormon]  connections:2
+2020-12-06T01:17:10.789-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:17:10.790-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:17:10.790-0600 [clientcursormon]  connections:2
+2020-12-06T01:22:10.808-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:22:10.808-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:22:10.808-0600 [clientcursormon]  connections:2
+2020-12-06T01:27:10.823-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:27:10.824-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:27:10.824-0600 [clientcursormon]  connections:2
+2020-12-06T01:32:10.840-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:32:10.841-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:32:10.841-0600 [clientcursormon]  connections:2
+2020-12-06T01:37:10.868-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:37:10.868-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:37:10.868-0600 [clientcursormon]  connections:2
+2020-12-06T01:42:10.887-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:42:10.888-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:42:10.888-0600 [clientcursormon]  connections:2
+2020-12-06T01:47:10.903-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:47:10.903-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:47:10.903-0600 [clientcursormon]  connections:2
+2020-12-06T01:52:10.918-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:52:10.918-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:52:10.918-0600 [clientcursormon]  connections:2
+2020-12-06T01:57:10.942-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T01:57:10.943-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T01:57:10.943-0600 [clientcursormon]  connections:2
+2020-12-06T02:02:10.960-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:02:10.961-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:02:10.961-0600 [clientcursormon]  connections:2
+2020-12-06T02:07:10.984-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:07:10.984-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:07:10.984-0600 [clientcursormon]  connections:2
+2020-12-06T02:12:11.002-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:12:11.002-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:12:11.002-0600 [clientcursormon]  connections:2
+2020-12-06T02:17:11.017-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:17:11.018-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:17:11.018-0600 [clientcursormon]  connections:2
+2020-12-06T02:22:11.036-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:22:11.036-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:22:11.036-0600 [clientcursormon]  connections:2
+2020-12-06T02:27:11.051-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:27:11.052-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:27:11.052-0600 [clientcursormon]  connections:2
+2020-12-06T02:32:11.074-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:32:11.074-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:32:11.074-0600 [clientcursormon]  connections:2
+2020-12-06T02:37:11.097-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:37:11.098-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:37:11.098-0600 [clientcursormon]  connections:2
+2020-12-06T02:42:11.121-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:42:11.121-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:42:11.121-0600 [clientcursormon]  connections:2
+2020-12-06T02:47:11.138-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:47:11.139-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:47:11.139-0600 [clientcursormon]  connections:2
+2020-12-06T02:52:11.159-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:52:11.163-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:52:11.163-0600 [clientcursormon]  connections:2
+2020-12-06T02:57:11.183-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T02:57:11.183-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T02:57:11.183-0600 [clientcursormon]  connections:2
+2020-12-06T03:02:11.199-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:02:11.199-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:02:11.199-0600 [clientcursormon]  connections:2
+2020-12-06T03:07:11.225-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:07:11.226-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:07:11.226-0600 [clientcursormon]  connections:2
+2020-12-06T03:12:11.242-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:12:11.243-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:12:11.243-0600 [clientcursormon]  connections:2
+2020-12-06T03:17:11.257-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:17:11.258-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:17:11.258-0600 [clientcursormon]  connections:2
+2020-12-06T03:22:11.276-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:22:11.276-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:22:11.276-0600 [clientcursormon]  connections:2
+2020-12-06T03:27:11.295-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:27:11.296-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:27:11.296-0600 [clientcursormon]  connections:2
+2020-12-06T03:32:11.310-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:32:11.310-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:32:11.310-0600 [clientcursormon]  connections:2
+2020-12-06T03:37:11.328-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:37:11.328-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:37:11.328-0600 [clientcursormon]  connections:2
+2020-12-06T03:42:11.350-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:42:11.350-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:42:11.350-0600 [clientcursormon]  connections:2
+2020-12-06T03:47:11.373-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:47:11.374-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:47:11.374-0600 [clientcursormon]  connections:2
+2020-12-06T03:52:11.395-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:52:11.396-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:52:11.396-0600 [clientcursormon]  connections:2
+2020-12-06T03:57:11.416-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T03:57:11.417-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T03:57:11.417-0600 [clientcursormon]  connections:2
+2020-12-06T04:02:11.434-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:02:11.435-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:02:11.435-0600 [clientcursormon]  connections:2
+2020-12-06T04:07:11.451-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:07:11.452-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:07:11.452-0600 [clientcursormon]  connections:2
+2020-12-06T04:12:11.473-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:12:11.474-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:12:11.474-0600 [clientcursormon]  connections:2
+2020-12-06T04:17:11.491-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:17:11.491-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:17:11.491-0600 [clientcursormon]  connections:2
+2020-12-06T04:22:11.508-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:22:11.508-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:22:11.508-0600 [clientcursormon]  connections:2
+2020-12-06T04:27:11.529-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:27:11.529-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:27:11.529-0600 [clientcursormon]  connections:2
+2020-12-06T04:32:11.550-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:32:11.550-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:32:11.550-0600 [clientcursormon]  connections:2
+2020-12-06T04:37:11.577-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:37:11.578-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:37:11.578-0600 [clientcursormon]  connections:2
+2020-12-06T04:42:11.598-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:42:11.599-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:42:11.599-0600 [clientcursormon]  connections:2
+2020-12-06T04:47:11.619-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:47:11.619-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:47:11.619-0600 [clientcursormon]  connections:2
+2020-12-06T04:52:11.637-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:52:11.637-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:52:11.637-0600 [clientcursormon]  connections:2
+2020-12-06T04:57:11.661-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T04:57:11.661-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T04:57:11.661-0600 [clientcursormon]  connections:2
+2020-12-06T05:02:11.678-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:02:11.678-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:02:11.678-0600 [clientcursormon]  connections:2
+2020-12-06T05:07:11.697-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:07:11.697-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:07:11.697-0600 [clientcursormon]  connections:2
+2020-12-06T05:12:11.713-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:12:11.714-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:12:11.714-0600 [clientcursormon]  connections:2
+2020-12-06T05:17:11.733-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:17:11.733-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:17:11.733-0600 [clientcursormon]  connections:2
+2020-12-06T05:22:11.752-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:22:11.753-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:22:11.753-0600 [clientcursormon]  connections:2
+2020-12-06T05:27:11.779-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:27:11.780-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:27:11.780-0600 [clientcursormon]  connections:2
+2020-12-06T05:32:11.798-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:32:11.798-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:32:11.798-0600 [clientcursormon]  connections:2
+2020-12-06T05:37:11.814-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:37:11.815-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:37:11.815-0600 [clientcursormon]  connections:2
+2020-12-06T05:42:11.834-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:42:11.834-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:42:11.834-0600 [clientcursormon]  connections:2
+2020-12-06T05:47:11.852-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:47:11.852-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:47:11.852-0600 [clientcursormon]  connections:2
+2020-12-06T05:52:11.872-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:52:11.873-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:52:11.873-0600 [clientcursormon]  connections:2
+2020-12-06T05:57:11.890-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T05:57:11.891-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T05:57:11.891-0600 [clientcursormon]  connections:2
+2020-12-06T06:02:11.914-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:02:11.915-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:02:11.915-0600 [clientcursormon]  connections:2
+2020-12-06T06:07:11.933-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:07:11.934-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:07:11.934-0600 [clientcursormon]  connections:2
+2020-12-06T06:12:11.953-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:12:11.953-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:12:11.953-0600 [clientcursormon]  connections:2
+2020-12-06T06:17:11.973-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:17:11.974-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:17:11.974-0600 [clientcursormon]  connections:2
+2020-12-06T06:22:11.991-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:22:11.992-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:22:11.992-0600 [clientcursormon]  connections:2
+2020-12-06T06:27:12.010-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:27:12.010-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:27:12.010-0600 [clientcursormon]  connections:2
+2020-12-06T06:32:12.028-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:32:12.029-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:32:12.029-0600 [clientcursormon]  connections:2
+2020-12-06T06:37:12.046-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:37:12.046-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:37:12.046-0600 [clientcursormon]  connections:2
+2020-12-06T06:42:12.066-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:42:12.066-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:42:12.066-0600 [clientcursormon]  connections:2
+2020-12-06T06:47:12.092-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:47:12.093-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:47:12.093-0600 [clientcursormon]  connections:2
+2020-12-06T06:52:12.110-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:52:12.111-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:52:12.111-0600 [clientcursormon]  connections:2
+2020-12-06T06:57:12.132-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T06:57:12.132-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T06:57:12.132-0600 [clientcursormon]  connections:2
+2020-12-06T07:02:12.148-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:02:12.149-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:02:12.149-0600 [clientcursormon]  connections:2
+2020-12-06T07:07:12.167-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:07:12.167-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:07:12.167-0600 [clientcursormon]  connections:2
+2020-12-06T07:12:12.185-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:12:12.185-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:12:12.185-0600 [clientcursormon]  connections:2
+2020-12-06T07:17:12.206-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:17:12.207-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:17:12.207-0600 [clientcursormon]  connections:2
+2020-12-06T07:22:12.225-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:22:12.225-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:22:12.225-0600 [clientcursormon]  connections:2
+2020-12-06T07:27:12.241-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:27:12.242-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:27:12.242-0600 [clientcursormon]  connections:2
+2020-12-06T07:32:12.259-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:32:12.259-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:32:12.259-0600 [clientcursormon]  connections:2
+2020-12-06T07:37:12.278-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:37:12.279-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:37:12.279-0600 [clientcursormon]  connections:2
+2020-12-06T07:42:12.306-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:42:12.307-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:42:12.307-0600 [clientcursormon]  connections:2
+2020-12-06T07:47:12.324-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:47:12.325-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:47:12.325-0600 [clientcursormon]  connections:2
+2020-12-06T07:52:12.341-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:52:12.342-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:52:12.342-0600 [clientcursormon]  connections:2
+2020-12-06T07:57:12.364-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T07:57:12.364-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T07:57:12.364-0600 [clientcursormon]  connections:2
+2020-12-06T08:02:12.383-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:02:12.384-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:02:12.384-0600 [clientcursormon]  connections:2
+2020-12-06T08:07:12.400-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:07:12.400-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:07:12.400-0600 [clientcursormon]  connections:2
+2020-12-06T08:12:12.419-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:12:12.420-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:12:12.420-0600 [clientcursormon]  connections:2
+2020-12-06T08:17:12.437-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:17:12.437-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:17:12.437-0600 [clientcursormon]  connections:2
+2020-12-06T08:22:12.464-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:22:12.465-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:22:12.465-0600 [clientcursormon]  connections:2
+2020-12-06T08:27:12.490-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:27:12.491-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:27:12.491-0600 [clientcursormon]  connections:2
+2020-12-06T08:32:12.507-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:32:12.508-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:32:12.508-0600 [clientcursormon]  connections:2
+2020-12-06T08:37:12.528-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:37:12.529-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:37:12.529-0600 [clientcursormon]  connections:2
+2020-12-06T08:42:12.546-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:42:12.547-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:42:12.547-0600 [clientcursormon]  connections:2
+2020-12-06T08:47:12.571-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:47:12.583-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:47:12.584-0600 [clientcursormon]  connections:2
+2020-12-06T08:52:12.607-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:52:12.608-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:52:12.608-0600 [clientcursormon]  connections:2
+2020-12-06T08:57:12.623-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T08:57:12.624-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T08:57:12.624-0600 [clientcursormon]  connections:2
+2020-12-06T09:02:12.644-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:02:12.644-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:02:12.644-0600 [clientcursormon]  connections:2
+2020-12-06T09:07:12.663-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:07:12.664-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:07:12.664-0600 [clientcursormon]  connections:2
+2020-12-06T09:12:12.682-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:12:12.683-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:12:12.683-0600 [clientcursormon]  connections:2
+2020-12-06T09:17:12.699-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:17:12.700-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:17:12.700-0600 [clientcursormon]  connections:2
+2020-12-06T09:22:12.720-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:22:12.720-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:22:12.720-0600 [clientcursormon]  connections:2
+2020-12-06T09:27:12.743-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:27:12.744-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:27:12.744-0600 [clientcursormon]  connections:2
+2020-12-06T09:32:12.760-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:32:12.760-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:32:12.760-0600 [clientcursormon]  connections:2
+2020-12-06T09:37:12.777-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:37:12.778-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:37:12.778-0600 [clientcursormon]  connections:2
+2020-12-06T09:42:12.797-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:42:12.798-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:42:12.798-0600 [clientcursormon]  connections:2
+2020-12-06T09:47:12.814-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:47:12.815-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:47:12.815-0600 [clientcursormon]  connections:2
+2020-12-06T09:52:12.833-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:52:12.834-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:52:12.834-0600 [clientcursormon]  connections:2
+2020-12-06T09:57:12.854-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T09:57:12.855-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T09:57:12.855-0600 [clientcursormon]  connections:2
+2020-12-06T10:02:12.875-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:02:12.876-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:02:12.876-0600 [clientcursormon]  connections:2
+2020-12-06T10:07:12.894-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:07:12.895-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:07:12.895-0600 [clientcursormon]  connections:2
+2020-12-06T10:12:12.913-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:12:12.914-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:12:12.914-0600 [clientcursormon]  connections:2
+2020-12-06T10:17:12.930-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:17:12.931-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:17:12.931-0600 [clientcursormon]  connections:2
+2020-12-06T10:22:12.947-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:22:12.948-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:22:12.948-0600 [clientcursormon]  connections:2
+2020-12-06T10:27:12.969-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:27:12.969-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:27:12.969-0600 [clientcursormon]  connections:2
+2020-12-06T10:32:12.987-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:32:12.988-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:32:12.988-0600 [clientcursormon]  connections:2
+2020-12-06T10:37:13.003-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:37:13.004-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:37:13.004-0600 [clientcursormon]  connections:2
+2020-12-06T10:42:13.024-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:42:13.024-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:42:13.024-0600 [clientcursormon]  connections:2
+2020-12-06T10:47:13.040-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:47:13.041-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:47:13.041-0600 [clientcursormon]  connections:2
+2020-12-06T10:52:13.064-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:52:13.065-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:52:13.065-0600 [clientcursormon]  connections:2
+2020-12-06T10:57:13.086-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T10:57:13.086-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T10:57:13.086-0600 [clientcursormon]  connections:2
+2020-12-06T11:02:13.103-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:02:13.103-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:02:13.104-0600 [clientcursormon]  connections:2
+2020-12-06T11:07:13.121-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:07:13.121-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:07:13.121-0600 [clientcursormon]  connections:2
+2020-12-06T11:12:13.143-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:12:13.143-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:12:13.143-0600 [clientcursormon]  connections:2
+2020-12-06T11:17:13.160-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:17:13.161-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:17:13.161-0600 [clientcursormon]  connections:2
+2020-12-06T11:22:13.182-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:22:13.182-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:22:13.182-0600 [clientcursormon]  connections:2
+2020-12-06T11:27:13.204-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:27:13.205-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:27:13.205-0600 [clientcursormon]  connections:2
+2020-12-06T11:32:13.225-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:32:13.226-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:32:13.226-0600 [clientcursormon]  connections:2
+2020-12-06T11:37:13.246-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:37:13.246-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:37:13.246-0600 [clientcursormon]  connections:2
+2020-12-06T11:42:13.266-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:42:13.267-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:42:13.267-0600 [clientcursormon]  connections:2
+2020-12-06T11:47:13.287-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:47:13.288-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:47:13.288-0600 [clientcursormon]  connections:2
+2020-12-06T11:52:13.303-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:52:13.303-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:52:13.303-0600 [clientcursormon]  connections:2
+2020-12-06T11:57:13.319-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T11:57:13.320-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T11:57:13.320-0600 [clientcursormon]  connections:2
+2020-12-06T12:02:13.337-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:02:13.338-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:02:13.338-0600 [clientcursormon]  connections:2
+2020-12-06T12:07:13.362-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:07:13.362-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:07:13.362-0600 [clientcursormon]  connections:2
+2020-12-06T12:12:13.378-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:12:13.379-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:12:13.379-0600 [clientcursormon]  connections:2
+2020-12-06T12:17:13.396-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:17:13.397-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:17:13.397-0600 [clientcursormon]  connections:2
+2020-12-06T12:22:13.415-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:22:13.416-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:22:13.416-0600 [clientcursormon]  connections:2
+2020-12-06T12:27:13.436-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:27:13.436-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:27:13.436-0600 [clientcursormon]  connections:2
+2020-12-06T12:32:13.453-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:32:13.454-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:32:13.454-0600 [clientcursormon]  connections:2
+2020-12-06T12:37:13.468-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:37:13.468-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:37:13.468-0600 [clientcursormon]  connections:2
+2020-12-06T12:42:13.482-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:42:13.483-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:42:13.483-0600 [clientcursormon]  connections:2
+2020-12-06T12:47:13.496-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:47:13.496-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:47:13.496-0600 [clientcursormon]  connections:2
+2020-12-06T12:52:13.513-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:52:13.513-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:52:13.513-0600 [clientcursormon]  connections:2
+2020-12-06T12:57:13.532-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T12:57:13.532-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T12:57:13.532-0600 [clientcursormon]  connections:2
+2020-12-06T13:02:13.548-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:02:13.549-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:02:13.549-0600 [clientcursormon]  connections:2
+2020-12-06T13:07:13.569-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:07:13.570-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:07:13.570-0600 [clientcursormon]  connections:2
+2020-12-06T13:12:13.592-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:12:13.593-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:12:13.593-0600 [clientcursormon]  connections:2
+2020-12-06T13:17:13.610-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:17:13.610-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:17:13.610-0600 [clientcursormon]  connections:2
+2020-12-06T13:22:13.634-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:22:13.635-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:22:13.635-0600 [clientcursormon]  connections:2
+2020-12-06T13:27:13.653-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:27:13.653-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:27:13.653-0600 [clientcursormon]  connections:2
+2020-12-06T13:32:13.673-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:32:13.674-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:32:13.674-0600 [clientcursormon]  connections:2
+2020-12-06T13:37:13.688-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:37:13.689-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:37:13.689-0600 [clientcursormon]  connections:2
+2020-12-06T13:42:13.705-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:42:13.706-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:42:13.706-0600 [clientcursormon]  connections:2
+2020-12-06T13:47:13.720-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:47:13.721-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:47:13.721-0600 [clientcursormon]  connections:2
+2020-12-06T13:52:13.738-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:52:13.739-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:52:13.739-0600 [clientcursormon]  connections:2
+2020-12-06T13:57:13.760-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T13:57:13.761-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T13:57:13.761-0600 [clientcursormon]  connections:2
+2020-12-06T14:02:13.779-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:02:13.780-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:02:13.780-0600 [clientcursormon]  connections:2
+2020-12-06T14:07:13.803-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:07:13.803-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:07:13.803-0600 [clientcursormon]  connections:2
+2020-12-06T14:12:13.818-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:12:13.819-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:12:13.819-0600 [clientcursormon]  connections:2
+2020-12-06T14:17:13.836-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:17:13.837-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:17:13.837-0600 [clientcursormon]  connections:2
+2020-12-06T14:22:13.857-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:22:13.858-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:22:13.858-0600 [clientcursormon]  connections:2
+2020-12-06T14:27:13.874-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:27:13.874-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:27:13.874-0600 [clientcursormon]  connections:2
+2020-12-06T14:32:13.893-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:32:13.894-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:32:13.894-0600 [clientcursormon]  connections:2
+2020-12-06T14:37:13.913-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:37:13.913-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:37:13.913-0600 [clientcursormon]  connections:2
+2020-12-06T14:42:13.933-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:42:13.933-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:42:13.933-0600 [clientcursormon]  connections:2
+2020-12-06T14:47:13.949-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:47:13.950-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:47:13.950-0600 [clientcursormon]  connections:2
+2020-12-06T14:52:13.967-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:52:13.968-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:52:13.968-0600 [clientcursormon]  connections:2
+2020-12-06T14:57:13.984-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T14:57:13.984-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T14:57:13.984-0600 [clientcursormon]  connections:2
+2020-12-06T15:02:14.006-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T15:02:14.007-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:02:14.007-0600 [clientcursormon]  connections:2
+2020-12-06T15:07:14.031-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T15:07:14.032-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:07:14.032-0600 [clientcursormon]  connections:2
+2020-12-06T15:12:14.057-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T15:12:14.067-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:12:14.068-0600 [clientcursormon]  connections:2
+2020-12-06T15:17:14.085-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T15:17:14.086-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:17:14.086-0600 [clientcursormon]  connections:2
+2020-12-06T15:21:03.252-0600 [initandlisten] connection accepted from 63.229.208.217:62315 #45 (3 connections now open)
+2020-12-06T15:21:03.258-0600 [initandlisten] connection accepted from 63.229.208.217:62314 #46 (4 connections now open)
+2020-12-06T15:22:03.251-0600 [initandlisten] connection accepted from 63.229.208.217:62337 #47 (5 connections now open)
+2020-12-06T15:22:03.255-0600 [initandlisten] connection accepted from 63.229.208.217:62338 #48 (6 connections now open)
+2020-12-06T15:22:14.105-0600 [clientcursormon] mem (MB) res:46 virt:557
+2020-12-06T15:22:14.105-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:22:14.105-0600 [clientcursormon]  connections:6
+2020-12-06T15:23:18.576-0600 [initandlisten] connection accepted from 63.229.208.217:62430 #49 (7 connections now open)
+2020-12-06T15:23:18.882-0600 [initandlisten] connection accepted from 63.229.208.217:62431 #50 (8 connections now open)
+2020-12-06T15:24:18.354-0600 [initandlisten] connection accepted from 63.229.208.217:62499 #51 (9 connections now open)
+2020-12-06T15:24:18.741-0600 [initandlisten] connection accepted from 63.229.208.217:62500 #52 (10 connections now open)
+2020-12-06T15:24:27.230-0600 [initandlisten] connection accepted from 63.229.208.217:62504 #53 (11 connections now open)
+2020-12-06T15:24:27.394-0600 [initandlisten] connection accepted from 63.229.208.217:62505 #54 (12 connections now open)
+2020-12-06T15:24:30.581-0600 [initandlisten] connection accepted from 63.229.208.217:62506 #55 (13 connections now open)
+2020-12-06T15:24:30.845-0600 [initandlisten] connection accepted from 63.229.208.217:62507 #56 (14 connections now open)
+2020-12-06T15:24:45.930-0600 [initandlisten] connection accepted from 63.229.208.217:62515 #57 (15 connections now open)
+2020-12-06T15:24:46.091-0600 [initandlisten] connection accepted from 63.229.208.217:62516 #58 (16 connections now open)
+2020-12-06T15:27:14.126-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T15:27:14.127-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:27:14.127-0600 [clientcursormon]  connections:16
+2020-12-06T15:32:14.145-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T15:32:14.146-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:32:14.146-0600 [clientcursormon]  connections:16
+2020-12-06T15:37:14.164-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T15:37:14.164-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:37:14.165-0600 [clientcursormon]  connections:16
+2020-12-06T15:41:21.302-0600 [conn46] end connection 63.229.208.217:62314 (15 connections now open)
+2020-12-06T15:41:21.302-0600 [conn48] end connection 63.229.208.217:62338 (15 connections now open)
+2020-12-06T15:41:21.302-0600 [conn47] end connection 63.229.208.217:62337 (15 connections now open)
+2020-12-06T15:41:21.302-0600 [conn45] end connection 63.229.208.217:62315 (15 connections now open)
+2020-12-06T15:41:36.662-0600 [conn51] end connection 63.229.208.217:62499 (11 connections now open)
+2020-12-06T15:41:36.662-0600 [conn52] end connection 63.229.208.217:62500 (11 connections now open)
+2020-12-06T15:41:37.174-0600 [conn49] end connection 63.229.208.217:62430 (9 connections now open)
+2020-12-06T15:41:37.174-0600 [conn50] end connection 63.229.208.217:62431 (9 connections now open)
+2020-12-06T15:41:46.396-0600 [conn53] end connection 63.229.208.217:62504 (7 connections now open)
+2020-12-06T15:41:46.396-0600 [conn54] end connection 63.229.208.217:62505 (7 connections now open)
+2020-12-06T15:41:48.439-0600 [conn55] end connection 63.229.208.217:62506 (5 connections now open)
+2020-12-06T15:41:48.439-0600 [conn56] end connection 63.229.208.217:62507 (5 connections now open)
+2020-12-06T15:42:03.798-0600 [conn57] end connection 63.229.208.217:62515 (3 connections now open)
+2020-12-06T15:42:03.798-0600 [conn58] end connection 63.229.208.217:62516 (3 connections now open)
+2020-12-06T15:42:14.186-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T15:42:14.186-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:42:14.186-0600 [clientcursormon]  connections:2
+2020-12-06T15:47:14.208-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T15:47:14.208-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:47:14.208-0600 [clientcursormon]  connections:2
+2020-12-06T15:52:14.224-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T15:52:14.225-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:52:14.225-0600 [clientcursormon]  connections:2
+2020-12-06T15:57:14.244-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T15:57:14.245-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T15:57:14.245-0600 [clientcursormon]  connections:2
+2020-12-06T16:02:14.267-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:02:14.268-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:02:14.268-0600 [clientcursormon]  connections:2
+2020-12-06T16:07:14.287-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:07:14.288-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:07:14.288-0600 [clientcursormon]  connections:2
+2020-12-06T16:12:14.310-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:12:14.311-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:12:14.311-0600 [clientcursormon]  connections:2
+2020-12-06T16:17:14.330-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:17:14.331-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:17:14.331-0600 [clientcursormon]  connections:2
+2020-12-06T16:22:14.354-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:22:14.355-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:22:14.355-0600 [clientcursormon]  connections:2
+2020-12-06T16:27:14.381-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:27:14.383-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:27:14.383-0600 [clientcursormon]  connections:2
+2020-12-06T16:32:14.409-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:32:14.409-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:32:14.409-0600 [clientcursormon]  connections:2
+2020-12-06T16:37:14.426-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:37:14.427-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:37:14.427-0600 [clientcursormon]  connections:2
+2020-12-06T16:42:14.445-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:42:14.446-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:42:14.446-0600 [clientcursormon]  connections:2
+2020-12-06T16:47:14.467-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:47:14.468-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:47:14.468-0600 [clientcursormon]  connections:2
+2020-12-06T16:52:14.490-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:52:14.490-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:52:14.490-0600 [clientcursormon]  connections:2
+2020-12-06T16:57:14.507-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T16:57:14.508-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T16:57:14.508-0600 [clientcursormon]  connections:2
+2020-12-06T17:02:14.535-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:02:14.535-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:02:14.535-0600 [clientcursormon]  connections:2
+2020-12-06T17:07:14.555-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:07:14.556-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:07:14.556-0600 [clientcursormon]  connections:2
+2020-12-06T17:12:14.573-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:12:14.574-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:12:14.574-0600 [clientcursormon]  connections:2
+2020-12-06T17:17:14.596-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:17:14.603-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:17:14.603-0600 [clientcursormon]  connections:2
+2020-12-06T17:22:14.623-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:22:14.624-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:22:14.624-0600 [clientcursormon]  connections:2
+2020-12-06T17:27:14.640-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:27:14.641-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:27:14.641-0600 [clientcursormon]  connections:2
+2020-12-06T17:32:14.663-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:32:14.663-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:32:14.664-0600 [clientcursormon]  connections:2
+2020-12-06T17:37:14.683-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:37:14.683-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:37:14.683-0600 [clientcursormon]  connections:2
+2020-12-06T17:42:14.699-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:42:14.700-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:42:14.700-0600 [clientcursormon]  connections:2
+2020-12-06T17:47:14.717-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:47:14.717-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:47:14.717-0600 [clientcursormon]  connections:2
+2020-12-06T17:52:14.737-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:52:14.737-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:52:14.738-0600 [clientcursormon]  connections:2
+2020-12-06T17:57:14.765-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T17:57:14.771-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T17:57:14.771-0600 [clientcursormon]  connections:2
+2020-12-06T18:02:14.797-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:02:14.809-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:02:14.810-0600 [clientcursormon]  connections:2
+2020-12-06T18:07:14.828-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:07:14.828-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:07:14.828-0600 [clientcursormon]  connections:2
+2020-12-06T18:12:14.847-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:12:14.848-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:12:14.848-0600 [clientcursormon]  connections:2
+2020-12-06T18:17:14.869-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:17:14.870-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:17:14.870-0600 [clientcursormon]  connections:2
+2020-12-06T18:22:14.889-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:22:14.889-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:22:14.890-0600 [clientcursormon]  connections:2
+2020-12-06T18:27:14.906-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:27:14.907-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:27:14.907-0600 [clientcursormon]  connections:2
+2020-12-06T18:32:14.930-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:32:14.930-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:32:14.930-0600 [clientcursormon]  connections:2
+2020-12-06T18:37:14.950-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:37:14.951-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:37:14.951-0600 [clientcursormon]  connections:2
+2020-12-06T18:42:14.974-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:42:14.975-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:42:14.975-0600 [clientcursormon]  connections:2
+2020-12-06T18:47:14.991-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:47:14.991-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:47:14.991-0600 [clientcursormon]  connections:2
+2020-12-06T18:52:15.007-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:52:15.009-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:52:15.009-0600 [clientcursormon]  connections:2
+2020-12-06T18:57:15.025-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T18:57:15.026-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T18:57:15.026-0600 [clientcursormon]  connections:2
+2020-12-06T19:02:15.049-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:02:15.049-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:02:15.049-0600 [clientcursormon]  connections:2
+2020-12-06T19:07:15.063-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:07:15.064-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:07:15.064-0600 [clientcursormon]  connections:2
+2020-12-06T19:12:15.083-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:12:15.084-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:12:15.084-0600 [clientcursormon]  connections:2
+2020-12-06T19:17:15.101-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:17:15.104-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:17:15.104-0600 [clientcursormon]  connections:2
+2020-12-06T19:22:15.122-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:22:15.122-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:22:15.122-0600 [clientcursormon]  connections:2
+2020-12-06T19:27:15.143-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:27:15.143-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:27:15.143-0600 [clientcursormon]  connections:2
+2020-12-06T19:32:15.161-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:32:15.161-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:32:15.161-0600 [clientcursormon]  connections:2
+2020-12-06T19:37:15.178-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:37:15.179-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:37:15.179-0600 [clientcursormon]  connections:2
+2020-12-06T19:42:15.200-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:42:15.201-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:42:15.201-0600 [clientcursormon]  connections:2
+2020-12-06T19:47:15.218-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:47:15.218-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:47:15.218-0600 [clientcursormon]  connections:2
+2020-12-06T19:52:15.239-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:52:15.250-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:52:15.250-0600 [clientcursormon]  connections:2
+2020-12-06T19:57:15.266-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T19:57:15.267-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T19:57:15.267-0600 [clientcursormon]  connections:2
+2020-12-06T20:02:15.288-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:02:15.288-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:02:15.288-0600 [clientcursormon]  connections:2
+2020-12-06T20:07:15.305-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:07:15.305-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:07:15.305-0600 [clientcursormon]  connections:2
+2020-12-06T20:12:15.322-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:12:15.323-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:12:15.323-0600 [clientcursormon]  connections:2
+2020-12-06T20:17:15.343-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:17:15.344-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:17:15.344-0600 [clientcursormon]  connections:2
+2020-12-06T20:22:15.362-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:22:15.363-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:22:15.363-0600 [clientcursormon]  connections:2
+2020-12-06T20:27:15.379-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:27:15.380-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:27:15.380-0600 [clientcursormon]  connections:2
+2020-12-06T20:32:15.396-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:32:15.396-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:32:15.396-0600 [clientcursormon]  connections:2
+2020-12-06T20:37:15.412-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:37:15.412-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:37:15.412-0600 [clientcursormon]  connections:2
+2020-12-06T20:42:15.431-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:42:15.431-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:42:15.431-0600 [clientcursormon]  connections:2
+2020-12-06T20:47:15.459-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:47:15.460-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:47:15.460-0600 [clientcursormon]  connections:2
+2020-12-06T20:52:15.478-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:52:15.479-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:52:15.479-0600 [clientcursormon]  connections:2
+2020-12-06T20:57:15.501-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T20:57:15.502-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T20:57:15.502-0600 [clientcursormon]  connections:2
+2020-12-06T21:02:15.520-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:02:15.521-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:02:15.521-0600 [clientcursormon]  connections:2
+2020-12-06T21:07:15.543-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:07:15.544-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:07:15.544-0600 [clientcursormon]  connections:2
+2020-12-06T21:12:15.562-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:12:15.562-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:12:15.562-0600 [clientcursormon]  connections:2
+2020-12-06T21:17:15.582-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:17:15.582-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:17:15.582-0600 [clientcursormon]  connections:2
+2020-12-06T21:22:15.601-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:22:15.602-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:22:15.602-0600 [clientcursormon]  connections:2
+2020-12-06T21:27:15.622-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:27:15.624-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:27:15.624-0600 [clientcursormon]  connections:2
+2020-12-06T21:32:15.644-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:32:15.645-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:32:15.645-0600 [clientcursormon]  connections:2
+2020-12-06T21:37:15.670-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:37:15.671-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:37:15.671-0600 [clientcursormon]  connections:2
+2020-12-06T21:42:15.687-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:42:15.689-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:42:15.689-0600 [clientcursormon]  connections:2
+2020-12-06T21:47:15.708-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:47:15.708-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:47:15.708-0600 [clientcursormon]  connections:2
+2020-12-06T21:52:15.727-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:52:15.727-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:52:15.727-0600 [clientcursormon]  connections:2
+2020-12-06T21:57:15.746-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T21:57:15.747-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T21:57:15.747-0600 [clientcursormon]  connections:2
+2020-12-06T22:02:15.762-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:02:15.763-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:02:15.763-0600 [clientcursormon]  connections:2
+2020-12-06T22:07:15.780-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:07:15.780-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:07:15.780-0600 [clientcursormon]  connections:2
+2020-12-06T22:12:15.803-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:12:15.803-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:12:15.803-0600 [clientcursormon]  connections:2
+2020-12-06T22:17:15.821-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:17:15.821-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:17:15.821-0600 [clientcursormon]  connections:2
+2020-12-06T22:22:15.836-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:22:15.837-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:22:15.837-0600 [clientcursormon]  connections:2
+2020-12-06T22:27:15.859-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:27:15.860-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:27:15.860-0600 [clientcursormon]  connections:2
+2020-12-06T22:32:15.875-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:32:15.875-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:32:15.875-0600 [clientcursormon]  connections:2
+2020-12-06T22:37:15.897-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:37:15.898-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:37:15.898-0600 [clientcursormon]  connections:2
+2020-12-06T22:42:15.921-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:42:15.921-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:42:15.921-0600 [clientcursormon]  connections:2
+2020-12-06T22:47:15.941-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:47:15.942-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:47:15.942-0600 [clientcursormon]  connections:2
+2020-12-06T22:52:15.961-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:52:15.962-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:52:15.962-0600 [clientcursormon]  connections:2
+2020-12-06T22:57:15.978-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T22:57:15.978-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T22:57:15.978-0600 [clientcursormon]  connections:2
+2020-12-06T23:02:15.999-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:02:15.999-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:02:16.000-0600 [clientcursormon]  connections:2
+2020-12-06T23:07:16.016-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:07:16.017-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:07:16.017-0600 [clientcursormon]  connections:2
+2020-12-06T23:12:16.036-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:12:16.037-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:12:16.037-0600 [clientcursormon]  connections:2
+2020-12-06T23:17:16.055-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:17:16.055-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:17:16.055-0600 [clientcursormon]  connections:2
+2020-12-06T23:22:16.076-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:22:16.076-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:22:16.076-0600 [clientcursormon]  connections:2
+2020-12-06T23:27:16.096-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:27:16.097-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:27:16.097-0600 [clientcursormon]  connections:2
+2020-12-06T23:32:16.119-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:32:16.119-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:32:16.119-0600 [clientcursormon]  connections:2
+2020-12-06T23:37:16.137-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:37:16.138-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:37:16.138-0600 [clientcursormon]  connections:2
+2020-12-06T23:42:16.153-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:42:16.154-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:42:16.154-0600 [clientcursormon]  connections:2
+2020-12-06T23:47:16.171-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:47:16.172-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:47:16.172-0600 [clientcursormon]  connections:2
+2020-12-06T23:52:16.191-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:52:16.191-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:52:16.191-0600 [clientcursormon]  connections:2
+2020-12-06T23:57:16.209-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-06T23:57:16.209-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-06T23:57:16.209-0600 [clientcursormon]  connections:2
+2020-12-07T00:02:16.226-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:02:16.227-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:02:16.227-0600 [clientcursormon]  connections:2
+2020-12-07T00:07:16.249-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:07:16.254-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:07:16.254-0600 [clientcursormon]  connections:2
+2020-12-07T00:12:16.272-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:12:16.274-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:12:16.274-0600 [clientcursormon]  connections:2
+2020-12-07T00:17:16.292-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:17:16.293-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:17:16.293-0600 [clientcursormon]  connections:2
+2020-12-07T00:22:16.309-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:22:16.310-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:22:16.310-0600 [clientcursormon]  connections:2
+2020-12-07T00:27:16.330-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:27:16.330-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:27:16.330-0600 [clientcursormon]  connections:2
+2020-12-07T00:32:16.348-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:32:16.348-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:32:16.348-0600 [clientcursormon]  connections:2
+2020-12-07T00:37:16.365-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:37:16.366-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:37:16.366-0600 [clientcursormon]  connections:2
+2020-12-07T00:42:16.385-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:42:16.385-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:42:16.385-0600 [clientcursormon]  connections:2
+2020-12-07T00:47:16.405-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:47:16.406-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:47:16.406-0600 [clientcursormon]  connections:2
+2020-12-07T00:52:16.421-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:52:16.422-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:52:16.422-0600 [clientcursormon]  connections:2
+2020-12-07T00:57:16.438-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T00:57:16.439-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T00:57:16.439-0600 [clientcursormon]  connections:2
+2020-12-07T01:02:16.457-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:02:16.459-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:02:16.459-0600 [clientcursormon]  connections:2
+2020-12-07T01:07:16.480-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:07:16.481-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:07:16.481-0600 [clientcursormon]  connections:2
+2020-12-07T01:12:16.497-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:12:16.498-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:12:16.498-0600 [clientcursormon]  connections:2
+2020-12-07T01:17:16.516-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:17:16.517-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:17:16.517-0600 [clientcursormon]  connections:2
+2020-12-07T01:22:16.536-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:22:16.536-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:22:16.536-0600 [clientcursormon]  connections:2
+2020-12-07T01:27:16.555-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:27:16.556-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:27:16.556-0600 [clientcursormon]  connections:2
+2020-12-07T01:32:16.573-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:32:16.573-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:32:16.573-0600 [clientcursormon]  connections:2
+2020-12-07T01:37:16.598-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:37:16.598-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:37:16.598-0600 [clientcursormon]  connections:2
+2020-12-07T01:42:16.617-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:42:16.618-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:42:16.618-0600 [clientcursormon]  connections:2
+2020-12-07T01:47:16.637-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:47:16.638-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:47:16.638-0600 [clientcursormon]  connections:2
+2020-12-07T01:52:16.658-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:52:16.659-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:52:16.659-0600 [clientcursormon]  connections:2
+2020-12-07T01:57:16.676-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T01:57:16.677-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T01:57:16.677-0600 [clientcursormon]  connections:2
+2020-12-07T02:02:16.695-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:02:16.696-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:02:16.696-0600 [clientcursormon]  connections:2
+2020-12-07T02:07:16.717-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:07:16.718-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:07:16.718-0600 [clientcursormon]  connections:2
+2020-12-07T02:12:16.745-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:12:16.746-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:12:16.746-0600 [clientcursormon]  connections:2
+2020-12-07T02:17:16.761-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:17:16.762-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:17:16.762-0600 [clientcursormon]  connections:2
+2020-12-07T02:22:16.780-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:22:16.780-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:22:16.780-0600 [clientcursormon]  connections:2
+2020-12-07T02:27:16.797-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:27:16.798-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:27:16.798-0600 [clientcursormon]  connections:2
+2020-12-07T02:32:16.815-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:32:16.815-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:32:16.815-0600 [clientcursormon]  connections:2
+2020-12-07T02:37:16.837-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:37:16.837-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:37:16.837-0600 [clientcursormon]  connections:2
+2020-12-07T02:42:16.857-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:42:16.857-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:42:16.857-0600 [clientcursormon]  connections:2
+2020-12-07T02:47:16.874-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:47:16.875-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:47:16.875-0600 [clientcursormon]  connections:2
+2020-12-07T02:52:16.894-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:52:16.894-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:52:16.894-0600 [clientcursormon]  connections:2
+2020-12-07T02:57:16.915-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T02:57:16.915-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T02:57:16.915-0600 [clientcursormon]  connections:2
+2020-12-07T03:02:16.933-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:02:16.933-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:02:16.933-0600 [clientcursormon]  connections:2
+2020-12-07T03:07:16.952-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:07:16.953-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:07:16.953-0600 [clientcursormon]  connections:2
+2020-12-07T03:12:16.971-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:12:16.972-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:12:16.972-0600 [clientcursormon]  connections:2
+2020-12-07T03:17:16.991-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:17:16.992-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:17:16.992-0600 [clientcursormon]  connections:2
+2020-12-07T03:22:17.007-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:22:17.008-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:22:17.008-0600 [clientcursormon]  connections:2
+2020-12-07T03:27:17.030-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:27:17.030-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:27:17.030-0600 [clientcursormon]  connections:2
+2020-12-07T03:32:17.047-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:32:17.048-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:32:17.048-0600 [clientcursormon]  connections:2
+2020-12-07T03:37:17.069-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:37:17.069-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:37:17.069-0600 [clientcursormon]  connections:2
+2020-12-07T03:42:17.086-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:42:17.087-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:42:17.087-0600 [clientcursormon]  connections:2
+2020-12-07T03:47:17.105-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:47:17.105-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:47:17.105-0600 [clientcursormon]  connections:2
+2020-12-07T03:52:17.120-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:52:17.121-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:52:17.121-0600 [clientcursormon]  connections:2
+2020-12-07T03:57:17.137-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T03:57:17.138-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T03:57:17.138-0600 [clientcursormon]  connections:2
+2020-12-07T04:02:17.154-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:02:17.155-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:02:17.155-0600 [clientcursormon]  connections:2
+2020-12-07T04:07:17.170-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:07:17.171-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:07:17.171-0600 [clientcursormon]  connections:2
+2020-12-07T04:12:17.192-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:12:17.193-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:12:17.193-0600 [clientcursormon]  connections:2
+2020-12-07T04:17:17.209-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:17:17.210-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:17:17.210-0600 [clientcursormon]  connections:2
+2020-12-07T04:22:17.228-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:22:17.229-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:22:17.229-0600 [clientcursormon]  connections:2
+2020-12-07T04:27:17.243-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:27:17.244-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:27:17.244-0600 [clientcursormon]  connections:2
+2020-12-07T04:32:17.263-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:32:17.264-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:32:17.264-0600 [clientcursormon]  connections:2
+2020-12-07T04:37:17.281-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:37:17.281-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:37:17.281-0600 [clientcursormon]  connections:2
+2020-12-07T04:42:17.298-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:42:17.299-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:42:17.299-0600 [clientcursormon]  connections:2
+2020-12-07T04:47:17.319-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:47:17.319-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:47:17.319-0600 [clientcursormon]  connections:2
+2020-12-07T04:52:17.335-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:52:17.336-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:52:17.336-0600 [clientcursormon]  connections:2
+2020-12-07T04:57:17.355-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T04:57:17.355-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T04:57:17.355-0600 [clientcursormon]  connections:2
+2020-12-07T05:02:17.387-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:02:17.388-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:02:17.388-0600 [clientcursormon]  connections:2
+2020-12-07T05:07:17.403-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:07:17.404-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:07:17.404-0600 [clientcursormon]  connections:2
+2020-12-07T05:12:17.420-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:12:17.421-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:12:17.421-0600 [clientcursormon]  connections:2
+2020-12-07T05:17:17.435-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:17:17.435-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:17:17.435-0600 [clientcursormon]  connections:2
+2020-12-07T05:22:17.456-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:22:17.456-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:22:17.456-0600 [clientcursormon]  connections:2
+2020-12-07T05:27:17.472-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:27:17.473-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:27:17.473-0600 [clientcursormon]  connections:2
+2020-12-07T05:32:17.490-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:32:17.491-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:32:17.491-0600 [clientcursormon]  connections:2
+2020-12-07T05:37:17.508-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:37:17.508-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:37:17.508-0600 [clientcursormon]  connections:2
+2020-12-07T05:42:17.527-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:42:17.528-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:42:17.528-0600 [clientcursormon]  connections:2
+2020-12-07T05:47:17.549-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:47:17.550-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:47:17.550-0600 [clientcursormon]  connections:2
+2020-12-07T05:52:17.563-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:52:17.564-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:52:17.565-0600 [clientcursormon]  connections:2
+2020-12-07T05:57:17.579-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T05:57:17.579-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T05:57:17.579-0600 [clientcursormon]  connections:2
+2020-12-07T06:02:17.608-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:02:17.609-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:02:17.609-0600 [clientcursormon]  connections:2
+2020-12-07T06:07:17.628-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:07:17.628-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:07:17.628-0600 [clientcursormon]  connections:2
+2020-12-07T06:12:17.645-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:12:17.646-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:12:17.646-0600 [clientcursormon]  connections:2
+2020-12-07T06:17:17.665-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:17:17.665-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:17:17.665-0600 [clientcursormon]  connections:2
+2020-12-07T06:22:17.683-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:22:17.684-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:22:17.684-0600 [clientcursormon]  connections:2
+2020-12-07T06:27:17.703-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:27:17.709-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:27:17.709-0600 [clientcursormon]  connections:2
+2020-12-07T06:32:17.730-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:32:17.730-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:32:17.730-0600 [clientcursormon]  connections:2
+2020-12-07T06:37:17.750-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:37:17.751-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:37:17.751-0600 [clientcursormon]  connections:2
+2020-12-07T06:42:17.773-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:42:17.774-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:42:17.774-0600 [clientcursormon]  connections:2
+2020-12-07T06:47:17.792-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:47:17.793-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:47:17.793-0600 [clientcursormon]  connections:2
+2020-12-07T06:52:17.810-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:52:17.811-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:52:17.811-0600 [clientcursormon]  connections:2
+2020-12-07T06:57:17.827-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T06:57:17.828-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T06:57:17.828-0600 [clientcursormon]  connections:2
+2020-12-07T07:02:17.846-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:02:17.847-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:02:17.847-0600 [clientcursormon]  connections:2
+2020-12-07T07:07:17.865-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:07:17.866-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:07:17.866-0600 [clientcursormon]  connections:2
+2020-12-07T07:12:17.890-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:12:17.891-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:12:17.891-0600 [clientcursormon]  connections:2
+2020-12-07T07:17:17.915-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:17:17.923-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:17:17.924-0600 [clientcursormon]  connections:2
+2020-12-07T07:22:17.941-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:22:17.941-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:22:17.941-0600 [clientcursormon]  connections:2
+2020-12-07T07:27:17.958-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:27:17.959-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:27:17.959-0600 [clientcursormon]  connections:2
+2020-12-07T07:32:17.978-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:32:17.979-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:32:17.979-0600 [clientcursormon]  connections:2
+2020-12-07T07:37:17.998-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:37:17.998-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:37:17.998-0600 [clientcursormon]  connections:2
+2020-12-07T07:42:18.021-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:42:18.022-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:42:18.022-0600 [clientcursormon]  connections:2
+2020-12-07T07:47:18.041-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:47:18.041-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:47:18.041-0600 [clientcursormon]  connections:2
+2020-12-07T07:52:18.059-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:52:18.060-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:52:18.060-0600 [clientcursormon]  connections:2
+2020-12-07T07:57:18.076-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T07:57:18.076-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T07:57:18.076-0600 [clientcursormon]  connections:2
+2020-12-07T08:02:18.101-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:02:18.101-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:02:18.101-0600 [clientcursormon]  connections:2
+2020-12-07T08:07:18.127-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:07:18.128-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:07:18.128-0600 [clientcursormon]  connections:2
+2020-12-07T08:12:18.143-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:12:18.143-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:12:18.143-0600 [clientcursormon]  connections:2
+2020-12-07T08:17:18.160-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:17:18.161-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:17:18.161-0600 [clientcursormon]  connections:2
+2020-12-07T08:22:18.180-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:22:18.181-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:22:18.181-0600 [clientcursormon]  connections:2
+2020-12-07T08:27:18.196-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:27:18.197-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:27:18.197-0600 [clientcursormon]  connections:2
+2020-12-07T08:32:18.220-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:32:18.221-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:32:18.221-0600 [clientcursormon]  connections:2
+2020-12-07T08:37:18.239-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:37:18.240-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:37:18.240-0600 [clientcursormon]  connections:2
+2020-12-07T08:42:18.254-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:42:18.255-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:42:18.255-0600 [clientcursormon]  connections:2
+2020-12-07T08:47:18.275-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:47:18.282-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:47:18.282-0600 [clientcursormon]  connections:2
+2020-12-07T08:52:18.302-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:52:18.303-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:52:18.303-0600 [clientcursormon]  connections:2
+2020-12-07T08:57:18.323-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T08:57:18.324-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T08:57:18.324-0600 [clientcursormon]  connections:2
+2020-12-07T09:02:18.341-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:02:18.341-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:02:18.341-0600 [clientcursormon]  connections:2
+2020-12-07T09:07:18.362-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:07:18.363-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:07:18.363-0600 [clientcursormon]  connections:2
+2020-12-07T09:12:18.381-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:12:18.382-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:12:18.382-0600 [clientcursormon]  connections:2
+2020-12-07T09:17:18.399-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:17:18.400-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:17:18.400-0600 [clientcursormon]  connections:2
+2020-12-07T09:22:18.417-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:22:18.418-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:22:18.418-0600 [clientcursormon]  connections:2
+2020-12-07T09:27:18.440-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:27:18.440-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:27:18.440-0600 [clientcursormon]  connections:2
+2020-12-07T09:32:18.456-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:32:18.457-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:32:18.457-0600 [clientcursormon]  connections:2
+2020-12-07T09:37:18.475-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:37:18.475-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:37:18.475-0600 [clientcursormon]  connections:2
+2020-12-07T09:42:18.489-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:42:18.490-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:42:18.490-0600 [clientcursormon]  connections:2
+2020-12-07T09:47:18.511-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:47:18.511-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:47:18.511-0600 [clientcursormon]  connections:2
+2020-12-07T09:52:18.531-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:52:18.531-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:52:18.531-0600 [clientcursormon]  connections:2
+2020-12-07T09:57:18.555-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T09:57:18.562-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T09:57:18.563-0600 [clientcursormon]  connections:2
+2020-12-07T10:02:18.582-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:02:18.583-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:02:18.583-0600 [clientcursormon]  connections:2
+2020-12-07T10:07:18.600-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:07:18.600-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:07:18.600-0600 [clientcursormon]  connections:2
+2020-12-07T10:12:18.615-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:12:18.616-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:12:18.616-0600 [clientcursormon]  connections:2
+2020-12-07T10:17:18.637-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:17:18.639-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:17:18.639-0600 [clientcursormon]  connections:2
+2020-12-07T10:22:18.659-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:22:18.660-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:22:18.660-0600 [clientcursormon]  connections:2
+2020-12-07T10:27:18.681-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:27:18.681-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:27:18.681-0600 [clientcursormon]  connections:2
+2020-12-07T10:32:18.696-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:32:18.696-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:32:18.696-0600 [clientcursormon]  connections:2
+2020-12-07T10:37:18.713-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:37:18.713-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:37:18.713-0600 [clientcursormon]  connections:2
+2020-12-07T10:42:18.732-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:42:18.733-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:42:18.733-0600 [clientcursormon]  connections:2
+2020-12-07T10:47:18.749-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:47:18.750-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:47:18.750-0600 [clientcursormon]  connections:2
+2020-12-07T10:52:18.764-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:52:18.764-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:52:18.764-0600 [clientcursormon]  connections:2
+2020-12-07T10:57:18.780-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T10:57:18.780-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T10:57:18.780-0600 [clientcursormon]  connections:2
+2020-12-07T11:02:18.800-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T11:02:18.802-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T11:02:18.802-0600 [clientcursormon]  connections:2
+2020-12-07T11:03:30.696-0600 [initandlisten] connection accepted from 140.190.2.48:58619 #59 (3 connections now open)
+2020-12-07T11:03:30.872-0600 [initandlisten] connection accepted from 140.190.2.48:58620 #60 (4 connections now open)
+2020-12-07T11:03:58.780-0600 [initandlisten] connection accepted from 140.190.2.48:58626 #61 (5 connections now open)
+2020-12-07T11:03:58.865-0600 [initandlisten] connection accepted from 140.190.2.48:58627 #62 (6 connections now open)
+2020-12-07T11:04:23.594-0600 [initandlisten] connection accepted from 140.190.2.48:2265 #63 (7 connections now open)
+2020-12-07T11:04:23.764-0600 [initandlisten] connection accepted from 140.190.2.48:2266 #64 (8 connections now open)
+2020-12-07T11:07:18.824-0600 [clientcursormon] mem (MB) res:47 virt:557
+2020-12-07T11:07:18.824-0600 [clientcursormon]  mapped (incl journal view):320
+2020-12-07T11:07:18.824-0600 [clientcursormon]  connections:8
